@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!--
+      <div class="component-title">Datepicker(range)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>기능 / 디자인 확정 후 플러그인 선정 및 진행 예정</li>
+            <li>기능은 기본 Datepicker와 동일</li>
+          </ul>
+          <pre class="component-tag">
+            <div class="flatpickr-range" data-picker="range" data-min-date="2020-09-10" data-date-format="m/d/Y" id="test">
+              <div class="picker">
+                <input type="text" data-range="start">
+              </div>
+              <div class="picker">
+                <input type="text" data-range="end">
+              </div>
+            </div></pre>
+        </item>
+      </div>
+    -->
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Datepicker(default)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기능 / 디자인 확정 후 수정 예정</li>
+          <li>L10N: data-locale 에 지역코드 입력(기본 ko)</li>
+          <li style="color: red;">제작 필요: 국가별 날짜 포멧 변환 기능 필요</li>
+          <li style="color: red;">확인 필요: 날짜 변경 방식 확인(월 변경시 select 형태?)</li>
+          <li>사용 플러그인: <a href="https://flatpickr.js.org/" target="_blank">https://flatpickr.js.org/</a></li>
+        </ul>
+        <!-- <pre class="component-tag">
+          <div class="picker">
+            <input type="text" class="picker__input" data-picker="layer" data-date-format="m/d/Y" data-header-first="month">
+          </div></pre> -->
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>data option 목록</strong>
+              <ul>
+                <li>data-picker : datepicker 형태(inline, layer)</li>
+                <li>data-min-date : 선택가능한 시작 날짜 (YYYY-MM-DD)</li>
+              </ul>
+            </li>
+            <li><strong>Localization(L10N)</strong>
+              <ul>
+                <li>data-locale : 언어 코드 입력(기본: ko)(cn, ja, ko, ru, th, vn, zh)</li>
+                <li>date-date-format : 날짜 표시 형식(기본: Y-m-d, 위치 및 형식은 변경 가능)(Y: year, m: month, d: day)</li>
+                <li>data-header-first: header 의 월 선택 박스 위치(기본: year)</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.picker>input[type="text"][data-picker="layer"][data-header-first="month"]</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+
+    <div class="component-title">Datepicker(inline)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>항상 달력 화면 노출</li>
+        </ul>
+        <!-- <pre class="component-tag">
+          <div class="picker">
+            <input type="text" class="picker__input" data-picker="inline" data-min-date="2020-09-04">
+          </div></pre> -->
+      </item>
+    </div>
+
+    <div class="component-title">Datepicker(L10N)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <!-- <pre class="component-tag">
+          <div class="picker">
+            <input type="text" class="picker__input" data-picker="inline" data-locale="zh" data-min-date="2020-09-04">
+          </div></pre> -->
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.picker>input[type="text"][data-picker="inline"][data-min-date="2020-09-04"]</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+
+    <div class="component-title">Datepicker(특정일 강조)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기능은 기본 Datepicker와 동일</li>
+          <li>특정일 강조를 위한 데이터는 json 형태로 받아오기 때문에 json 파일오류 일 경우 datepicker가 그려지지 않음</li>
+        </ul>
+        <!-- <pre class="component-tag">
+          <div class="picker">
+            <input type="text" class="picker__input" data-picker="inline" data-min-date="2020-09-04"
+          </div></pre> -->
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>data option 목록</strong>
+              <ul>
+                <li>data-ajax : JSON url 입력</li>
+                <li><strong>설명</strong>
+                  <ul>
+                    <li>price: 배열로 입력하며 date 는 날짜, class 는 날짜에 해당하는 class명 입력</li>
+                    <li>disabled: 배열로 입력하며 date 는 날짜, label 은 날짜에 해당하는 텍스트 입력</li>
+                    <li>price 와 disabled는 모두 필수이며 없을경우 비어있는 배열([])로 입력</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="component-code">
+            <pre><code class="json">{
+  "price": [
+    {
+      "date": ["2020-09-15"],
+      "class": "best"
+    },
+    {
+      "date": ["2020-09-18"],
+      "class": "better"
+    },
+    {
+      "date": ["2020-09-20", "2020-09-21"],
+      "class": "good"
+    }
+  ],
+  "disabled": [
+    {
+      "date": ["2020-09-25", "2020-09-26"],
+      "label": "휴가"
+    },
+    {
+      "date": ["2020-09-28", "2020-09-29"],
+      "label": "결항일"
+    }
+  ]
+}
+</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+
+    <div class="component-title">Datepicker(highlight)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기능은 기본 Datepicker와 동일</li>
+          <li>특정일 강조를 위한 데이터는 json 형태로 받아오기 때문에 json 파일오류 일 경우 datepicker가 그려지지 않음</li>
+        </ul>
+        <!-- <pre class="component-tag">
+          <div class="picker test-mobile">
+            <input type="text" class="picker__input" data-picker="range" data-min-date="2020-09-04"
+          </div></pre> -->
+      </item>
+    </div>
+
+
+    <div class="component-title">Datepicker(range)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기능은 기본 Datepicker와 동일</li>
+          <li>특정일 강조를 위한 데이터는 json 형태로 받아오기 때문에 json 파일오류 일 경우 datepicker가 그려지지 않음</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="flatpickr-range"
+            data-picker="range"
+            data-min-date="2020-09-10"
+            data-date-format="m/d/Y"
+            data-ajax="../../dashboard/test.json"
+          >
+            <div class="picker">
+              <input class="picker__input" type="text" data-range="start">
+            </div>
+            <div class="picker">
+              <input class="picker__input" type="text" data-range="end">
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

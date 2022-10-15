@@ -1,0 +1,39 @@
+@mixin darkmode {
+  @media all and (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// 1280 ~
+@mixin pc {
+  @media all and (min-width: 1080px) {
+      @content;
+  }
+}
+
+@mixin mobile {
+  @media all and (max-width: 1079px){
+    @content;
+  }
+}
+@mixin w320 {
+  @media all and (max-width: 320px){
+    @content;
+  }
+}
+
+@mixin line-clamp($font-size, $line) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+  overflow: hidden;
+  font-size: $font-size;
+  // height: ($font-size * 1.3) * $line;
+}
+
+@function cons($directon) {
+  @return constant(safe-area-inset-#{$directon});
+}
+@function safe($directon) {
+  @return env(safe-area-inset-#{$directon});
+}

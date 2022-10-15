@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">여정</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>상황이 맞게 직접 입력</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="booking-destination">
+            <div class="booking-destination__header booking-destination__header--flight">
+              <div class="flight-number">편명<span class="number">7C147</span></div>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                  <span class="daytime">2020.08.27 19:10</span>
+                </div>
+                <div class="to">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                  <span class="daytime">2020.08.27 19:10</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination">
+            <div class="booking-destination__header">
+              <div class="date">2020.10.11</div>
+              <span class="flight">8GPR4</span>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <div class="to">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+              <div class="members">성인2,  소아1,  유아1</div>
+              <div class="check-favorite">
+                <input type="checkbox" class="check-favorite__input" id="favorite">
+                <label for="favorite" class="check-favorite__label">
+                  <span class="hidden">즐겨찾기</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination">
+            <div class="booking-destination__header">
+              <div class="date">2020.10.11</div>
+              <span class="flight">8GPR4</span>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <span class="time">11:11</span>
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <div class="to">
+                  <span class="time">11:11</span>
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+              <div class="members">성인2,  소아1,  유아1</div>
+              <div class="check-favorite">
+                <input type="checkbox" class="check-favorite__input" id="favorite">
+                <label for="favorite" class="check-favorite__label">
+                  <span class="hidden">즐겨찾기</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination">
+            <div class="booking-destination__header">
+              <div class="date">2020.10.11</div>
+              <span class="flight">8GPR4</span>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <div class="to">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+              <div class="members members--left">성인2,  소아1,  유아1</div>
+              <div class="util">
+                <button type="button" class="util__share">
+                  <span class="hidden">공유</span>
+                </button>
+                <button type="button" class="util__remove">
+                  <span class="hidden">삭제</span>
+                </button>
+              </div>
+            </div>
+            <div class="booking-destination__button">
+              <button class="option-button">
+                <span class="text text--orange">예매하기</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination">
+            <div class="booking-destination__header">
+              <div class="date">2020.10.11</div>
+              <span class="flight">8GPR4</span>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <div class="to">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+              <div class="members">성인2,  소아1,  유아1</div>
+              <strong class="booking-result color-sky">예약완료</strong>
+            </div>
+            <div class="booking-destination__button">
+              <button class="option-button">
+                <span class="text">예매하기</span>
+              </button>
+              <button class="option-button">
+                <span class="text">예매하기</span>
+              </button>
+              <button class="option-button">
+                <span class="text text--orange">부가서비스 구매</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination booking-destination--dim">
+            <div class="booking-destination__header">
+              <div class="date">2020.10.11 / 12:30
+                <span class="d-day">D-3</span>
+              </div>
+              <span class="flight">8GPR4</span>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <div class="to">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+              <div class="members">성인2,  소아1,  유아1</div>
+              <strong class="booking-result">예약완료</strong>
+            </div>
+            <div class="booking-destination__button">
+              <button class="option-button">
+                <span class="text">예매하기</span>
+              </button>
+              <button class="option-button">
+                <span class="text">예예매하기</span>
+              </button>
+              <button class="option-button">
+                <span class="text text--orange">부가서비스 구매</span>
+              </button>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination booking-destination--dim">
+            <div class="booking-destination__header">
+              <div class="date">2020.10.11 / 12:30
+                <span class="d-day">D-3</span>
+              </div>
+              <span class="flight">8GPR4</span>
+            </div>
+            <div class="booking-destination__content">
+              <div class="content-destination">
+                <div class="from">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <div class="to">
+                  <strong class="city">서울</strong>
+                  <span class="airport">인천</span>
+                </div>
+                <button type="button" class="swap-button">
+                  <span class="hidden">출/도착지 전환</span>
+                </button>
+              </div>
+              <div class="members">성인2,  소아1,  유아1</div>
+              <strong class="booking-result">예약완료</strong>
+            </div>
+            <div class="booking-destination__button">
+              <button class="option-button">
+                <span class="text">예매하기</span>
+              </button>
+              <button class="option-button">
+                <span class="text">예매하기</span>
+              </button>
+              <button class="option-button">
+                <span class="text text--orange">부가서비스 구매</span>
+              </button>
+            </div>
+            <div class="booking-destination__dimmed">
+              <h2 class="title">지금 바로 가까운 시간의 동일한 노선으로<br>여정을 변경할 수 있어요</h2>
+              <div class="buttons">
+                <button type="button" class="button">예약취소</button>
+                <button type="button" class="button">예약변경</button>
+                <button type="button" class="button">결항/지연 확인서</button>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="booking-destination booking-destination--no-data">
+            <p class="text__default">조회결과가 없습니다.</p>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    const testData = [
+      { id: 0, text: 'enhancement' },
+      { id: 1, text: 'bug' },
+      { id: 2, text: 'duplicate' },
+      { id: 3, text: 'invalid' },
+      { id: 4, text: 'wontfix' }
+    ];
+
+    hljs.initHighlightingOnLoad();
+
+    $('#testEvent').on('select2:select', function (e) {
+      var data = e.params.data;
+      console.log(data);
+    });
+    $('#testAjax').select2({
+      data: testData
+    })
+  </script>
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

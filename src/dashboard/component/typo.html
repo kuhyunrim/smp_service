@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Font test</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>webfont(나눔스퀘어) 테스트</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="text">
+            <p style="font-size: 16px;font-weight: 300;">웹폰트 테스트 Webfont Light</p>
+            <p style="font-size: 16px;font-weight: 400;">웹폰트 테스트 Webfont Regular</p>
+            <p style="font-size: 16px;font-weight: 700;">웹폰트 테스트 Webfont Bold</p>
+            <p style="font-size: 16px;font-weight: 800;">웹폰트 테스트 Webfont Extra Bold</p>
+          </div></pre>
+      </item>
+    </div>
+
+    <div class="component-title">H1 title</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>화면의 메인 타이틀</li>
+          <li>페이지당 한번만 사용되며 중복사용 불가</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__page">24px Extrabold(mo)/ 28px Regular(pc)<br>SEO를 위해 사용되는 제목으로 페이지의 <span class="highlight-word">hero</span>, <span class="highlight-word">페이지 명</span> 등으로 사용되는 타이틀입니다.</div>
+            <div class="title__page"><span class="title__page-color--org">kimjeju</span>님의 계정은<br>휴면 상태로 전환되었어요.</div>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-title">Main TItle</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>h2 태그로 작성되는 화면의 주요 타이틀</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <h2 class="title__main">20px Extrabold(mo) / 22px bold(pc)<br>화면의 가장 큰 제목입니다.</h2>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-title">Section Title</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>h3 태그로 작성되는 섹션의 제목</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <h3 class="title__section pc-color-gray">18px Extrabold #000(mo) / 18px Regular #666(pc)<br>섹션의 제목입니다.</h3>
+          </div>
+          <div class="title">
+            <h3 class="title__section title__section--lighter">18px bold(pc,mo)<br>섹션의 제목입니다.</h3>
+          </div>
+          <div class="title">
+            <h3 class="title__section center">18px Extrabold<br>섹션의 제목입니다./ 가운데정렬</h3>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>h4 태그로 작성되는 섹션의 제목</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <h4 class="title__section title__section--small">16px Extrabold<br>섹션의 제목입니다.</h4>
+          </div>
+          <div class="title">
+            <h4 class="title__section title__section--small title__section--lighter">16px bold<br>섹션의 제목입니다.</h4>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>title box</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__box">
+              <div class="flex-text">
+                2020년 11월
+              </div>
+            </div>
+          </div>
+        </pre>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__box">
+              <div class="flex-text">
+                2020년 11월
+                <div class="flex-text__additional">총 <span class="count">2</span>개</div>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Title - text </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>제목 옆 텍스트</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__wrap">
+              <h2 class="title__section title__section--small">유실물 조회<p class="text__small text--color-gray">최근 1개월만 조회할 수 있습니다.</p></h2>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>제목 양옆 텍스트</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__section title__section--additional title__section--small">title(16px, 800)
+              <div class="additional">
+                <a href="#none" class="additional__arrow">arrow</a>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+            <div class="title__section title__section--additional">title(18px, 800)
+              <div class="additional">
+                <a href="#none" class="text__small text--color-gray">text(13px, #888)</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="title">
+            <div class="title__section title__section--additional title__section--additional__center title__section--small">친구 정보
+             <div class="additional">
+                <button type="button" class="button button--small"><span class="button__text">친구선택</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="title">
+            <div class="title__section title__section--additional title__section--additional__center title__section--small">카드 정보 입력<span class="text__default">(최초 1회)</span>
+             <div class="additional">
+                <button type="button" class="button button--small"><span class="button__text">카드스캔</span></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="title title__switch">
+            <div class="title__wrap">
+              <h2 class="title__section title__section--small">NEW CLASS 운임 포함</h2>
+              <p class="title__additional">더 넓은 좌석으로 편안한 비행을 누리세요</p>
+            </div>
+            <div class="switch-wrap">
+              <span class="switch">
+                <input type="checkbox" id="switchItem1" class="switch__input">
+                <label for="switchItem1" class="switch__label">
+                  <i class="switch__ico"></i>
+                </label>
+              </span>
+            </div>
+          </div>
+        </pre>
+
+        <ul class="component-description">
+          <li>양옆 텍스트</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="flex-text">
+            font-size 14px, #333
+            <div class="flex-text__additional">bold #000</div>
+          </div>
+          <div class="flex-text">
+            font-size 14px, #333
+            <div class="flex-text__additional">extra bold #000</div>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>타이틀 옆 프로필</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__wrap">
+              <div class="title__page">김제주 고객님,<br>
+                선물을 찾으시나요?</div>
+              <div class="title__additional">특별한 날, 소중한 분에게 여행을
+                선물하세요.</div>
+            </div>
+            <div class="title__profile">
+              <img src="../../assets/images/@temp/@basic-list-01.png" alt="프로필">
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">TItle Additional</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>제목과 함께 들어가는 설명이 있는 경우(mo)</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__wrap">
+              <div class="title__page">섹션의 제목입니다. 24px Extrabold</div>
+              <div class="title__additional title__additional--colored">제목의 설명글 입니다 16px Bold #666</div>
+              <div class="title__additional title__additional--colored--org">제목의 설명글 입니다 16px Bold #ff5000</div>
+            </div>
+            <div class="title__wrap">
+              <div class="title__page">섹션의 제목입니다. 24px Extrabold</div>
+              <div class="title__additional">제목의 설명글 입니다 16px Regular #333</div>
+            </div>
+            <div class="title__wrap">
+              <div class="title__section">섹션의 제목입니다. 18px Extrabold</div>
+              <div class="title__additional">제목의 설명글 입니다 14px Regular</div>
+            </div>
+            <div class="title__wrap">
+              <div class="title__section title__section--small">섹션의 제목입니다. 16px Extrabold</div>
+              <div class="title__additional">제목의 설명글 입니다 14px Regular</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>제목과 함께 들어가는 설명이 있는 경우(pc)</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__wrap pc-only">
+              <div class="title__page">pc) 타이틀(28px Regular #000)</div>
+              <div class="title__additional">pc 설명글(18px Regular #333)</div>
+            </div>
+          </div>
+          <div class="title">
+            <div class="title__wrap pc-only">
+              <div class="title__page">pc) 타이틀+설명+서브설명</div>
+              <div class="title__additional">pc 설명글(18px Regular #333)</div>
+            </div>
+            <div class="title__wrap-sub pc-only">할인에 적립까지, 기업 임직원과 가족이 함께 받는 기업우대 서비스입니다.</div>
+          </div>
+          <div class="title">
+            <div class="title__wrap pc-only">
+              <div class="title__page">pc) 타이틀+설명+링크</div>
+              <div class="title__additional">pc 설명글(18px Regular #333)</div>
+              <div class="link-wrap link-wrap--arrow link-wrap--left">
+                <a href="#" class="link-wrap__text"><span>화살표 링크</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+            <div class="title__wrap pc-only">
+              <div class="title__page">pc) 타이틀+설명+링크+셀렉트</div>
+              <div class="title__additional">pc 설명글(18px Regular #333)</div>
+              <div class="link-wrap link-wrap--arrow link-wrap--left">
+                <a href="#" class="link-wrap__text"><span>화살표 링크</span></a>
+              </div>
+              <div class="title__select">
+                <div data-element="select" class="select-wrap select-wrap--line">
+                  <select data-element="select__select" data-placeholder="국가 선택하세요" title="국가 선택" class="select-wrap__select" data-class="select-nation">
+                    <option></option>
+                    <option value="1" selected>대한민국</option>
+                    <option value="2">일본</option>
+                    <option value="3">중국</option>
+                    <option value="4">홍콩</option>
+                    <option value="5">대만</option>
+                    <option value="6">괌</option>
+                    <option value="7">사이판</option>
+                    <option value="8">필리핀</option>
+                    <option value="9">태국</option>
+                    <option value="10">라오스</option>
+                    <option value="11">미국</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+            <div class="title__wrap pc-only">
+              <div class="title__page">pc) 타이틀+설명+스텝</div>
+              <div class="title__additional">pc 설명글(18px Regular #333)</div>
+              <div class="title__step">
+                <ol class="stepper__group">
+                  <li class="stepper__list stepper__list--complete">1</li>
+                  <li class="stepper__list stepper__list--active" aria-current="step">2</li>
+                  <li class="stepper__list stepper__list--disabled">3</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+            <div class="title__wrap pc-only">
+              <div class="title__page">pc) 타이틀+설명+스텝+서브설명</div>
+              <div class="title__additional">동료와 가족을 우대합니다.</div>
+              <div class="title__step">
+                <ol class="stepper__group">
+                  <li class="stepper__list stepper__list--active" aria-current="step">1</li>
+                  <li class="stepper__list stepper__list--disabled">2</li>
+                  <li class="stepper__list stepper__list--disabled">3</li>
+                </ol>
+              </div>
+            </div>
+            <div class="title__wrap-sub pc-only">잠깐, 일반 임직원 및 가족들이신가요? 기업코드를 등록하여 가입하셔야 합니다.(14px, #888)</div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Paragraph</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>일반적인 문장</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="text">
+            <p class="text__large">16px Regular 제주항공에 오신걸 환영합니다</p>
+            <p class="text__default">14px Regular 제주항공에 오신걸 환영합니다</p>
+            <p class="text__default text--bold">14px bold <span class="text--color-org">제주항공에</span><span class="text--color-gray">오신걸 환영합니다</span></p>
+            <p class="text__default text--exbold">14px Extrabold 제주항공에 오신걸 환영합니다</p>
+            <p class="text__small">13px Regular 제주항공에 오신걸 환영합니다</p>
+            <p class="text__small text--bold">13px bold 제주항공에 오신걸 환영합니다</p>
+            <p class="text__small text--exbold">13px Extrabold 제주항공에 오신걸 환영합니다</p>
+          </div></pre>
+      </item>
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>일반적인 문장</li>
+        </ul>
+        <pre class="component-tag">
+          <p class="notice-text">단, 외환은행의 경우 은행자체 정책으로 인해 1회 50만원, 1일 100만원을 초과할 수 없습니다.)</p>
+          <p class="notice-text notice-text--darken">실시간 계좌이체의 서비스 이용 가능시간은 각 금융기관의 사정 에 따라 다소 변동될 수 있으며, 매일 23:30 ~ 익일 01:30 에는 시스템 작업으로 인하여 계좌이체 서비스가 일시적으로 중단됩니다.</p>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Roboto</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>영문사용시</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="text">
+            <p class="eng">Roboto Regular</p>
+          </div></pre>
+      </item>
+
+    </div>
+
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+<script>
+  const innerComp = Vue.extend({
+    props: ['slotData', 'guideType'],
+    template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+    computed: {
+      tagItem() {
+        return this.slotData
+      }
+    }
+  })
+
+  const wrapperComp = Vue.extend({
+    props: ['guideType'],
+    template: `<div class="wrap-slot">
+        <div class="component-item">
+          <slot name="default"></slot>
+        </div>
+        <div class="component-code">
+          <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+          <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+        </div>
+        <slot name="footer"></slot>
+      </div>`,
+    data: () => {
+      return {
+        slotTag: ''
+      }
+    },
+    components: {
+      'item-inner': innerComp
+    },
+    computed: {
+      tagList() {
+        return this.slotTag
+      }
+    },
+    mounted() {
+      const slotItem = $(this.$el).find('.component-tag').html()
+      this.slotTag = slotItem
+    },
+    methods: {
+      toggleExpend() {
+        const elem = this.$el.querySelector('.component-code')
+        elem.classList.toggle('expend')
+      },
+    }
+  })
+
+  Vue.component('item', wrapperComp)
+  Vue.component('item-inner', innerComp)
+
+  new Vue({
+    el: '#compo',
+    data: () => {
+      return {
+        def: '',
+      }
+    },
+  })
+</script>
+</body>
+</html>

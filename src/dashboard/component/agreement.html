@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">agreement</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>필수값</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="agree-wrap">
+            <div class="check-wrap" data-element="checkList">
+              <div class="check-wrap__all-check">
+                <span class="checkbox">
+                  <input type="checkbox" class="checkbox__input" id="inpAgreeAll" data-element="checkAll">
+                  <label for="inpAgreeAll" class="checkbox__label">
+                    <i class="checkbox__ico" aria-hidden="true"></i>
+                    <span>전체 동의</span>
+                  </label>
+                </span>
+              </div>
+              <ul class="check-wrap__list">
+                <li class="agree-wrap__item">
+                  <span class="agree-wrap__label">탑승보안 안내</span>
+                  <button type="button" aria-label="탑승보안 안내 보기" class="agree-wrap__button"></button>
+                </li>
+                <li class="agree-wrap__item">
+                    <span class="checkbox checkbox--small">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-01" data-element="checkbox">
+                      <label for="inpAgree-01" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(필수) 서비스 약관</span>
+                      </label>
+                    </span>
+                    <button type="button" class="agree-wrap__button" aria-label="(필수) 서비스 약관 보기"></button>
+                </li>
+                <li class="agree-wrap__item">
+                    <span class="checkbox checkbox--small">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-02" data-element="checkbox">
+                      <label for="inpAgree-02" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(필수) 개인정보 수집, 이용 동의</span>
+                      </label>
+                    </span>
+                    <button type="button" class="agree-wrap__button" aria-label="(필수) 개인정보 수집, 이용 동의 보기"></button>
+                </li>
+                <li class="agree-wrap__item">
+                    <span class="checkbox checkbox--small">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-03" data-element="checkbox">
+                      <label for="inpAgree-03" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(필수) 고유식별정보의 수집, 이용 동의</span>
+                      </label>
+                    </span>
+                    <button type="button" class="agree-wrap__button" aria-label="(필수) 고유식별정보의 수집, 이용 동의 보기"></button>
+                </li>
+                <li class="agree-wrap__item">
+                    <span class="checkbox checkbox--small">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-04" data-element="checkbox">
+                      <label for="inpAgree-04" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(선택) 개인정보 유효기간 규정</span>
+                      </label>
+                    </span>
+                    <button type="button" class="agree-wrap__button" aria-label="(선택) 개인정보 유효기간 규정 보기"></button>
+                </li>
+                <!-- 일반 회원가입 -->
+                <li>
+                  <div class="agree-wrap__item">
+                    <span class="checkbox checkbox--small">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-05" data-element="checkbox">
+                      <label for="inpAgree-05" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(선택) 마케팅 정보 수신 동의</span>
+                      </label>
+                    </span>
+                  </div>
+                </li>
+                <!-- //일반 회원가입 -->
+                <!-- 간편 회원가입 -->
+                <li data-element="inputToggle">
+                  <div class="agree-wrap__item">
+                    <span class="checkbox checkbox--small">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-06" data-element="checkbox" data-toggle="toggle__anchor">
+                      <label for="inpAgree-06" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(선택) 마케팅 정보 수신 동의</span>
+                      </label>
+                    </span>
+                  </div>
+                  <div class="gray-box" data-toggle="toggle__panel">
+                    <div class="check-wrap">
+                      <span class="checkbox checkbox--line">
+                        <input type="checkbox" id="inputCheck5-1" data-element="checkbox" class="checkbox__input">
+                        <label for="inputCheck5-1" class="checkbox__label">
+                          <span>앱</span>
+                          <i aria-hidden="true" class="checkbox__ico"></i>
+                        </label>
+                      </span>
+                      <span class="checkbox checkbox--line">
+                        <input type="checkbox" id="inputCheck5-2" data-element="checkbox" class="checkbox__input">
+                        <label for="inputCheck5-2" class="checkbox__label">
+                          <span>문자</span>
+                          <i aria-hidden="true" class="checkbox__ico"></i>
+                        </label>
+                      </span>
+                      <span class="checkbox checkbox--line">
+                        <input type="checkbox" id="inputCheck5-3" data-element="checkbox" class="checkbox__input">
+                        <label for="inputCheck5-3" class="checkbox__label">
+                          <span>이메일</span>
+                          <i aria-hidden="true" class="checkbox__ico"></i>
+                        </label>
+                      </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="agree-wrap__item">
+                    <span class="checkbox">
+                      <input type="checkbox" class="checkbox__input" id="inpAgree-07" data-element="checkbox">
+                      <label for="inpAgree-07" class="checkbox__label">
+                        <i class="checkbox__ico" aria-hidden="true"></i>
+                        <span>(필수) 14세 이상입니다</span>
+                      </label>
+                    </span>
+                  </div>
+                </li>
+                <!-- //간편 회원가입 -->
+                <!-- (국외) 이메일 인증 가입 -->
+                <li>
+                  <div data-element="inputToggle">
+                    <div class="agree-wrap__item">
+                      <span class="checkbox">
+                        <input type="checkbox" class="checkbox__input" id="inpAgree-08" data-toggle="toggle__anchor" data-element="checkbox">
+                        <label for="inpAgree-08" class="checkbox__label">
+                          <i class="checkbox__ico" aria-hidden="true"></i>
+                          <span>14세 미만입니다</span>
+                        </label>
+                      </span>
+                    </div>
+                    <div class="gray-box gray-box--pdt-none" data-toggle="toggle__panel">
+                      <div class="input-wrap input--line">
+                        <div class="input-row">
+                          <div class="input-item">
+                            <div class="input-box">
+                              <label for="inp" class="input__label">법정대리인 성명</label>
+                              <div data-element="form" class="input">
+                                <input type="text" data-element="input" id="inp" class="input__text">
+                                <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                              </div>
+                            </div>
+                            <p tabindex="0" class="input__error">에러메세지</p>
+                          </div>
+                        </div>
+                        <div data-element="select" class="select-wrap select-wrap--line">
+                          <select data-element="select__select" data-placeholder="가입자와의 관계" title="가입자와의 관계 선택" class="select-wrap__select">
+                            <option></option>
+                            <option value="1">부</option>
+                            <option value="1">모</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="checkbox checkbox--line">
+                        <input type="checkbox" class="checkbox__input" id="inpAgree-09">
+                        <label for="inpAgree-09" class="checkbox__label">
+                          <span>법정대리인으로서 가입을 동의 합니다</span>
+                          <i class="checkbox__ico" aria-hidden="true"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- //(국외) 이메일 인증 가입 -->
+              </ul>
+            </div>
+            <div class="guide-info guide-info--gray">
+              <p class="guide-info__text">동의하신 분들께 한해 이벤트, 프로모션 등
+                특가정보를 제공해드려요!</p>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/plugin.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

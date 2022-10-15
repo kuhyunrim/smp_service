@@ -1,0 +1,15 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "amd": true
+  },
+  "extends" : "airbnb",
+  "rules" : {
+    "no-param-reassign": 0,
+    "indent": ["error", 2],
+    "max-len": [2, 200, 4]
+  }
+}

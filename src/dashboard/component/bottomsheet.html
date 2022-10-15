@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+  <style>
+    .event{border:1px solid black;padding:10px;}
+    .event:focus{outline:1px solid blue;}
+  </style>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">bottom sheet</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>toast ui</li>
+        </ul>
+        <ul class="component-etc">
+          <li>
+            <strong>실행문 : toast.init({text:'text', focus:selector,width:number, distance:number ,delay:Number})</strong>
+          </li>
+          <li>text:'text' 토스트 팝업 들어갈 문구 (필수)</li>
+          <li>focus:'classname' 되돌아갈 선택자 값 (ex: '.aaa') (필수)</li>
+          <li>width:'number' 토스트 팝업 width값 (default:100%)</li>
+          <li>distance:'number' 토스트 팝업 하단에서 부터 떨어지는 distance 위치값 (default:50)</li>
+          <li>delay:'number' 토스트팝업 떠 있는 시간 (default:1500)</li>
+          <li>position:'top/bottom' 포지션 위아래 결정 (deafult:bottom)</li>
+        </ul>
+        <pre class="component-tag">
+          <!-- 이벤트 전용 : 삭제예정 -->
+          <button type="button" data-element="toast" class="event aaa" onclick="toast.init({text:'토스트 팝업 들어갈 텍스트', focus:$(this)});
+          ">toast event button</button>
+          <button type="button" data-element="toast" class="event" onclick="toast.init({text:'토스트 팝업 들어갈 텍스트2', focus:'.aaa', width: 100, delay:500, distance:100, position:'top'});
+          ">toast event button2</button>
+          <!-- <div class="toast" id="toast01" data-element="toast">
+            <p class="toast__text"><span>37</span>명의 고객들이 이 여정을 보고 있어요!</p> -->
+          </div>
+        </pre>
+      </item>
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>bottomSheet ui (test -ing)</li>
+        </ul>
+        <ul class="component-etc">
+          <li>
+            <strong>필수 값</strong>
+          </li>
+        </ul>
+        <pre class="component-tag">
+          <button type="button"  data-target-open="sheet01">결제 안내 정보</button>
+          <div data-target="sheet01" class="bottom-sheet bottom-sheet--drag" data-element="bottomSheet">
+            <button type="button" class="bottom-sheet__button-drag" data-element="bottomSheet__button-drag" aria-label="하단시트 닫기"></button>
+            <div class="bottom-sheet__top" data-element="bottomSheet__button-drag">
+              <div class="title">
+                <h2 class="title__main">결제 안내 정보</h2>
+              </div>
+            </div>
+            <div class="bottom-sheet__bot">
+              <ul class="list-option">
+                <li class="list-option__item">
+                  <button type="button" class="list-option__button">신용카드 안내</button>
+                </li>
+                <li class="list-option__item"><button type="button" class="list-option__button">간편결제</button></li>
+                <li class="list-option__item"><button type="button" class="list-option__button">실시간 계좌 이체</button></li>
+                <li class="list-option__item"><button type="button" class="list-option__button">홍콩</button></li>
+              </ul>
+            </div>
+            <button type="button" class="bottom-sheet__button-close" data-element="bottomSheet__button-close" aria-label="하단시트 닫기"></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+<script>
+  const innerComp = Vue.extend({
+    props: ['slotData', 'guideType'],
+    template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+    computed: {
+      tagItem() {
+        return this.slotData
+      }
+    }
+  })
+
+  const wrapperComp = Vue.extend({
+    props: ['guideType'],
+    template: `<div class="wrap-slot">
+        <div class="component-item">
+          <slot name="default"></slot>
+        </div>
+        <div class="component-code">
+          <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+          <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+        </div>
+        <slot name="footer"></slot>
+      </div>`,
+    data: () => {
+      return {
+        slotTag: ''
+      }
+    },
+    components: {
+      'item-inner': innerComp
+    },
+    computed: {
+      tagList() {
+        return this.slotTag
+      }
+    },
+    mounted() {
+      const slotItem = $(this.$el).find('.component-tag').html()
+      this.slotTag = slotItem
+    },
+    methods: {
+      toggleExpend() {
+        const elem = this.$el.querySelector('.component-code')
+        elem.classList.toggle('expend')
+      },
+    }
+  })
+
+  Vue.component('item', wrapperComp)
+  Vue.component('item-inner', innerComp)
+
+  new Vue({
+    el: '#compo',
+    data: () => {
+      return {
+        def: '',
+      }
+    },
+  })
+</script>
+</body>
+</html>

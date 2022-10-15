@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Tab(default)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="tab tab--default" data-element="tab">
+            <div class="tab__buttons">
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor is-active" type="button" data-element="tab__anchor">탭 버튼 1</button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">탭 버튼 2</button>
+              </div>
+            </div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 1</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 2</div>
+          </div>
+          <!-- 스크롤 탭 -->
+          <div data-element="tab" class="tab tab--default tab--scroll" data-options='{"tabType": "scroll"}'>
+            <div class="tab__button-wrap" data-element="tab__scroll-wrap">
+              <div class="tab__buttons" data-element="tab__scroll">
+                <div class="tab__buttons">
+                  <div data-element="tab__list" class="tab__button">
+                    <button type="button" data-element="tab__anchor" class="tab__anchor is-active">서울(인천)->오사카(간사이)</button>
+                  </div>
+                  <div data-element="tab__list" class="tab__button">
+                    <button type="button" data-element="tab__anchor" class="tab__anchor">블라디보스트크->타이베이(타오위안)</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-element="tab__panel" class="tab__panel">탭 내용 1</div>
+            <div data-element="tab__panel" class="tab__panel">탭 내용 2</div>
+          </div>
+
+          <ul class="component-description">
+            <li>이중탭</li>
+          </ul>
+          <div class="tab tab--default" data-element="tab" data-options='{"linkedTab": "#linkedTab"}'>
+            <div class="tab__buttons">
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor is-active" type="button" data-element="tab__anchor">탭1</button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">탭2</button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">탭3</button>
+              </div>
+            </div>
+          </div>
+          <div class="linked-tab" id="linkedTab" data-element="tab__link">
+            <div class="tab__panel" data-element="tab__panel">
+              <div class="tab tab--2depth" data-element="tab">
+                <div class="tab__buttons">
+                  <div class="tab__button" data-element="tab__list">
+                    <button class="tab__anchor is-active" type="button" data-element="tab__anchor">전체</button>
+                  </div>
+                  <div class="tab__button" data-element="tab__list">
+                    <button class="tab__anchor" type="button" data-element="tab__anchor">적립</button>
+                  </div>
+                  <div class="tab__button" data-element="tab__list">
+                    <button class="tab__anchor" type="button" data-element="tab__anchor">차감</button>
+                  </div>
+                </div>
+                <div class="tab__panel" data-element="tab__panel">패널1</div>
+                <div class="tab__panel" data-element="tab__panel">패널2</div>
+                <div class="tab__panel" data-element="tab__panel">패널3</div>
+              </div>
+            </div>
+            <div class="tab__panel" data-element="tab__panel">패널2</div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Tab(round)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="tab tab--round" data-element="tab" data-options='{"tabType": "scroll"}'>
+            <div class="tab__button-wrap" data-element="tab__scroll-wrap">
+              <div class="tab__buttons" data-element="tab__scroll">
+                <div class="tab__button" data-element="tab__list">
+                  <button class="tab__anchor" type="button" data-element="tab__anchor">노선별운임</button>
+                </div>
+                <div class="tab__button" data-element="tab__list">
+                  <button class="tab__anchor" type="button" data-element="tab__anchor">개인 및 단체 할인 안내</button>
+                </div>
+                <div class="tab__button" data-element="tab__list">
+                  <button class="tab__anchor" type="button" data-element="tab__anchor">수수료 및 위약금
+                  </button>
+                </div>
+                <div class="tab__button" data-element="tab__list">
+                  <button class="tab__anchor" type="button" data-element="tab__anchor">유류할증료
+                  </button>
+                </div>
+                <div class="tab__button" data-element="tab__list">
+                  <button class="tab__anchor" type="button" data-element="tab__anchor">성수기 안내
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 1</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 2</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 3</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 4</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 5</div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Tab(square)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>4개</li>
+        </ul>
+        <pre class="component-tag">
+          <div data-element="tab" class="tab tab--square">
+            <div class="tab__buttons">
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor is-active">일본</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">중국</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">홍콩/<br>마카오</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">대만</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">태국</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">베트남</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">필리핀</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">라오스</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">대양주</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">말레이시아</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">러시아</button>
+              </div>
+              <div data-element="tab__list" class="tab__button">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">싱가포르</button>
+              </div>
+            </div>
+            <div data-element="tab__panel" class="tab__panel">1</div>
+            <div data-element="tab__panel" class="tab__panel">2</div>
+            <div data-element="tab__panel" class="tab__panel">3</div>
+            <div data-element="tab__panel" class="tab__panel">4</div>
+            <div data-element="tab__panel" class="tab__panel">5</div>
+            <div data-element="tab__panel" class="tab__panel">6</div>
+            <div data-element="tab__panel" class="tab__panel">7</div>
+            <div data-element="tab__panel" class="tab__panel">8</div>
+            <div data-element="tab__panel" class="tab__panel">9</div>
+            <div data-element="tab__panel" class="tab__panel">10</div>
+            <div data-element="tab__panel" class="tab__panel">11</div>
+            <div data-element="tab__panel" class="tab__panel">12</div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>3개</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="tab tab--square tab--square-cols3">
+            <div class="tab__buttons">
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div  class="tab__button"><a href="#" class="tab__anchor">일본</a></div>
+              <div class="tab__button"></div>
+            </div>
+          </div>
+          <div class="tab tab--square tab--square-cols3 tab--square-small" data-element="toggle">
+            <div class="tab__buttons">
+              <div class="tab__button">
+                <button type="button" class="tab__anchor is-active">10,000</button><!-- active시 is-active class 추가 -->
+              </div>
+              <div class="tab__button">
+                <button type="button" class="tab__anchor">30,000</button>
+              </div>
+              <div class="tab__button">
+                <button type="button" class="tab__anchor">50,000</button>
+              </div>
+              <div class="tab__button">
+                <button type="button" class="tab__anchor">100,000</button>
+              </div>
+              <div class="tab__button">
+                <button type="button" class="tab__anchor" data-element="toggle__anchor">직접입력</button>
+              </div>
+              <div class="tab__button">
+                <button type="button" class="tab__anchor">정정</button>
+              </div>
+            </div>
+            <div class="container--small" data-element="toggle__panel">
+              <div class="input-wrap input--line">
+                <div class="input-row">
+                  <div class="input-item">
+                    <div class="input-box">
+                      <label for="inp" class="input__label">구매 포인트(P)</label>
+                      <div class="input" data-element="form">
+                        <input type="text" class="input__text" data-element="input" id="inp" placeholder="">
+                        <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                      </div>
+                    </div>
+                    <p class="input__sub-text">10,000~4,000,000 P</p>
+                    <p class="input__error" tabindex="0">에러메세지</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Tab(swipe)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기본 동작까지 작업완료</li>
+        </ul>
+        <pre class="component-tag">
+          <div data-element="tab" data-carousel="scrollItem" class="tab tab--swipe swiper-container booking-tab">
+            <div class="tab__buttons swiper-wrapper">
+              <!-- 선택 불가 탭 -->
+              <div class="tab__button swiper-slide">
+                <button type="button" class="tab__anchor" disabled>
+                  <span class="date">10.11(일)</span>
+                  <span class="price">119,000</span>
+                </button>
+              </div>
+              <div class="tab__button swiper-slide">
+                <button type="button" class="tab__anchor" disabled>
+                  <span class="date">10.11(일)</span>
+                  <span class="price">119,000</span>
+                </button>
+              </div>
+              <!-- // 선택 불가 탭 -->
+              <div data-element="tab__list" class="tab__button swiper-slide">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">
+                  <span class="date">10.11(일)</span>
+                  <span class="price">119,111</span>
+                </button>
+              </div>
+              <div data-element="tab__list" class="tab__button swiper-slide">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">
+                  <span class="date">10.12(월)</span>
+                  <span class="price">119,222</span>
+                </button>
+              </div>
+              <div data-element="tab__list" class="tab__button swiper-slide">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">
+                  <span class="date">10.13(화)</span>
+                  <span class="price">119,333</span>
+                </button>
+              </div>
+              <div data-element="tab__list" class="tab__button swiper-slide">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">
+                  <span class="date">10.14(수)</span>
+                  <span class="price">119,444</span>
+                </button>
+              </div>
+              <div data-element="tab__list" class="tab__button swiper-slide">
+                <button type="button" data-element="tab__anchor" class="tab__anchor">
+                  <span class="date">10.15(목)</span>
+                  <span class="price">119,555</span>
+                </button>
+              </div>
+              <!-- 선택 불가 탭 -->
+              <div class="tab__button swiper-slide">
+                <button type="button" class="tab__anchor" disabled>
+                  <span class="date">10.11(일)</span>
+                  <span class="price">119,999</span>
+                </button>
+              </div>
+              <div class="tab__button swiper-slide">
+                <button type="button" class="tab__anchor" disabled>
+                  <span class="date">10.11(일)</span>
+                  <span class="price">119,999</span>
+                </button>
+              </div>
+              <!-- // 선택 불가 탭 -->
+            </div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 1</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 2</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 3</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 4</div>
+            <div class="tab__panel" data-element="tab__panel">탭 내용 5</div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Tab(vertical)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기본 동작까지 작업완료</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="tab tab--vertical" data-element="tab">
+            <div class="tab__buttons">
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="sup">New</span>
+                  탭 버튼 1
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">탭 버튼 2</button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">탭 버튼 탭 버튼 탭 버튼탭 버튼 3</button>
+              </div>
+            </div>
+            <div class="tab__panel-wrap">
+              <div class="tab__panel" data-element="tab__panel">
+                탭 내용 1
+                <div class="tab" data-element="tab"></div>
+              </div>
+              <div class="tab__panel" data-element="tab__panel">탭 내용 2</div>
+              <div class="tab__panel" data-element="tab__panel">탭 내용 3</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+    </div>
+
+    <div class="component-title">Tab(icon)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>이름만(숫자인 경우)</li>
+        </ul>
+        <div class="tab tab--scroll tab--icon tab--number" data-element="tab" data-options='{"tabType": "scroll"}'>
+          <div class="tab__button-wrap" data-element="tab__scroll-wrap">
+            <div class="tab__buttons" data-element="tab__scroll">
+              <div class="tab__button" data-element="tab__list">
+                <!-- D : 내용 입력 다 되면 is-checked 클래스 추가 -->
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="num">1</span>
+                    <strong class="name">김/제주</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="num">1</span>
+                    <strong class="name">홍/길동</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="num">1</span>
+                    <strong class="name">홍/길동</strong>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+        </div>
+
+        <ul class="component-description">
+          <li>이름만(아이콘 들어가는 경우 - 한글)</li>
+        </ul>
+        <div class="tab tab--scroll tab--icon" data-element="tab" data-options='{"tabType": "scroll"}'>
+          <div class="tab__button-wrap" data-element="tab__scroll-wrap">
+            <div class="tab__buttons" data-element="tab__scroll">
+              <div class="tab__button" data-element="tab__list">
+                <!-- D : 내용 입력 다 되면 is-checked 클래스 추가 -->
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <strong class="name">김제주</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <strong class="name">홍/길동</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <strong class="name">홍/길동</strong>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+        </div>
+
+        <ul class="component-description">
+          <li>이름만(아이콘 들어가는 경우 - 영어)</li>
+        </ul>
+        <div class="tab tab--scroll tab--icon tab--icon-large" data-element="tab" data-options='{"tabType": "scroll"}'>
+          <div class="tab__button-wrap" data-element="tab__scroll-wrap">
+            <div class="tab__buttons" data-element="tab__scroll">
+              <div class="tab__button" data-element="tab__list">
+                <!-- D : 내용 입력 다 되면 is-checked 클래스 추가 -->
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <strong class="name">KIM/JEJUHANGG ONG</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <strong class="name">KIM/JEJUHANGG ONG</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <strong class="name">KIM/JEJUHANGG ONG</strong>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+        </div>
+
+        <ul class="component-description">
+          <li>승객정보</li>
+        </ul>
+        <div class="tab tab--scroll tab--icon tab--icon-large" data-element="tab" data-options='{"tabType": "scroll"}'>
+          <div class="tab__button-wrap" data-element="tab__scroll-wrap">
+            <div class="tab__buttons" data-element="tab__scroll">
+              <div class="tab__button" data-element="tab__list">
+                <!-- D : 내용 입력 다 되면 is-checked 클래스 추가 -->
+                <button class="tab__anchor is-checked" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="type">성인 1</span>
+                    <strong class="name">KIM/ kongkongkong</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger child">
+                    <span class="type">소아 1</span>
+                    <strong class="name">홍/길동</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger baby">
+                    <span class="type">유아 1</span>
+                    <strong class="name">홍/길동</strong>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+        </div>
+
+        <ul class="component-description">
+          <li>좌우 스크롤 버튼 추가</li>
+        </ul>
+        <div class="tab tab--scroll tab--icon tab--icon-large tab__scroll" data-element="tab" data-options='{"tabType": "scroll"}'>
+          <button class="button tab__scroll-left" data-tab-direction="prev">
+            <span class="hidden">왼쪽 탭으로 이동</span>
+          </button>
+          <button class="button tab__scroll-right" data-tab-direction="next">
+            <span class="hidden">오른쪽 탭으로 이동</span>
+          </button>
+          <div class="tab__scroll-wrap" data-element="tab__scroll-wrap">
+            <div class="tab__buttons" data-element="tab__scroll">
+              <div class="tab__button" data-element="tab__list">
+                <!-- D : 내용 입력 다 되면 is-checked 클래스 추가 -->
+                <button class="tab__anchor is-checked" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="type">성인 1</span>
+                    <strong class="name">KIM/ kongkong</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor is-checked" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="type">소아 1</span>
+                    <strong class="name">KIM/ kongkongkong</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="type">유아 1</span>
+                    <strong class="name">KIM/ kongkongkong</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="type">유아 2</span>
+                    <strong class="name">KIM/ kongkongkong</strong>
+                  </span>
+                </button>
+              </div>
+              <div class="tab__button" data-element="tab__list">
+                <button class="tab__anchor" type="button" data-element="tab__anchor">
+                  <span class="passenger">
+                    <span class="type">유아 2</span>
+                    <strong class="name">KIM/ kongkongkong</strong>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+            data-set-fromasd
+            f
+            asdf
+            sf
+            sa
+            saf
+            <br>
+
+            sf
+            sa
+            saf
+            <br>
+
+            sf
+            sa
+            saf
+            <br>
+
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+          <div class="tab__panel" data-element="tab__panel">
+          </div>
+        </div>
+      </item>
+    </div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <template slot="footer">
+          <ul class="component-etc">
+            <li>
+              <strong>Event</strong>
+              <ul>
+                <li>beforeChange: 패널 오픈 전 실행될 함수(Arguments: event, plugin, anchor, panel)</li>
+                <li>afterChange: 패널 오픈 후 실행될 함수(Arguments: event, plugin, anchor, panel)</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="component-code">
+            <pre><code class="javascript">var tabElement = $('.your-element');
+
+  tabElement.on('beforeChange', function( event, plugin, anchor, panel ){
+      /* your code ... */
+  })
+
+  tabElement.on('afterChange', function( event, plugin, anchor, panel ){
+      /* your code ... */
+  })
+</code></pre>
+          <ul class="component-etc">
+            <li>
+              <strong>Method</strong>
+              <ul>
+                <li>open: 원하는 탭 오픈(Arguments: index, autoScroll(Boolean): 선택된 탭의 상단으로 스크롤)</li>
+                <li>destroy: 플러그인 제거(Arguments: none)</li>
+                <li>reInit: 플러그인 제거 후 생성(Arguments: none)</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="component-code">
+            <pre><code class="javascript">var yourVariable = $('.your-element').data('plugin_tab');
+
+yourVariable.open(1); //OR
+yourVariable.open(2, true); //OR
+yourVariable.open(0, false); //OR
+
+yourVariable.destroy();
+
+yourVariable.reInit();
+</code></pre>
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.tab[data-element="tab"]>(div.tab__buttons>div.tab__button[data-element="tab__list"]*3>button.tab__anchor[type="button"][data-element="tab__anchor"]{tab $$})(div.tab__panel[data-element="tab__panel"]*3{tab content $$})</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/plugin.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+  const testData = [
+    { id: 0, text: 'enhancement' },
+    { id: 1, text: 'bug' },
+    { id: 2, text: 'duplicate' },
+    { id: 3, text: 'invalid' },
+    { id: 4, text: 'wontfix' }
+  ];
+
+  hljs.initHighlightingOnLoad();
+
+  $('#testEvent').on('select2:select', function (e) {
+    var data = e.params.data;
+    console.log(data);
+  });
+  $('#testAjax').select2({
+    data: testData
+  })
+</script>
+
+<script>
+  const innerComp = Vue.extend({
+    props: ['slotData', 'guideType'],
+    template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+    computed: {
+      tagItem() {
+        return this.slotData
+      }
+    }
+  })
+
+  const wrapperComp = Vue.extend({
+    props: ['guideType'],
+    template: `<div class="wrap-slot">
+        <div class="component-item">
+          <slot name="default"></slot>
+        </div>
+        <div class="component-code">
+          <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+          <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+        </div>
+        <slot name="footer"></slot>
+      </div>`,
+    data: () => {
+      return {
+        slotTag: ''
+      }
+    },
+    components: {
+      'item-inner': innerComp
+    },
+    computed: {
+      tagList() {
+        return this.slotTag
+      }
+    },
+    mounted() {
+      const slotItem = $(this.$el).find('.component-tag').html()
+      this.slotTag = slotItem
+    },
+    methods: {
+      toggleExpend() {
+        const elem = this.$el.querySelector('.component-code')
+        elem.classList.toggle('expend')
+      },
+    }
+  })
+
+  Vue.component('item', wrapperComp)
+  Vue.component('item-inner', innerComp)
+
+  new Vue({
+    el: '#compo',
+    data: () => {
+      return {
+        def: '',
+      }
+    },
+  })
+</script>
+</body>
+</html>

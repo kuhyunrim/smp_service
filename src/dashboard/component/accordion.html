@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jeju Air</title>
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/component.css" />
+    <link rel="stylesheet" href="../../assets/css/page.css" />
+    <link rel="stylesheet" href="../guide.css" />
+    <link rel="stylesheet" href="../css/atelier-estuary-light.css" />
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="compo">
+      <!-- <div class="component-title">Select</div> -->
+      <div class="component-title">Accordion</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>디자인확인 후 적용 필요</li>
+          </ul>
+          <pre class="component-tag">
+
+          <div class="accordion">
+            <div class="accordion__header">
+              <p class="accordion__title">자주 묻는 질문</p>
+              <span class="accordion__total">총 <strong>33</strong>개</span>
+            </div>
+            <div class="accordion__group" data-element="accordion">
+              <div class="accordion__item" data-element="accordion__item">
+                <a href="#" class="accordion__anchor" data-element="accordion__anchor">
+                  <div class="accordion__text"><span class="accordion__text-elem">Q.</span>항공권 예매 후 환불 하려는데 위약금 규정이 어떻게 되나요?</div>
+                </a>
+                <div class="accordion__panel" data-element="accordion__panel">
+                  <div class="accordion__text"><span class="accordion__text-elem">A.</span>항공권 환불시에는 취소위약금이 부과되며 각 항공권 운임 규정과 출발전 기간에 따라 상이하게 적용됩니다.</div>
+                </div>
+              </div>
+              <div class="accordion__item" data-element="accordion__item">
+                <a href="#" class="accordion__anchor" data-element="accordion__anchor">
+                  <div class="accordion__text"><span class="accordion__text-elem">Q.</span>항공권 구매 후 변경 가능한가요?</div>
+                </a>
+                <div class="accordion__panel" data-element="accordion__panel">
+                  <div class="accordion__text">
+                    <span class="accordion__text-elem">A.</span>항공권 환불시에는 취소위약금이 부과되며 각 항공권 운임 <span class="accordion__text--org">규정과 출발전 기간에 따라 상이하게 적용됩니다.</span>
+                    <p class="accordion__text-date">2020.10.08</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="more-wrap">
+            <button type="button" class="more__button">더보기 (<span>10</span>/33)</button>
+          </div>
+
+        </pre>
+          <template slot="footer">
+            <ul class="component-etc">
+              <li>
+                <strong>옵션 목록</strong>
+                <ul>
+                  <li>autoScroll : 화면 스크롤 이동(true / false)</li>
+                  <li>autoFold : 자동 닫힘(true / false)</li>
+                  <li>initIndex : 초기화시 열릴 패널의 index(0)</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="component-code">
+              <pre><code class="js">data-element="accordion" data-options='{ "autoFold": false }'</code></pre>
+            </div>
+            <ul class="component-etc">
+              <li>
+                <strong>Event</strong>
+                <ul>
+                  <li>
+                    beforeChange : 패널 오픈 전 실행될 함수(arguments: event,
+                    plugin, anchor)
+                  </li>
+                  <li>
+                    afterChange : 패널 오픈 후 실행될 함수(arguments: event,
+                    plugin, anchor)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="component-code">
+              <pre><code class="js">var accordionItem = $('.your-element');
+accordionItem.on('beforeChange', function(event, plugin, anchor){
+  /* your code ... */
+})
+accordionItem.on('afterChange', function(event, plugin, anchor){
+  /* your code ... */
+})</code></pre>
+            </div>
+            <ul class="component-etc">
+              <li>
+                <strong>Method</strong>
+                <ul>
+                  <li>reInit: 플러그인 제거 후 생성</li>
+                  <li>destroy: 플러그인 제거</li>
+                  <li>
+                    go: 패널 열기(arguments: index, withScroll(Boolean): 선택된
+                    탭의 상단으로 스크롤 이동 여부)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div class="component-code">
+              <pre><code class="js">  var accordionItem = $('.your-element').data('plugin_accordion');
+
+accordionItem.go(1); //OR
+accordionItem.go(2, true); //OR
+accordionItem.go(0, false); //OR
+
+accordionItem.destroy();
+
+accordionItem.reInit();
+</code></pre>
+            </div>
+            <ul class="component-etc">
+              <li><strong>emmet (tab으로 마크업 생성)</strong></li>
+            </ul>
+            <div class="component-code">
+              <pre class="inline"><code class="text">div[data-element="accordion"].accordion>div[data-element="accordion__item"].accordion__item*3>(button[type="button"][data-element="accordion__anchor"].accordion__anchor)(div[data-element="accordion__panel"].accordion__panel)</code></pre>
+            </div>
+          </template>
+        </item>
+      </div>
+    </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/plugin.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

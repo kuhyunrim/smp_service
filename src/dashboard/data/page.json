@@ -1,0 +1,25 @@
+[
+  {
+    "category": "공통팝업",
+    "pages": [
+      {
+        "pageName": "공통팝업",
+        "pageId": "PAGE-BASE",
+        "L1": "공통팝업",
+        "L2": "공통팝업",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "dueDate": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      }
+    ]
+  }
+]

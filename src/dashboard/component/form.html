@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>제주항공</title>
+    <link rel="stylesheet" href="../../assets/css/global.css" />
+    <link rel="stylesheet" href="../../assets/css/component.css" />
+    <link rel="stylesheet" href="../../assets/css/page.css" />
+    <link rel="stylesheet" href="../guide.css" />
+    <link rel="stylesheet" href="../css/atelier-estuary-light.css" />
+    <script src="../vue.js"></script>
+  </head>
+  <body>
+    <div id="compo">
+      <div class="component-title">input (icon)</div>
+      <ul class="component-description">
+        <li>북마크 </li>
+        <li>즐겨찾기(별모양)</li>
+      </ul>
+      <div class="component-sub">
+        <item guide-type="html">
+          <pre class="component-tag">
+            <div class="check-bookmark">
+              <input type="checkbox" class="check-bookmark__input" id="bookmark">
+              <label for="bookmark" class="check-bookmark__label">
+                <span class="hidden">북마크</span>
+              </label>
+            </div>
+            <div class="check-favorite">
+              <input type="checkbox" class="check-favorite__input" id="favorite">
+              <label for="favorite" class="check-favorite__label">
+                <span class="hidden">즐겨찾기</span>
+              </label>
+            </div>
+          </pre>
+        </item>
+      </div>
+      <div class="component-title">input (line)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li></li>
+          </ul>
+          <pre class="component-tag">
+
+            <div class="input-wrap input--line">
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">기본</label>
+                    <div class="input" data-element="form">
+                      <input type="text" class="input__text" data-element="input" id="inp" placeholder="기본 텍스트 입력입니다.">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__sub-text">회색 input 밑 서브텍스트</p>
+                  <p class="input__sub-text color-org">오랜지 input 밑 서브텍스트</p>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inputEmail1" class="input__label">이메일</label>
+                    <div class="input" data-element="form">
+                      <input type="text" class="input__text" data-element="email" id="inputEmail1" placeholder="example@email.com" data-json="/dashboard/email.json">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">필수필수필수<span class="input__label-asterisk"  title="required">*</span></label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp" placeholder="" class="input__text" required>
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row input-row--password">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inputpw" class="input__label">Password</label>
+                    <div class="input" data-element="form">
+                      <input type="password" class="input__text" data-element="input" id="inputpw" placeholder="비밀번호 입력">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                      <button type="button" data-element="toggleShow" class="input__show-button" aria-label="비밀번호 보기"></button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inputnumber" class="input__label">Number</label>
+                    <div class="input" data-element="form">
+                      <input type="tel" class="input__text" data-element="input" id="inputnumber" placeholder="숫자만 입력">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+              <div class="input-row input-row--button">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">기업명<span class="input__label-asterisk"  title="required">*</span></label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp" placeholder="" class="input__text" required>
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                    <div class="button-wrap">
+                      <button type="button" class="button button--small button--small-org"><span class="button__text">기업조회</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+              <div class="input-row input-row--button input-row--bg">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp06" class="input__label">기업주소</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp06" placeholder="예)제주항공" class="input__text">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                    <div class="button-wrap">
+                      <button type="button" class="button button--small button--small-org"><span class="button__text">우편번호검색</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+            </div>
+            <div class="input-row input-row--bg">
+              <div class="input-item">
+                <div class="input-box">
+                  <label for="inp07" class="input__label">주소</label>
+                  <div data-element="form" class="input">
+                    <input type="text" data-element="input" id="inp07" placeholder="서울시 강서구 공항로 111" class="input__text">
+                    <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                  </div>
+                </div>
+                <p tabindex="0" class="input__error">에러메세지</p>
+              </div>
+            </div>
+              <div class="input-row">
+                <div class="radio-wrapper">
+                  <p class="radio__text">이메일로 문의 답변 받기</p>
+                  <div class="radio-wrap">
+                    <span class="radio">
+                      <input type="radio" id="inputRadio2" name="inputRadio" class="radio__input">
+                      <label for="inputRadio2" class="radio__label">
+                        <i aria-hidden="true" class="radio__ico"></i>
+                        <span>예</span>
+                      </label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="inputRadio3" name="inputRadio" class="radio__input">
+                      <label for="inputRadio3" class="radio__label">
+                        <i aria-hidden="true" class="radio__ico"></i>
+                        <span>아니요</span>
+                      </label>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-row input-row--number">
+                <label for="inputNumber" class="input__label">기본</label>
+                <div data-element="form" class="input input--number">
+                  <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기"></button>
+                    <input type="text" id="inputNumber" placeholder="숫자입력" data-element="number__input" value="1" data-max="12" data-min="1" data-string-number="" class="input__number">
+                  <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                </div>
+              </div>
+              <div class="input-row input-row--number">
+                <label for="inputNumber" class="input__label">기본</label>
+                <div data-element="form" class="input input--number">
+                  <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기"></button>
+                    <input type="text" id="inputNumber" placeholder="숫자입력" data-element="number__input" value="1" data-max="12" data-min="1" data-string-number="" class="input__number">
+                    <span class="text">개월</span>
+                  <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                </div>
+              </div>
+              <div class="input-row input-row--number input-row--total">
+                <label for="inputNumber2" class="input__label">성인</label>
+                <div data-element="form" class="input input--number input--number-small">
+                  <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기" disabled></button>
+                    <input type="text" id="inputNumber2" placeholder="숫자입력" data-element="number__input" value="1" data-max="9" data-min="1" data-string-number="" class="input__number">
+                  <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                </div>
+                <div class="input-total"><span class="sum">16,900</span> 원</div>
+              </div>
+
+              <div class="input-row">
+                <!-- error일 경우 error 클래스 추가 -->
+                <div class="input-item input--error">
+                  <div class="input-box">
+                    <label for="inp2" class="input__label">에러</label>
+                    <div class="input" data-element="form">
+                      <input type="text" class="input__text" data-element="input" id="inp2" placeholder="에러일 경우">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp3" class="input__label">비활성화일 경우</label>
+                    <div class="input" data-element="form">
+                      <input type="text" class="input__text" data-element="input" id="inp3" placeholder="비활성화일 경우" value="비활성화" readonly>
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp4" class="input__label">탑승일</label>
+                    <button
+                      type="button"
+                      class="picker picker--button"
+                      data-element="modal_anchor"
+                      data-modal-type="datepicker"
+                      data-target="#datepicker01"
+                    >
+                      달력 호출
+                    </button>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+              <!-- ****수정 필요 앞에 셀렉트로 갈지 버튼으로 갈지 **** -->
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-flex">
+                    <div class="input-box input-box--tel">
+                      <div data-element="select" class="select-wrap select-wrap--line">
+                        <select data-element="select__select" data-placeholder="+82" title="국가코드 선택" class="select-wrap__select" data-ajax="countryCode">
+                          <option></option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <label for="inputPhone-02" class="input__label">휴대전화번호</label>
+                      <div data-element="form" class="input">
+                        <input type="text" id="inputPhone-02" class="input__text">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-item input--error">
+                <div class="input-box">
+                  <label for="inp" class="input__label">인증코드 입력 (6자리)</label>
+                  <div class="input" data-element="form">
+                    <input type="text" class="input__text" data-element="input" id="inp">
+                    <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                  </div>
+                </div>
+                <p class="input__error" tabindex="0">에러메세지</p>
+                <div class="button-wrap button-wrap--right">
+                  <div class="sub-text">유효시간 <span>08:12</span></div>
+                  <button type="button" class="button button--secondary button--gray"><span class="button__text">다시받기</span></button>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-item input--error">
+                  <div class="input-flex">
+                    <div class="input-box">
+                      <label for="inp1-1" class="input__label">성</label>
+                      <div class="input" data-element="form">
+                        <input type="text" class="input__text" data-element="input" id="inp1-1">
+                        <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <label for="inp1-2" class="input__label">이름</label>
+                      <div class="input" data-element="form">
+                        <input type="text" class="input__text" data-element="input" id="inp1-2">
+                        <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에에에에에ㅔ에에에에에에에에에에ㅔ엥러러러러ㅓ럴메세세세지지지지지</p>
+                </div>
+              </div>
+
+              <div class="input-row">
+                <div class="input-item input--error">
+                  <div class="input-box">
+                    <label for="inp5-1" class="input__label">2개일때</label>
+                    <div class="input" data-element="form">
+                      <input type="text" class="input__text" data-element="input" id="inp5-1" placeholder="2개일때">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지 따로따로</p>
+                </div>
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp5-2" class="input__label">디자인 나와야함</label>
+                    <div class="input" data-element="form">
+                      <input type="text" class="input__text" data-element="input" id="inp5-2" placeholder="임시">
+                      <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                    </div>
+                  </div>
+                  <p class="input__error" tabindex="0">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row input-row--label">
+                <div class="input-label">생년월일</div>
+                <div class="input-item input--error">
+                  <div class="input-flex">
+                    <div class="input-box">
+                      <div class="input" data-element="form">
+                        <input type="text" class="input__text input__text--placeholder" data-element="input" title="연도 입력" placeholder="년">
+                        <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <div class="select-wrap select-wrap--line" data-element="select">
+                        <select class="select-wrap__select"  data-element="select__select" data-placeholder="월" title="월 선택">
+                          <option></option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <div class="select-wrap select-wrap--line" data-element="select">
+                        <select class="select-wrap__select"  data-element="select__select" data-placeholder="일" title="일 선택">
+                          <option></option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+              <div class="input-row input-row--label">
+                <div class="input-label">레이블위치</div>
+                <div class="input-item">
+                  <div class="select-wrap select-wrap--line" data-element="select">
+                    <select class="select-wrap__select" data-element="select__select" data-placeholder="보여지는 타이틀" title="타이틀 선택">
+                      <option></option>
+                      <option>1</option>
+                      <option>2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row input-row--label">
+                <div class="input-label">편명(고정값 노출)</div>
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp3-1" class="input__label input__label--value">7C</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp3-1" class="input__text" placeholder="예)4자리 숫자 입력">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">편명을 입력해 주세요.</p>
+                </div>
+              </div>
+              <div class="input-wrap input--line">
+                <div class="input-row input-row--amount">
+                  <div class="input-item">
+                    <div class="input-box">
+                      <label for="inp-amnunt" class="input__label">결제금액 입력</label>
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" id="inp-amnunt" placeholder="1,100,000" class="input__text">
+                        <span class="amount-text">P</span>
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                    <p tabindex="0" class="input__error">에러메세지</p>
+                  </div>
+                </div>
+
+                <div class="input-row input-row--amount input-row--amount-small">
+                  <div class="input-item">
+                    <div class="input-box">
+                      <label for="inp" class="input__label">환불금액</label>
+                      <div data-element="form" class="input">
+                        <input type="tel" data-element="input" id="inp" class="input__text" placeholder="100,000"><span class="amount-text">원</span>
+                      </div>
+                    </div>
+                    <p tabindex="0" class="input__error">에러메세지</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="input-row input-row--label">
+                <div class="input-label">주민번호</div>
+                  <div class="input-item">
+                    <div class="input-flex">
+                      <div class="input-box">
+                        <div class="input" data-element="form">
+                          <input type="text" class="input__text input__text--placeholder" data-element="input" title="주민번호 앞 6자리 입력" placeholder="앞 6자리">
+                          <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                        </div>
+                      </div>
+                      <div class="input-box input-box--resident">
+                        <div class="input" data-element="form">
+                          <input type="text" class="input__text input__text--placeholder" data-element="input" title="주민번호 뒤 1자리 입력" placeholder="">
+                          <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                        </div>
+                      </div>
+                      <div class="resident-num" aria-label="주민번호 뒤 6자리">
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                        <i aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  <p tabindex="0" class="input__error">error</p>
+                </div>
+              </div>
+
+              <div class="input-row input-row--button input-row--label">
+                <div class="input-label">인증번호</div>
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">숫자 6자리</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp" placeholder="" class="input__text">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                    <div class="verification-code">00:00</div>
+                    <div class="button-wrap">
+                      <!--
+                        인증번호 6자리 입력 후 활성화 상태
+                        <button type="button" class="button button--small button--active"><span class="button__text">인증</span></button>
+                       -->
+                      <button type="button" class="button button--small button--small-org"><span class="button__text">인증</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row input-row--label">
+                <div class="input-item input-item--flex">
+                  <div class="input-label">유효기간</div>
+                  <div class="input-flex">
+                    <div class="input-box input-box--period">
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" title="유효기간 년도 입력" placeholder="MM" class="input__text input__text--placeholder">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                    <div class="input-box input-box--period">
+                      <div data-element="select" class="select-wrap select-wrap--line">
+                        <select data-element="select__select" data-placeholder="YY" title="유효기간 월 선택" class="select-wrap__select">
+                          <option></option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지 따로따로</p>
+                </div>
+                <div class="input-item input-item--flex">
+                  <div class="input-label">CVC</div>
+                  <div class="input-box">
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" title="CVC 카드 뒷면 3자리 입력" placeholder="카드 뒷면 3자리" class="input__text" maxlength="3">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+
+              <div class="input-row input-row--label">
+                <div class="input-label">카드번호</div>
+                <div class="input-item input--error">
+                  <div class="input-flex input-flex--dash">
+                    <div class="input-box">
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" title="카드번호 앞 4자리 입력" placeholder="1234" class="input__text">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" title="카드번호 두번째 자리 4자리 입력" placeholder="1234" class="input__text">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" title="카드번호 세번째 자리 4자리 입력" placeholder="1234" class="input__text">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                    <div class="input-box">
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" title="카드번호 네번째 자리 4자리 입력" placeholder="1234" class="input__text">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">유효하지 않은 카드 번호입니다.</p>
+                </div>
+              </div>
+
+            </div>
+          </pre>
+        </item>
+      </div>
+
+      <div class="component-title">input (border)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>기본 텍스트 입력 항목으로 디자인 후 진행 예정</li>
+            <li>삭제버튼 클릭시 내용 지워짐</li>
+            <li>
+              1000 단위 쉼표가 표시 되어야 될 경우 data-string-number 추가
+            </li>
+            <li>
+              유효성 검사(Password 포함)를 포함한 form 관련 스크립트의 경우
+              개발에서 처리
+            </li>
+          </ul>
+          <pre class="component-tag">
+          <div class="input-wrap">
+            <div class="input-row">
+              <label for="inputDefault" class="input__label">기본</label>
+              <div class="input" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputDefault" placeholder="기본 텍스트 입력입니다.">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+              <p class="input__sub-text">회색 input 밑 서브텍스트</p>
+            </div>
+            <div class="input-row">
+              <label for="inputDefault4" class="input__label">비밀번호</label>
+              <div class="input" data-element="form">
+                <input type="password" class="input__text" data-element="input" id="inputDefault4" placeholder="비밀번호">
+                <button type="button" class="input__show-button" data-element="toggleShow">비밀번호 보기</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <label for="inputDefault1" class="input__label">입력됨</label>
+              <div class="input" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputDefault1" placeholder="기본 텍스트 입력입니다." value="입력됨">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <label for="inputDefault2" class="input__label">비활성화</label>
+              <div class="input" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputDefault2" placeholder="기본 텍스트 입력입니다." disabled value="비활성화">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <label for="inputDefault5" class="input__label">오류메시지</label>
+              <div class="input input--error" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputDefault5" placeholder="기본 텍스트 입력입니다." value="오류입니다.">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+              <p class="input__error" tabindex="0">아이디를 잘못 입력하셨습니다.</p>
+            </div>
+            <div class="input-row" data-element="form">
+              <label for="inputComma" class="input__label">천단위 쉼표</label>
+              <div class="input" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputComma" placeholder="기본 텍스트 입력입니다." data-string-number value="1234">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <label for="inputDefault3" class="input__label">단위입력</label>
+              <div class="input" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputDefault3" placeholder="기본 텍스트 입력입니다.">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <label for="inputEmail" class="input__label">이메일</label>
+              <div class="input" data-element="form">
+                <input type="text" class="input__text" data-element="email" id="inputEmail" placeholder="example@email.com" data-json="/dashboard/email.json">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+              <p class="input__sub-text">회색 input 밑 서브텍스트</p>
+            </div>
+            <!-- <div class="input-row">
+              <label for="inputDate" class="input__label">기본 달력</label>
+              <div class="input" data-element="form">
+                <input type="date" class="input__text" data-element="input" id="inputDate" placeholder="기본 텍스트 입력입니다.">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+            </div> -->
+            <div class="input-row">
+              <label for="inputSearch" class="input__label">검색</label>
+              <div class="input input--search" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputSearch" placeholder="검색어 입력">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                <button class="input__icon input__icon--search">
+                  <span class="hidden">검색</span>
+                </button>
+              </div>
+            </div>
+            <div class="input-row">
+              <label for="inputLocation" class="input__label">위치</label>
+              <div class="input input--location" data-element="form">
+                <input type="text" class="input__text" data-element="input" id="inputLocation" placeholder="위치 입력">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                <button class="input__icon input__icon--location">
+                  <span class="hidden">검색</span>
+                </button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input input--flight" data-element="form">
+                <span class="number">7C</span>
+                <input type="text" class="input__text" data-element="input" placeholder="편명을 입력하세요." title="편명 입력">
+                <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="input input--button input--error" data-element="form">
+                <input type="text" class="input__text" id="inputDefault6" data-element="input" placeholder="인증코드 입력(6자리)" title="인증코드 입력" value="200910" maxlength="6">
+                <div class="input__right">
+                  <div class="input__code-time">08:12</div>
+                  <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                </div>
+                <button type="button" class="button button--submit" data-element="toast" class="event" onclick="toast.init({text:'인증코드를 다시 발송했어요.', focus:'#inputDefault'});
+              "><span class="button__text">다시받기</span></button>
+              </div>
+              <!-- 에러 메세지 -->
+              <p class="input__error" tabindex="0">인증코드를 다시 확인해 주세요.</p>
+            </div>
+            <div class="input-row">
+              <div class="input input--button" data-element="form">
+                <input type="text" class="input__text" id="inputDefault7" data-element="input" placeholder="나이 입력" title="나이 입력" value="2018.12.24">
+                <div class="input__right">
+                  <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                </div>
+                <button type="button" class="button button--submit" ><span class="button__text">계산하기</span></button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div class="radio-button-wrap">
+                <span class="radio-button">
+                  <input type="radio" id="inputRadio1" name="inputRadio" class="radio-button__input">
+                  <label for="inputRadio1" class="radio-button__label">
+                    <span>남</span>
+                  </label>
+                </span>
+                <span class="radio-button">
+                  <input type="radio" id="inputRadio2" name="inputRadio" checked="checked" class="radio-button__input">
+                  <label for="inputRadio2" class="radio-button__label">
+                    <span>여</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+            <div class="input-division">
+              <div class="input-row">
+                <div class="input" data-element="form">
+                  <input type="text" class="input__text" data-element="input" id="inputDefault8" placeholder="성(한글)" disabled value="성(한글)">
+                  <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                </div>
+                <p class="input__error" tabindex="0">에러메세지</p>
+              </div>
+              <div class="input-row">
+                <div class="input" data-element="form">
+                  <input type="text" class="input__text" data-element="input" id="inputDefault9" placeholder="이름(한글)">
+                  <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                </div>
+                <p class="input__error" tabindex="0">에러메세지</p>
+              </div>
+            </div>
+            <div class="input-division input-division--number">
+              <div class="info-number">+82</div>
+              <div class="input-row">
+                <div class="input" data-element="form">
+                  <input type="text" class="input__text" data-element="input" id="inputDefault10" placeholder="기본 텍스트 입력입니다.">
+                  <button type="button" class="input__remove-button" data-element="remove">삭제</button>
+                </div>
+                <p class="input__error" tabindex="0">에러메세지</p>
+              </div>
+            </div>
+
+
+          </div></pre>
+          <template slot="footer">
+            <ul class="component-etc">
+              <li><strong>emmet</strong></li>
+            </ul>
+            <div class="component-code">
+              <pre class="inline"><code class="text">div.input-row>(label.input__label[for="input$"]{텍스트})(div.input[data-element="form"]>(input.input__text[placeholder][data-element="input"]#input$)(button[type="button"].input__remove-button[data-element="remove"]{삭제}))</code></pre>
+            </div>
+          </template>
+        </item>
+      </div>
+
+      <div class="component-title">input (number)</div>
+
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>숫자의 증가 / 감소 관련 기능</li>
+            <li>data-max 에 최대값을, data-min 에 최소값을 넣음</li>
+            <li>data-min 은 삭제 가능하지만 data-max 는 반드시 필요</li>
+            <li>최소값보다 작아지지않고 최대값보다 크게 입력되지 않음</li>
+            <li>
+              숫자 입력 후 max 보다 크면 max를, min보다 작으면 min값이 value 로
+              입력됨
+            </li>
+            <li>
+              1000 단위 쉼표가 표시 되어야 될 경우 data-string-number 추가
+            </li>
+          </ul>
+          <pre class="component-tag">
+            <div class="input-wrap input--line">
+              <div class="input-row input-row--number">
+                <label for="inputNumber" class="input__label">기본</label>
+                <div data-element="form" class="input input--number">
+                  <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기"></button>
+                    <input type="text" id="inputNumber" placeholder="숫자입력" data-element="number__input" value="1" data-max="12" data-min="1" data-string-number="" class="input__number">
+                    <span class="text">개월</span>
+                  <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                </div>
+              </div>
+            </div>
+          </pre>
+
+          <ul class="component-description">
+            type2
+          </ul>
+          <pre class="component-tag">
+            <div class="total-wrap">
+              <div class="input-wrap input--line">
+                <div class="input-row input-row--number input-row--total">
+                  <label for="inputNumber1" class="input__label">성인</label>
+                  <div data-element="form" class="input input--number input--number-small">
+                    <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기" disabled></button>
+                      <input type="text" id="inputNumber1" placeholder="숫자입력" data-element="number__input" value="1" data-max="9" data-min="1" data-string-number="" class="input__number">
+                    <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                  </div>
+                  <div class="input-total"><span class="sum">16,900</span> 원</div>
+                </div>
+                <div class="input-row input-row--number input-row--total">
+                  <label for="inputNumber2" class="input__label">소아</label>
+                  <div data-element="form" class="input input--number input--number-small">
+                    <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기" disabled></button>
+                      <input type="text" id="inputNumber2" placeholder="숫자입력" data-element="number__input" value="1" data-max="9" data-min="1" data-string-number="" class="input__number">
+                    <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                  </div>
+                  <div class="input-total"><span class="sum">9,900</span> 원</div>
+                </div>
+              </div>
+              <div class="total-amount">
+                <div class="flex-text">
+                  총 상품 금액
+                  <div class="flex-text__additional">
+                    <span class="sum">26,900</span> 원
+                  </div>
+                </div>
+                <div class="flex-text">
+                  총 상품 금액
+                  <div class="flex-text__additional">
+                    <span class="sum">26,900</span> 원
+                  </div>
+                </div>
+              </div>
+            </div>
+          </pre>
+        </item>
+      </div>
+
+      <div class="component-title">input (radio)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>디자인에 따라 마크업이 변경될 수 있음</li>
+          </ul>
+          <pre class="component-tag">
+          <div class="radio-wrap">
+            <span class="radio">
+              <input type="radio" class="radio__input" id="inputRadio1" name="inputRadio" checked>
+              <label for="inputRadio1" class="radio__label">
+                <span>before text</span>
+                <i class="radio__ico" aria-hidden="true"></i>
+              </label>
+            </span>
+            <span class="radio">
+              <input type="radio" class="radio__input" id="inputRadio2" name="inputRadio">
+              <label for="inputRadio2" class="radio__label">
+                <i class="radio__ico" aria-hidden="true"></i>
+              </label>
+            </span>
+            <span class="radio">
+              <input type="radio" class="radio__input" id="inputRadio3" name="inputRadio">
+              <label for="inputRadio3" class="radio__label">
+                <i class="radio__ico" aria-hidden="true"></i>
+                <span>after text</span>
+              </label>
+            </span>
+            <span class="radio">
+              <input type="radio" class="radio__input" id="inputRadio4" name="inputRadio" disabled>
+              <label for="inputRadio4" class="radio__label">
+                <i class="radio__ico" aria-hidden="true"></i>
+                <span>비활성화</span>
+              </label>
+            </span>
+          </div>
+          <div class="radio-wrap">
+            <div class="radio-item">
+              <span class="radio">
+                <input type="radio" id="inputRadio1" name="inputRadio" class="radio__input">
+                <label for="inputRadio1" class="radio__label">
+                  <i aria-hidden="true" class="radio__ico"></i>
+                  <span>제주 항공 여행과 상관없는 댓글입니다.</span>
+                </label>
+              </span>
+            </div>
+            <div class="radio-item">
+              <span class="radio">
+                <input type="radio" id="inputRadio2" name="inputRadio" class="radio__input">
+                <label for="inputRadio2" class="radio__label">
+                  <i aria-hidden="true" class="radio__ico"></i>
+                  <span>음란성/광고성 댓글입니다.</span>
+                </label>
+              </span>
+            </div>
+            <div class="radio-item">
+              <span class="radio">
+                <input type="radio" id="inputRadio3" name="inputRadio" class="radio__input">
+                <label for="inputRadio3" class="radio__label">
+                  <i aria-hidden="true" class="radio__ico"></i>
+                  <span>기타</span>
+                </label>
+              </span>
+            </div>
+          </div>
+          <div class="radio-wrap">
+            <div class="radio-item">
+              <span class="radio radio--label-text">
+                <input type="radio" id="inputRadio3" name="inputRadio" class="radio__input">
+                <label for="inputRadio3" class="radio__label">
+                  <i aria-hidden="true" class="radio__ico"></i>
+                  <span>
+                    <strong class="radio__label-title">FLY</strong>
+                    <em class="radio__label-text">운임 기본 제공 위탁 수하물 : 0KG</em>
+                  </span>
+                </label>
+              </span>
+            </div>
+            <div class="radio-item">
+              <span class="radio radio--label-text">
+                <input type="radio" id="inputRadio3" name="inputRadio" class="radio__input">
+                <label for="inputRadio3" class="radio__label">
+                  <i aria-hidden="true" class="radio__ico"></i>
+                  <span>
+                    <strong class="radio__label-title">FLY BAG</strong>
+                    <em class="radio__label-text">운임 기본 제공 위탁 수하물 : 15KG</em>
+                  </span>
+                </label>
+              </span>
+            </div>
+          </div>
+
+          <div class="radio-wrap">
+            <div class="radio-flex">
+              <div class="radio-item">
+                <span class="radio">
+                  <input type="radio" id="inputRadio2" name="inputRadio" class="radio__input">
+                  <label for="inputRadio2" class="radio__label">
+                    <i aria-hidden="true" class="radio__ico"></i>
+                    <span>00시~06시</span>
+                  </label>
+                </span>
+              </div>
+              <div class="radio-item">
+                <span class="radio">
+                  <input type="radio" id="inputRadio3" name="inputRadio" class="radio__input">
+                  <label for="inputRadio3" class="radio__label">
+                    <i aria-hidden="true" class="radio__ico"></i>
+                    <span>06시~12시</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+            <div class="radio-flex">
+              <div class="radio-item">
+                <span class="radio">
+                  <input type="radio" id="inputRadio4" name="inputRadio" class="radio__input">
+                  <label for="inputRadio4" class="radio__label">
+                    <i aria-hidden="true" class="radio__ico"></i>
+                    <span>12시~18시</span>
+                  </label>
+                </span>
+              </div>
+              <div class="radio-item">
+                <span class="radio">
+                  <input type="radio" id="inputRadio5" name="inputRadio" class="radio__input">
+                  <label for="inputRadio5" class="radio__label">
+                    <i aria-hidden="true" class="radio__ico"></i>
+                    <span>18시~24시</span>
+                  </label>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+        </pre>
+        </item>
+      </div>
+
+      <div class="component-title">input (switch)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>디자인에 따라 마크업이 변경될 수 있음</li>
+          </ul>
+          <pre class="component-tag">
+            <div class="switch-wrap">
+              <span class="switch">
+                <input type="checkbox" class="switch__input" id="switchItem1">
+                <label for="switchItem1" class="switch__label">
+                  <i class="switch__ico"></i>
+                  <span>기본</span>
+                </label>
+              </span>
+              <span class="switch">
+                <input type="checkbox" class="switch__input" id="switchItem2">
+                <label for="switchItem2" class="switch__label">
+                  <span>기본</span>
+                  <i class="switch__ico"></i>
+                </label>
+              </span>
+            </div>
+          </pre>
+        </item>
+      </div>
+
+      <div class="component-title">input (check)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>디자인에 따라 마크업이 변경될 수 있음</li>
+            <li>전체 체크 기능(비활성화되어있는 체크박스는 제외)</li>
+            <li>전체 체크가 불필요한 경우 data-element 삭제</li>
+          </ul>
+          <pre class="component-tag">
+          <div class="check-wrap" data-element="checkList">
+            <span class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="inputCheck1" data-element="checkAll">
+              <label for="inputCheck1" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+                <span>전체 체크</span>
+              </label>
+            </span>
+            <span class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="inputCheck2" data-element="checkbox" checked>
+              <label for="inputCheck2" class="checkbox__label">
+                <span>before text</span>
+                <i class="checkbox__ico" aria-hidden="true"></i>
+              </label>
+            </span>
+            <span class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="inputCheck3" data-element="checkbox">
+              <label for="inputCheck3" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+              </label>
+            </span>
+            <span class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="inputCheck4" data-element="checkbox">
+              <label for="inputCheck4" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+                <span>after text</span>
+              </label>
+            </span>
+            <span class="checkbox">
+              <input type="checkbox" class="checkbox__input" id="inputCheck5" disabled data-element="checkbox">
+              <label for="inputCheck5" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+                <span>비활성화</span>
+              </label>
+            </span>
+            <span class="checkbox checkbox--small">
+              <input type="checkbox" class="checkbox__input" id="inputCheck6"  data-element="checkbox">
+              <label for="inputCheck6" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+                <span>작은체크</span>
+              </label>
+            </span>
+          </div></pre>
+        </item>
+      </div>
+
+      <div class="component-title">input (check) type-line</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>디자인에 따라 마크업이 변경될 수 있음</li>
+            <li>텍스트 체크활성화는 label>span.acitve</li>
+          </ul>
+          <pre class="component-tag">
+          <div class="check-wrap">
+            <span class="checkbox checkbox--line">
+              <input type="checkbox" class="checkbox__input" id="inputCheckLine2" checked>
+              <label for="inputCheckLine2" class="checkbox__label">
+                <span class="active">before text</span>
+                <i class="checkbox__ico" aria-hidden="true"></i>
+              </label>
+            </span>
+            <span class="checkbox checkbox--line">
+              <input type="checkbox" class="checkbox__input" id="inputCheckLine3">
+              <label for="inputCheckLine3" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+              </label>
+            </span>
+            <span class="checkbox checkbox--line">
+              <input type="checkbox" class="checkbox__input" id="inputCheckLine4">
+              <label for="inputCheckLine4" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+                <span>after text</span>
+              </label>
+            </span>
+            <span class="checkbox checkbox--line">
+              <input type="checkbox" class="checkbox__input" id="inputCheckLine5" disabled>
+              <label for="inputCheckLine5" class="checkbox__label">
+                <i class="checkbox__ico" aria-hidden="true"></i>
+                <span>비활성화</span>
+              </label>
+            </span>
+          </div></pre>
+        </item>
+      </div>
+
+      <div class="component-title">textarea</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>디자인에 따라 마크업이 변경될 수 있음</li>
+            <li>byte check 완료 (UTF-8 기준), 필요에따라 삭제 가능</li>
+          </ul>
+          <pre class="component-tag">
+            <div class="textarea-wrap">
+              <label for="textarea1" class="textarea__label">textarea</label>
+              <div class="textarea" data-element="form">
+                <textarea class="textarea__input" id="textarea1" cols="30" rows="5" data-element="textarea"></textarea>
+                <div class="textarea__info">
+                  <span class="textarea__text">내용을 입력해 주세요.</span>
+                  <span data-element="checkByte" class="textarea__byte">
+                    <span data-element="current" class="textarea__byte-current">0</span>
+                    <span class="textarea__byte-sepherator">/</span>
+                    <span data-element="max" class="textarea__byte-max">100</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </pre>
+          <template slot="footer">
+            <ul class="component-etc">
+              <li><strong>emmet</strong></li>
+            </ul>
+            <div class="component-code">
+              <pre class="inline"><code class="text">(div.textarea-wrap>(label[for="textarea01"])div.textarea[data-element="form"]>(textarea.textarea__input#textarea01[col="30"][row="5"][data-element="textarea"])(span.textarea__byte[data-element="checkByte"]>(span.textarea__byte-current[data-element="current"]{0})(span.textarea__byte-sepherator{/})(span.textarea__byte-max[data-element="max"])))</code></pre>
+            </div>
+          </template>
+        </item>
+      </div>
+
+      <div class="component-title">input (file)</div>
+      <div class="component-sub">
+        <item guide-type="html">
+          <ul class="component-description">
+            <li>파일 첨부 기능 디자인 미확정</li>
+            <li>파일 클릭시 thumbnail 화면 노출</li>
+            <li>기본 최대 이미지 업로드는 8개 까지 가능하며 data-options='{"imageMax": $}' 를 통해 증감 가능</li>
+            <li>blob 형태로 저장되므로 serialize 시 blob 포함필요</li>
+          </ul>
+          <pre class="component-tag">
+          <div class="input-wrap">
+            <div class="input-row">
+              <div class="file" data-element="file__wrap" data-options='{"imageMax": 2}'>
+                <label for="inputFile" class="file__label" data-element="file__label" aria-label="파일첨부"></label>
+                <input type="file" class="file__input" id="inputFile" data-element="file__input" multiple>
+                <div class="file__images" data-element="file__images"></div>
+              </div>
+            </div>
+          </div></pre>
+          <template slot="footer">
+            <ul class="component-etc">
+              <li>
+                <strong>Event</strong>
+                <ul>
+                  <li>afterChange: 변경(추가/삭제) 될 경우 실행</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="component-code">
+              <pre class="inline"><code class="text">var yourVariable = $('[data-element="file__wrap"]');
+
+  yourVariable.on('afterChange', (plugin, image) {
+    console.log(plugin, image)
+  })
+</code></pre>
+            </div>
+          </template>
+        </item>
+      </div>
+    </div>
+
+    <script src="../../assets/js/lib/lib.min.js"></script>
+    <script src="../../dashboard/highlight.pack.js"></script>
+    <script src="../../assets/js/plugin.js"></script>
+    <script src="../../assets/js/common.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

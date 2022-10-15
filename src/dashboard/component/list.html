@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Link List</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <div class="arrow-list">
+          <a href="#" class="arrow-list__item">
+            <span class="arrow-list__text">항공권 구매 시 포인트 적립 안내</span>
+          </a>
+          <a href="#" class="arrow-list__item">
+            <span class="arrow-list__text">누락포인트 적립 안내</span>
+          </a>
+        </div>
+        <div class="arrow-list arrow-list--box">
+          <a href="#" class="arrow-list__item">
+            <span class="arrow-list__text">기본 제공 수하물</span>
+          </a>
+          <a href="#" class="arrow-list__item">
+            <span class="arrow-list__text">초과 수하물</span>
+          </a>
+          <a href="#" class="arrow-list__item">
+            <span class="arrow-list__text">특수 수하물</span>
+          </a>
+        </div>
+      </item>
+    </div>
+    <div class="component-title">Label List</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>label 이 있는 목록</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="label-list">
+            <div class="label-list__row">
+              <div class="label-list__label">관리번호</div>
+              <div class="label-list__content">PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 </div>
+            </div>
+            <div class="label-list__row">
+              <div class="label-list__label">습득 날짜</div>
+              <div class="label-list__content">2020.09.28</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Label List</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>label 이 있는 목록</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="label-list">
+            <div class="label-list__row">
+              <div class="label-list__label">관리번호</div>
+              <div class="label-list__content">PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 PUS00275 </div>
+            </div>
+            <div class="label-list__row">
+              <div class="label-list__label">습득 날짜</div>
+              <div class="label-list__content">2020.09.28</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">List(default)</div>
+    <div class="component-sub">
+      <!-- <item guide-type="html">
+        <ul class="component-description">
+          <li>기본 목록</li>
+        </ul>
+        <pre class="component-tag">
+          <ul class="default-list">
+            <li class="default-list__item">목록 1</li>
+            <li class="default-list__item">목록 2</li>
+            <li class="default-list__item">목록 3</li>
+            <li class="default-list__item">목록 4</li>
+            <li class="default-list__item">목록 5</li>
+          </ul></pre>
+      </item> -->
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>리스트 : 상품 목록 - 세로형</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="list-product">
+            <a href="#none" class="list-product__item">
+              <div class="list-product__image">
+                <img src="../../assets/images/@temp/@product_sample.png" alt="상품이미지">
+                <div class="label-wrap">
+                  <span class="label-wrap__item label-wrap__item--new">NEW</span>
+                  <span class="label-wrap__item label-wrap__item--sale">SALE</span>
+                  <span class="label-wrap__item label-wrap__item--best">BEST</span>
+                </div>
+              </div>
+              <div class="list-product__info">
+                <div class="list-product__sub-text eng">Fried Fish & Rice</div>
+                <div class="list-product__title">제주 오메오메 오메기메 오메기메 오메기메 오메기메 오메기메 오메기떡</div>
+                <div class="cost-wrap">
+                  <div class="cost-wrap__before">
+                    <span class="cost">6,000원</span>
+                    <span class="discount" aria-label="할인">10%</span>
+                  </div>
+                  <div class="cost-wrap__after">
+                    <span class="cost">5,000원</span>
+                    <div class="currency-wrap">
+                      <span>5$</span>
+                      <span>500￥</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cost-wrap--single-line">
+                  <div class="cost-wrap__before">
+                    <span class="cost">6,000원</span>
+                    <span aria-label="할인" class="discount">10%</span>
+                  </div>
+                  <div class="cost-wrap__after">
+                    <span class="cost">5,000원</span>
+                  </div>
+                </div>
+                <div class="cost-wrap">
+                  <div class="cost-wrap__before">
+                    <span class="cost">6,000원</span>
+                    <span class="discount">1000원 할인</span>
+                  </div>
+                  <div class="cost-wrap__after">
+                    <span class="cost">5,000원</span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#none" class="list-product__item">
+              <div class="list-product__image">
+                <img src="../../assets/images/@temp/@product_sample.png" alt="상품이미지">
+                <div class="label-wrap">
+                  <span class="label-wrap__item label-wrap__item--new">NEW</span>
+                  <span class="label-wrap__item label-wrap__item--sale">SALE</span>
+                </div>
+              </div>
+              <div class="list-product__info">
+                <div class="list-product__sub-text eng">Fried Fish & Rice</div>
+                <div class="list-product__title">제주 오메오메 오메기메 오메기메 오메기메 오메기메 오메기메 오메기떡</div>
+                <div class="cost-wrap">
+                  <div class="cost-wrap__before">
+                    <span class="cost">6,000원</span>
+                    <span class="discount" aria-label="할인">10%</span>
+                  </div>
+                  <div class="cost-wrap__after">
+                    <span class="cost">5,000원</span>
+                    <div class="currency-wrap">
+                      <span>5$</span>
+                      <span>500￥</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>리스트 : card 이미지 - 가로형</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="list-card">
+            <a href="#none" class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@product_sample2.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">마술공연</strong>
+                <p class="list-card__text">기내에서 펼쳐지는<br>신비한 마술의 세계로 초대합니다.</p>
+              </div>
+            </a>
+            <a href="#none" class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@product_sample2.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">캐리커처, 캘리그라피</strong>
+                <p class="list-card__text">행복한 순간을 담은<br>그림과 손글씨를 선물해 드립니다.</p>
+              </div>
+            </a>
+          </div>
+        </pre>
+      </item>
+
+      <div class="component-title">Bullet List</div>
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>블릿 리스트</li>
+        </ul>
+        <pre class="component-tag">
+          <ul class="list-guide">
+            <li class="list-guide__item">국내선 : 인천, 김포 및 일부 지방 노선 (단거리 노선의 경우 식사류 미제공)</li>
+            <li class="list-guide__item">국제선 : 동남아시아, 중국, 괌 노선 등 (일부 노선의 경우 검역 대상 상품 미제공)</li>
+            <li class="list-guide__item"><span class="point">실시간 계좌이체로 구매한 항공권은 구매일로부터 최대 180일 이내에만 인터넷에서 환불이 가능합니다.</span> 기간이 경과된 항공권의 경우 <span class="colored">제주항공 고객센터 통해 환불 신청 해주시기바랍니다.</span></li>
+            <li class="list-guide__item">
+              아래에 해당하는 병역의무자가 출국을 하고자 할 경우, 반드시 병무청의 국외여행허가를 받아야 합니다.
+              <ol class="list-guide list-guide--number">
+                <li class="list-guide__item">25세 이상인 병역 준비역 (병역판정검사 대상, 현역병 입영대상) 또는 보충역으로서 소집되지 아니한 사람</li>
+                <li class="list-guide__item">25세 이상인 병역 준비역 (병역판정검사 대상, 현역병 입영대상) 또는 보충역으로서 소집되지 아니한 사람</li>
+              </ol>
+            </li>
+          </ul>
+
+          <ul class="list-guide list-guide--bold">
+            <li class="list-guide__item">이메일에 송부된 링크를 클릭하여 다음 단계를 진행해주세요.</li>
+            <li class="list-guide__item">이메일이 오지 않았을 경우 스팸 메일함을 확인해 주세요.</li>
+            <li class="list-guide__item">아이디: <span class="colored colored--point">jejumember</span></li>
+          </ul>
+
+          <ul class="list-guide list-guide--hyphen">
+            <li class="list-guide__item">국내선 : 인천, 김포 및 일부 지방 노선 (단거리 노선의 경우 식사류 미제공)</li>
+            <li class="list-guide__item">국제선 : 동남아시아, 중국, 괌 노선 등 <span class="bold">일부 노선의 경우 검역 대상 상품 미제공)</span>(</li>
+          </ul>
+
+          <ul class="list-guide list-guide--asterisk">
+            <li class="list-guide__item">
+              홈페이지에서 항공권을 구매하시는 경우 안전한 전자상거래를 위하여 안전결제(ISP), 안심클릭(MPI)을 통한 신용카드 인증 서비스를 실시하고 있습니다.
+            </li>
+          </ul>
+
+          <ul class="list-guide list-guide--asterisk list-guide--asterisk-lignt-gray">
+            <li class="list-guide__item">파일은 최대 5MB까지 첨부할 수 있습니다. (파일 형식 : PDF)  </li>
+          </ul>
+
+          <ul class="list-guide list-guide--asterisk list-guide--asterisk-gray">
+            <li class="list-guide__item">
+              국내선,국제선 (관/사이판 제외)
+            </li>
+          </ul>
+
+          <ul class="list-guide list-guide--asterisk list-guide--asterisk-gray list-guide--right">
+            <li class="list-guide__item">
+              오른쪽 정렬
+            </li>
+          </ul>
+
+          <ul class="component-description">
+            <li>타이틀 + 블릿 리스트</li>
+          </ul>
+          <div class="list-wrap">
+            <div class="text__default text--bold">서비스 제공 노선</div>
+            <ul class="list-guide">
+              <li class="list-guide__item">국내선 : 인천, 김포 및 일부 지방 노선 (단거리 노선의 경우 식사류 미제공)</li>
+              <li class="list-guide__item">국제선 : 동남아시아, 중국, 괌 노선 등 (일부 노선의 경우 검역 대상 상품 미제공)</li>
+            </ul>
+          </div>
+
+          <div class="list-wrap">
+            <div class="text__large">NEW CLASS 노선 안내</div>
+            <div class="text__default">NEW CLASS 노선 안내</div>
+            <ul class="list-guide">
+              <li class="list-guide__item">부산(PUS) ㅡ 싱가포르(SIN)</li>
+              <li class="list-guide__item">부산(PUS) ㅡ 후쿠오카(FUK)</li>
+            </ul>
+          </div>
+
+          <ul class="component-description">
+            <li>리스트 color #666</li>
+          </ul>
+          <ul class="list-guide list-guide--color-gray">
+            <li class="list-guide__item">국내선 : 인천, 김포 및 일부 지방 노선 (단거리 노선의 경우 식사류 미제공)</li>
+          </ul>
+
+          <ul class="component-description">
+            <li>리스트 color #888</li>
+          </ul>
+          <ul class="list-guide list-guide--color-light-gray">
+            <li class="list-guide__item">업무시간 : 05:10 ~ 18:30</li>
+            <li class="list-guide__item">출국심사시간 : 05:30 ~ 18:30</li>
+            <li class="list-guide__item">마감시간 : 출발 3시간 전 20분전</li>
+            <li class="list-guide__item">공항이동시간 : 60~100분 (배차간격 15~20분)</li>
+          </ul>
+
+          <ul class="component-description">
+            <li>리스트 color #000</li>
+          </ul>
+          <ul class="list-guide list-guide--color-black">
+            <li class="list-guide__item">국내선 : 인천, 김포 및 일부 지방 노선 (단거리 노선의 경우 식사류 미제공)</li>
+            <li class="list-guide__item">국제선 : 동남아시아, 중국, 괌 노선 등 (일부 노선의 경우 검역 대상 상품 미제공)</li>
+          </ul>
+
+          <ul class="component-description">
+            <li>블릿 small</li>
+          </ul>
+          <ul class="list-guide list-guide--small list-guide--color-gray">
+            <li class="list-guide__item">국내선 : 인천, 김포 및 일부 지방 노선 (단거리 노선의 경우 식사류 미제공)</li>
+            <li class="list-guide__item">국제선 : 동남아시아, 중국, 괌 노선 등 (일부 노선의 경우 검역 대상 상품 미제공)</li>
+          </ul>
+
+          <ul class="component-description">
+            <li>list number + border</li>
+          </ul>
+          <ol class="list-guide list-guide--number list-guide--border">
+            <li class="list-guide__item">예기치 못한 여행 중 안전사고가 발생한 경우</li>
+            <li class="list-guide__item">여행 중 휴대폰의 도난 및 파손으로 손실을 입은 경우</li>
+            <li class="list-guide__item">여행 중 법률상의 배상 책임 문제가 발생한 경우</li>
+            <li class="list-guide__item">여행을 떠나기 전 일정이 취소가 된 경우</li>
+          </ol>
+
+          <ul class="component-description">
+            <li>list flex</li>
+          </ul>
+          <ul class="list-guide list-guide--flex">
+            <li class="list-guide__item">번들 2PLUS<span class="text">10,000 원</span></li>
+            <li class="list-guide__item">번들 3PLUS<span class="text">20,000 원</span></li>
+            <li class="list-guide__item">위탁 수화물 15Kg<span class="text">5,000 원</span></li>
+            <li class="list-guide__item">사전 좌석<span class="text">5,000 원</span></li>
+          </ul>
+
+          <div class="list-wrap list-wrap--colored">
+            <div class="text__large">운항 정보</div>
+            <p class="text__default">제주항공의 항공편 현황을 편명 또는 구간으로 조회할 수 있습니다.</p>
+            <ul class="list-guide">
+              <li class="list-guide__item">운항 스케줄은 정부인가 조건이며, 출도착 시각과 기종은 예고 없이 변경될 수 있습니다.</li>
+              <li class="list-guide__item">출도착 시간은 현지시간 기준입니다. (+1은 다음날)</li>
+            </ul>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>타이틀 + 텍스트</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="description-list">
+            <div class="description-list__item">
+              <div class="description-list__title">할인율</div>
+              <div class="description-list__text">15%(주말/성수기 제외)</div>
+            </div>
+            <div class="description-list__item">
+              <div class="description-list__title">적용조건</div>
+              <div class="description-list__text">“제주도에 등록기준지를 두고 있으면서 타지역에 거주하는 자 (배우자/직계비속 포함)”,”증빙서류”</div>
+            </div>
+            <div class="description-list__item">
+              <div class="description-list__title">증빙서류</div>
+              <div class="description-list__text">재외제주도민증 또는 가족관계증명서</div>
+            </div>
+            <div class="description-list__item">
+              <div class="description-list__title">단체할인</div>
+              <div class="description-list__text">
+                <ul class="list-guide">
+                  <li class="list-guide__item">10명 이상 예매를 원하시는 경우 홈페이지 상단 메뉴상의 항공권 예매 - 단체예약신청으로 문의바랍니다. (로그인 필요)</li>
+                  <li class="list-guide__item">여행사회원일경우<a class="link" href="http://jj.jejuair.net" target="_blank">http://jj.jejuair.net</a> 로 가입/문의 바랍니다</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="box-list">
+            <div class="box-list__item">
+              <div class="box-list__info">
+                <div class="box-list__title">FLY BAG</div>
+                <p class="box-list__text">아세요? 알뜰한 살림꾼 고객님들은
+                    이미 이용중이세요 추천 드려요 </p>
+              </div>
+            </div>
+            <div class="box-list__item">
+              <div class="box-list__info fly-icon">
+                <div class="box-list__title">FLY</div>
+                <p class="box-list__text">한 손에 들리는 짐 하나로 떠나는 여행! 합리적인 Fly</p>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>박스 버튼 링크</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="box-link-list">
+            <div class="box-link-list__item">
+              <a href="#"><span>휴대전화 인증 회원가입</span></a>
+            </div>
+            <div class="box-link-list__item">
+              <a href="#"><span>아이핀 인증 회원가입</span></a>
+            </div>
+            <div class="box-link-list__item">
+              <a href="#" download><span class="icon-download">동북아 노선</span></a>
+            </div>
+          </div>
+          <br>
+          <div class="box-link-list box-link-list--arrow">
+            <div class="box-link-list__item">
+              <a href="#">
+                <span class="text__default text--bold">인천-세부</span>
+                <p class="box-link-list__sub-text">편도총액 <strong class="box-link-list__amount">199,000원~</strong></p>
+              </a>
+            </div>
+            <div class="box-link-list__item">
+              <a href="#">
+                <span class="text__default text--bold">인천-세부</span>
+                <p class="box-link-list__sub-text">편도총액 <strong class="box-link-list__amount">199,000원~</strong></p>
+              </a>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>step + img</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="list-step-wrap">
+            <div class="list-step">
+              <p class="list-step__title">01<span class="list-step__title-sub">탑승권과 여권스캔</span></p>
+              <div class="list-step__img"><img src="../../assets/images/@temp/@unsplash.png" alt=""> </div>
+            </div>
+            <div class="list-step">
+              <p class="list-step__title">02<span class="list-step__title-sub">수하물 투입</span></p>
+              <div class="list-step__img"><img src="../../assets/images/@temp/@unsplash.png" alt=""> </div>
+            </div>
+            <div class="list-step">
+              <p class="list-step__title">03<span class="list-step__title-sub">수하물 위탁규정 확인</span></p>
+              <div class="list-step__img"><img src="../../assets/images/@temp/@unsplash.png" alt=""> </div>
+            </div>
+            <div class="list-step">
+              <p class="list-step__title">04<span class="list-step__title-sub">수하물 태그 부착</span></p>
+              <div class="list-step__img"><img src="../../assets/images/@temp/@unsplash.png" alt=""> </div>
+            </div>
+            <div class="list-step">
+              <p class="list-step__title">05<span class="list-step__title-sub">확인증 발행</span></p>
+              <div class="list-step__img"><img src="../../assets/images/@temp/@unsplash.png" alt=""> </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>
