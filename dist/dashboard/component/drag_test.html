@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Drag test</div>
+    <div class="component-sub">
+      <div class="drag-wrap" data-drag-wrap id="asd">
+        <div data-drag-ground style="width: 100%;height: 500px; border: 1px solid red;cursor: grab"></div>
+
+      </div>
+      <input type="text" id="dragDirection">
+    </div>
+
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

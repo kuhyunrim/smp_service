@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">헤더</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>상황이 맞게 직접 입력</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="header" id="header">
+            <header class="header__inner">
+              <div class="header__logo">
+                <span class="hidden">JEJU air</span>
+              </div>
+
+              <div class="header__button-wrap">
+                <button class="header__ticket">
+                  <span class="blind">티켓</span>
+                </button>
+                <button class="gnb__button">
+                  <span class="gnb__button-inner"></span>
+                  <span class="blind">검색메뉴 토글</span>
+                </button>
+              </div>
+            </header>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner">
+              <button type="button" class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+
+              <div class="header__button-wrap">
+                <button class="gnb__button">
+                  <span class="gnb__button-inner"></span>
+                  <span class="blind">검색메뉴 토글</span>
+                </button>
+              </div>
+            </header>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner">
+              <button class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+              <h2 class="header__page-name">1:1 문의 작성</h2>
+
+              <div class="header__button-wrap">
+                <button class="gnb__button">
+                  <span class="gnb__button-inner"></span>
+                  <span class="blind">검색메뉴 토글</span>
+                </button>
+              </div>
+            </header>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner">
+              <button class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+              <div class="stepper header__stepper">
+                <ol class="stepper__group">
+                  <li class="stepper__list">1</li>
+                  <li class="stepper__list stepper__list--active" aria-current="step">2</li>
+                  <li class="stepper__list stepper__list--disabled">3</li>
+                  <li class="stepper__list stepper__list--disabled">4</li>
+                  <li class="stepper__list stepper__list--disabled">5</li>
+                </ol>
+              </div>
+              <div class="header__button-wrap">
+                <button type="button" class="header__trigger-button">닫기</button>
+              </div>
+            </header>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner">
+              <button class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+              <div class="stepper header__stepper">
+                <ol class="stepper__group">
+                  <li class="stepper__list stepper__list--complete">1</li>
+                  <li aria-current="step" class="stepper__list stepper__list--active">2</li>
+                  <li class="stepper__list stepper__list--disabled">3</li>
+                </ol>
+              </div>
+            </header>
+          </div>
+
+
+          <div class="header" id="header">
+            <header class="header__inner">
+              <div class="header__logo">
+                <span class="hidden">JEJU air</span>
+              </div>
+              <div class="header__select">
+                <div class="select-wrap" data-element="select">
+                  <!--
+                    data-title : button 첫 문구 선택
+                    title : 접근성 문구 & bottomsheet 타이틀 문구
+                    option : .on 추가시 default selected
+                  -->
+                  <select class="select-wrap__select" data-element="select__select" data-placeholder="선택해 주세요" title="언어 선택">
+                    <option></option>
+                    <option value="1" selected>대한민국</option>
+                    <option value="2">국가</option>
+                    <option value="3">국가</option>
+                    <option value="4">국가</option>
+                  </select>
+                </div>
+              </div>
+            </header>
+          </div>
+
+          <div class="header">
+            <div >
+            <div class="header" id="header">
+              <header class="header__inner">
+                <button class="header__button">
+                  <span class="hidden">이전으로</span>
+                </button>
+                <div class="stepper header__stepper">
+                  <ol class="stepper__group">
+                    <li class="stepper__list">1</li>
+                    <li aria-current="step" class="stepper__list stepper__list--active">2</li>
+                    <li class="stepper__list stepper__list--disabled">3</li>
+                  </ol>
+                </div>
+                <div class="header__text">
+                  <span class="color-000">5</span>명 중 <span class="color-org">1</span>명 입력완료
+                </div>
+              </header>
+            </div>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner">
+              <button class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+
+              <div class="stepper header__stepper">
+                <ol class="stepper__group">
+                  <li class="stepper__list">1</li>
+                  <li class="stepper__list">2</li>
+                  <li aria-current="step" class="stepper__list  stepper__list--active">3</li>
+                  <li class="stepper__list stepper__list--disabled">4</li>
+                  <li class="stepper__list stepper__list--disabled">5</li>
+                </ol>
+              </div>
+
+              <div class="header__text header__text--gray-box">
+                <span>2</span>/<span>3</span> <span>수하물 구매</span>
+              </div>
+            </header>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner header__inner-bg header__inner-bg--org">
+              <button type="button" class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+              <h2 class="header__page-name">리프레시 포인트</h2>
+              <div class="header__button-wrap">
+                <button class="header__card">
+                  <span class="blind">회원카드 팝업</span>
+                </button>
+                <button class="gnb__button">
+                  <span class="gnb__button-inner"></span>
+                  <span class="blind">검색메뉴 토글</span>
+                </button>
+              </div>
+            </header>
+          </div>
+
+          <div class="header" id="header">
+            <header class="header__inner header__inner-bg header__inner-bg--gray">
+              <button class="header__button">
+                <span class="hidden">이전으로</span>
+              </button>
+              <h2 class="header__page-name">카드스캔</h2>
+            </header>
+          </div>
+
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">상단 인포</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+
+        </ul>
+        <pre class="component-tag">
+          <div class="top-info">
+            <div class="select-wrap select-wrap--inline" data-element="select">
+              <select data-element="select__select" data-placeholder="일반결제" title="결제 방식 선택" class="select-wrap__select">
+                <option></option>
+                <option value="1" class="on">일반결제</option>
+                <option value="2">포인트결제</option>
+              </select>
+            </div>
+            <div class="top-info__additional">
+              <div class="switch-wrap">
+                <span class="switch">
+                  <input type="checkbox" class="switch__input" id="switchItem1">
+                  <label for="switchItem1" class="switch__label">
+                    <span>단체예약(10인 이상)</span>
+                    <i class="switch__ico"></i>
+                  </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">기타</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+
+        </ul>
+        <pre class="component-tag">
+          <span class="tooltip-label">툴팁</span>
+          <span class="tooltip" data-element="tooltip" role="tooltip">
+            <button type="button" class="tooltip__button" aria-label="$title 툴팁 열기" data-element="tooltip__anchor"></button>
+            <span class="tooltip__panel" data-element="tooltip__panel">
+              <span class="tooltip-arrow" aria-hidden="true"></span>
+              <span class="tooltip-title">$title</span>
+              <span class="tooltip-desc">내용내용내용</span>
+              <button type="button" class="tooltip-close" aria-label="툴팁 닫기" data-element="tooltip__close"></button>
+            </span>
+          </span>
+        </pre>
+      </item>
+
+      <!-- <item guide-type="html">
+        <ul class="component-description">
+
+        </ul>
+        <pre class="component-tag">
+          <span class="tooltip-label">툴팁(가로형)</span>
+          <span class="tooltip" data-element="tooltip" role="tooltip" data-width="190" data-position="row">
+            <button type="button" class="tooltip__button" aria-label="$title 툴팁 열기" data-element="tooltip__anchor"></button>
+            <span class="tooltip__panel" data-element="tooltip__panel">
+              <span class="tooltip-arrow" aria-hidden="true"></span>
+              <span class="tooltip-title">$title</span>
+              <span class="tooltip-desc">내용내용내용</span>
+              <button type="button" class="tooltip-close" aria-label="툴팁 닫기" data-element="tooltip__close"></button>
+            </span>
+          </span>
+        </pre>
+      </item> -->
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="img-box">
+            <div class="img-box__item">
+              <div class="img-box__img">
+                <img src="../../assets/images/icon/icon-ticket-online.png" alt="">
+              </div>
+              <div class="img-box__text">
+                제주항공<br>온라인 구매
+              </div>
+            </div>
+
+            <div class="img-box__item">
+              <div class="img-box__img">
+                <img src="../../assets/images/icon/icon-ticket-airport.png" alt="">
+              </div>
+              <div class="img-box__text">
+                공항 지점<br>고객센터 구매
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="notice-box">
+            <h5 class="notice-box__title">알아두세요!</h5>
+            <p class="notice-box__text">수하물 파손에 대한 배상은 수하물을 인도받은 날로부터 7일 이내에 신고해야 합니다.</p>
+            <p class="notice-box__text">수하물 파손에 대한 배상은 수하물을 인도받은 날로부터 7일 이내에 신고해야 합니다.</p>
+          </div>
+
+          <div class="notice-box notice-box--orange">
+            <h2 class="notice-box__title">회원 탈퇴 시 유의사항</h2>
+            <p class="notice-box__text">회원 탈퇴가 완료되면 회원님의 개인정보는 즉시 삭제됩니다.</p>
+            <p class="notice-box__text">회원 탈퇴 처리 후에는 회원님의 <span class="notice-box__text--org">개인정보를 복원할 수 없습니다.</span></p>
+            <p class="notice-box__text"><span class="notice-box__text--org">재가입은 탈퇴일로부터 3일 후에</span> 가능합니다.</p>
+            <p class="notice-box__text"><span class="notice-box__text--org">탈퇴한 아이디는 재사용이 불가</span>합니다.</p>
+            <ul>
+              <li class="notice-box__text notice-box__text--hyphen">전화번호 : 070-7420-1699</li>
+              <li class="notice-box__text notice-box__text--hyphen">운영시간 08:30~17:00 (주말 및 공휴일 제외)</li>
+            </ul>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <p class="notice-text"><span class="bullet">*</span> 결제 문의 : 네이버페이 고객센터 <br>
+          (1588-3819. helpcustomer@naver.com)</p>
+          <p class="notice-text notice-text--type2"> 결제 문의 : 네이버페이 고객센터 <br>
+          (1588-3819. helpcustomer@naver.com)</p>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="horizontal-list">
+            <div class="horizontal-list__item">
+              <div class="img">
+                <img src="../../assets/images/icon/icon-lounge-living.png" alt="">
+              </div>
+              <div class="text">리빙룸</div>
+            </div>
+            <div class="horizontal-list__item">
+              <div class="img">
+                <img src="../../assets/images/icon/icon-lounge-food.png" alt="">
+              </div>
+              <div class="text">시그니처<br>푸드존</div>
+            </div>
+            <div class="horizontal-list__item">
+              <div class="img">
+                <img src="../../assets/images/icon/icon-lounge-family.png" alt="">
+              </div>
+              <div class="text">가족용<br>프라이빗 부스</div>
+            </div>
+            <div class="horizontal-list__item">
+              <div class="img">
+                <img src="../../assets/images/icon/icon-lounge-powder.png" alt="">
+              </div>
+              <div class="text">러블리<br>파우더룸</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="finish-item-wrap finish-item-wrap--full">
+            <div class="finish-item">
+              <div class="finish-item__img"><img src="../../assets/images/icon/icon-check-completion.png" alt=""></div>
+              <p class="finish-item__title">휴면계정 해제 완료</p>
+              <p class="finish-item__text"><span class="color--org text--bold">kimjeju</span>님의 계정의 휴면 상태가 해제되었습니다.<br>서비스 이용을 위해 로그인해주세요.</p>
+            </div>
+          </div>
+
+          <div class="finish-item-wrap">
+            <div class="finish-item">
+              <div class="finish-item__img"><img src="../../assets/images/icon/icon-check-completion.png" alt=""></div>
+              <p class="finish-item__title"><span class="color--org">선예매 수수료</span><br>구매가 완료되었습니다.</p>
+            </div>
+          </div>
+
+          <div class="finish-item no-data">
+            <div class="finish-item__img" aria-hidden="true"></div>
+            <p class="finish-item__title small">저장된 아이디가 없습니다</p>
+            <div class="link-wrap">
+              <a href="#" class="link-wrap__underline"><span>다른 아이디로 로그인</span></a>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <hr class="spacer spacer--light">
+          <hr class="spacer spacer--full">
+          <hr class="section-spacer">
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="guide-info">
+            <p class="guide-info__text">비회원으로 로그인하시면, 리프레시 포인트 및 회원 혜택을 받으실 수 없어요.</p>
+          </div>
+          <div class="guide-info guide-info--gray">
+            <p class="guide-info__text">비회원으로 로그인하시면, 리프레시 포인트 및 회원 혜택을 받으실 수 없어요.</p>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="main-banner">
+            <div class="main-banner__title">
+              <img src="../../assets/images/@temp/@banner720x414.png" alt="운임의 최적화를 이루다. 제주항공 페어 패밀리 여행 플랜대로, 스타일대로, 운임 다이어트!">
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="search-result">
+            <div class="search-result__header">
+              <div data-element="select" class="select-wrap select-wrap--inline">
+                <select data-element="select__select" data-placeholder="전체" title="보기 방식 선택" class="select-wrap__select">
+                  <option></option>
+                  <option value="1">전체</option>
+                  <option value="2">사용가능</option>
+                </select>
+              </div>
+              <span class="search-result__total">총 <strong>4건</strong></span>
+            </div>
+            <div class="search-result__contents"></div>
+          </div>
+          <div class="search-result">
+            <div class="search-result__header">
+              <p class="search-result__header-title">조회 결과</p>
+              <span class="search-result__total">총 <strong>22</strong>개</span>
+            </div>
+
+            <div class="search-result__contents">
+              <!-- 조회결과 내용 컨텐츠 : style 지우고 사용 -->
+              <div style="padding:50px;"></div>
+              <!-- //조회결과 내용 컨텐츠 -->
+            </div>
+
+            <div class="more-wrap" data-show="true" >
+              <button type="button" class="more__button"><span class="more__button-text">더보기 (<span class="more__button--color">10</span>/33)</span></button>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <!-- 데이터 없을때 -->
+          <div class="no-data">
+            <span class="no-data__text no-data__text--type01">데이터가 없습니다.</span>
+          </div>
+          <!-- //데이터 없을때 -->
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <!-- 데이터 없을때 -->
+          <div class="tag-list">
+            <span class="tag-list__item tag-list__item--tag">
+              <button type="button" class="tag-list__text">#김포 - 제주</button>
+              <button type="button" class="tag-list__remove">
+                <span class="hidden">삭제</span>
+              </button>
+            </span>
+            <button class="tag-list__item" type="button">
+              <span class="new">New</span>
+              <span class="tag-list__text">김포 - 제주</span>
+            </button>
+            <button class="tag-list__item" type="button">
+              <span class="tag-list__text">김포 - 제주</span>
+            </button>
+          </div>
+          <!-- //데이터 없을때 -->
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <a href="#" class="banner">
+            <div class="banner__image">
+              <img src="../../assets/images/banner/banner-aircafe-meal.png" alt="">
+            </div>
+            <div class="banner__text">
+              <h4 class="banner__title">더 든든한<br>더 맛있는</h4>
+              <p class="banner__desc">기내식도 준비되어 있어요</p>
+            </div>
+          </a>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="hero">
+            <div class="hero__image">
+              <img src="../../assets/images/hero/hero-jejuair-service.png" alt="">
+            </div>
+            <div class="hero__text">
+              <div class="hero__title">음료와 먹을거리를<br>즐기세요</div>
+              <div class="hero__button">
+                <button type="button" class="button button--middle"><span class="button__text">메뉴 자세히 보기</span></button>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="service-information" data-element="toggle" data-options='{"mode": "slide"}'>
+            <div class="service-information__title">
+              <button type="button" class="service-information__anchor" data-element="toggle__anchor">사전 기내식 구매 안내</button>
+            </div>
+            <div class="service-information__content" data-element="toggle__panel">
+              <div class="list-wrap">
+                <div class="text__large">구매 안내</div>
+                <ul class="list-guide">
+                  <li class="list-guide__item">제주항공 국제선 전 노선 예약 고객 구매 가능합니다.</li>
+                  <li class="list-guide__item">노선 별, 수량이 조기 품절될 수 있으며, 이미지는 제공되는 제품과 다를 수 있습니다.</li>
+                </ul>
+              </div>
+              <div class="button-wrap">
+                <button type="button" class="button button--small"><span class="button__text">부가서비스 환불 규정</span></button>
+              </div>
+            </div>
+          </div>
+      </item>
+
+      <div class="component-title">gray-box</div>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="gray-box gray-box--full">
+            <div class="input-wrap input--line">
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">기본</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp" placeholder="기본 텍스트 입력입니다." class="input__text">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+              <div class="input-row input-row--number">
+                <label for="inputNumber" class="input__label">기본</label>
+                <div data-element="form" class="input input--number">
+                  <button type="button" data-element="number__button" data-type="decrease" class="input__number input__number-minus" aria-label="빼기"></button>
+                    <input type="text" id="inputNumber" placeholder="숫자입력" data-element="number__input" value="1" data-max="12" data-min="1" data-string-number="" class="input__number">
+                    <span class="text">개월</span>
+                  <button type="button" data-element="number__button" data-type="increase" class="input__number input__number-plus" aria-label="더하기"></button>
+                </div>
+              </div>
+              <div class="input-row input-row--label">
+                <div class="input-label">직접입력</div>
+                <div class="input-item input--error">
+                  <div class="input-box">
+                    <!-- <div class="picker">
+                      <input type="text" data-picker="layer" data-date-format="m/d/Y" data-header-first="month" class="picker__input" >
+                    </div> -->
+                    <button type="button" data-element="modal_anchor" data-modal-type="datepicker" data-target="#datepicker01" class="picker picker--button">
+                      날짜 선택
+                    </button>
+                  </div>
+                  <p class="input__sub-text">최근 6개월만 조회할 수 있습니다.</p>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap button-wrap--center">
+              <button type="button" class="button button--secondary button--border-active"><span class="button__text">조회하기</span></button>
+            </div>
+          </div>
+
+          <div class="gray-box">
+            <div class="text">
+              <p class="text__default text--bold">
+                <span class="text--color-org">kimjeju@jejuair.net</span>
+              </p>
+            </div>
+          </div>
+
+          <a href="#none" class="gray-box gray-box--link">
+            <dl class="join-info">
+              <div class="join-info__row">
+                <dt>아이디</dt><dd> : <span class="color-org">jeju******</span></dd>
+              </div>
+              <div class="join-info__row">
+                <dt>가입일</dt><dd> : <span>2020.09.01</span></dd>
+              </div>
+            </dl>
+          </a>
+
+          <div class="gray-box gray-box--finish">
+            <div class="text">
+              <p class="text__default text--color-gray text--bold">재가입은 <span class="text--color-org">OO월 OO일 이후</span>부터 가능합니다.</p>
+            </div>
+          </div>
+
+          <div class="gray-box-wrap">
+            <div class="title">
+              <div class="title__wrap">
+                <h2 class="title__section">유실물 문의</h2>
+              </div>
+            </div>
+            <div class="gray-box">
+              <div class="text">
+                <p class="text__default text--exbold gray-box-title">찾으시는 물건이 없나요?</p>
+                <p class="text__default text--color-gray">1:1문의로 유실물을 신청해 보세요.</p>
+                <div class="button-wrap">
+                  <button type="button" class="button button--small"><span class="button__text">1:1 문의하기</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gray-box">
+            <ul class="coupon-list">
+              <li class="coupon-list__box">
+                <p class="coupon-list__box--title">추가정보 입력만 해도</p>
+                <div class="coupon-list__item coupon-type1">
+                  <p class="coupon-list__text">리프레시 포인트</p>
+                  <p class="coupon-list__point">1,000<span>P</span></p>
+                </div>
+              </li>
+              <li class="coupon-list__box">
+                <p class="coupon-list__box--title">할인쿠폰 증정</p>
+                <div class="coupon-list__item coupon-type2">
+                  <p class="coupon-list__text">최대</p>
+                  <p class="coupon-list__point">10,000<span>원</span></p>
+                </div>
+              </li>
+              <li class="coupon-list__box">
+                <p class="coupon-list__box--title">추천인 아이디 입력하면</p>
+                <div class="coupon-list__item coupon-type3">
+                  <p class="coupon-list__text">리프레시 포인트</p>
+                  <p class="coupon-list__point">3,000<span>P</span></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="gray-box gray-box--coupon">
+            <div class="coupon-list coupon-list--large">
+              <div class="coupon-list__item coupon-type1">
+                <p class="coupon-list__text">리프레시 포인트 1,000 P 적립</p>
+                <p class="coupon-list__point">10,000<span>원</span></p>
+              </div>
+              <div class="coupon-list__item coupon-type2">
+                <p class="coupon-list__text">왕복 항공운임 15만원 이상 결제 시 적용</p>
+                <p class="coupon-list__point">5,000<span>원</span></p>
+              </div>
+              <div class="coupon-list__item coupon-type3">
+                <p class="coupon-list__text">왕복 항공운임 10만원 이상 결제 시 적용</p>
+                <p class="coupon-list__point">5,000<span>원</span></p>
+              </div>
+            </div>
+            <ul class="list-guide">
+              <li class="list-guide__item">최초 신규가입 시 쿠폰 자동 발급</li>
+              <li class="list-guide__item">쿠폰 사용기간 : 발급일로 부터 30일 이내</li>
+              <li class="list-guide__item">탑승기간 : 가입일로 부터 90일 이내</li>
+              <li class="list-guide__item">사용채널 : 제주항공 모바일 앱 사용 전용(성수기 기간 제외)</li>
+              <li class="list-guide__item">JJ라운지 쿠폰사용기간 : 발급일로부터 30일 이내</li>
+            </ul>
+            <div class="container--small">
+              <div class="button-wrap button-wrap--center">
+                <button type="button" class="button button--secondary button--active"><span class="button__text">회원가입</span></button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="component-description"><li>gray-box pc 타입</li></ul>
+          <div class="gray-box pc-search">
+            <div class="boarding">
+              <div class="boarding__info-wrap">
+                <div class="boarding__info">
+                  <div class="boarding__info-before before-select"><!-- 선택 전인 경우  before-select class 추가-->
+                    <button type="button">
+                      <div class="boarding__info-title">출발지</div>
+                      <div class="boarding__info-text">선택</div>
+                    </button>
+                  </div>
+                  <button type="button" class="icon-mark one-way before-select" aria-label="one-way"></button><!-- 선택 전인 경우  before-select class 추가-->
+                  <div class="boarding__info-after before-select"><!-- 선택 전인 경우  before-select class 추가-->
+                    <button type="button">
+                      <div class="boarding__info-title">도착지</div>
+                      <div class="boarding__info-text">선택</div>
+                    </button>
+                  </div>
+                </div>
+                <div class="boarding__input">
+                  <div class="input-wrap input--line">
+                    <div class="input-row">
+                      <div class="input-item">
+                        <div class="input-box">
+                          <label for="inp" class="input__label">탑승일</label>
+                          <button
+                            type="button"
+                            class="picker picker--button"
+                            data-element="modal_anchor"
+                            data-modal-type="datepicker"
+                            data-target="#datepicker01"
+                          >
+                            YYYYMMDD
+                          </button>
+                        </div>
+                        <p tabindex="0" class="input__error">에러메세지</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container--small">
+              <div class="button-wrap button-wrap--center">
+                <button type="button" class="button button--optional button--disabled"><span class="button__text">조회하기</span></button>
+                <!-- button 활성화시 button--active class 추가 -->
+              </div>
+            </div>
+          </div>
+          <div class="gray-box gray-box--result pc-search pc-search--flex">
+            <div class="input-wrap input--line">
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">주소 입력</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp" placeholder="예)제주 첨단로 242" class="input__text">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap button-wrap--center">
+              <!-- D : 활성화 클래스  button--active -->
+              <button type="button" class="button button--optional  button--disabled"><span class="button__text">검색</span></button>
+            </div>
+          </div>
+          <div class="gray-box pc-search pc-search--flex pc-search--number">
+            <div class="input-wrap input--line">
+              <div class="input-row input-row--number">
+                <label for="inputNumber" class="input__label">기간선택</label>
+                <div data-element="form" class="input input--number">
+                  <button type="button" data-element="number__button" data-type="decrease" aria-label="빼기" class="input__number input__number-minus"></button>
+                    <input type="text" id="inputNumber" data-element="number__input" value="1" data-max="12" data-min="1" data-string-number="" class="input__number">
+                    <span class="text">개월</span>
+                  <button type="button" data-element="number__button" data-type="increase" aria-label="더하기" class="input__number input__number-plus"></button>
+                </div>
+              </div>
+              <div class="input-row input-row--label">
+                <div class="input-label mobile-only">직접입력</div>
+                <div class="input-item"><!-- 에러메세지 있을 경우 input--error class 추가-->
+                  <div class="input-box">
+                    <label for="inp4" class="input__label pc-only">탑승일</label>
+                    <button
+                      type="button"
+                      class="picker picker--button"
+                      data-element="modal_anchor"
+                      data-modal-type="datepicker"
+                      data-target="#datepicker01"
+                    >
+                    </button>
+                  </div>
+                  <p class="input__sub-text">최근 6개월만 조회할 수 있습니다.</p>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap button-wrap--center">
+              <button type="button" class="button button--optional button--disabled"><span class="button__text">조회하기</span></button><!-- button 활성화 시 button--active class 추가 -->
+            </div>
+          </div>
+          <div class="gray-box pc-search pc-search--flex pc-search--row2">
+            <div class="boarding">
+              <div class="boarding__input">
+                <div class="input-wrap input--line">
+                  <!-- D : 에러시  input--error 클래스 추가 -->
+                  <div class="input-row input--error">
+                    <div class="input-item">
+                      <div class="input-box">
+                        <label for="inp3-1" class="input__label">편명</label>
+                        <div data-element="form" data-change="true" class="input input-wraping">
+                          <div class="default-text"><span>7</span><span>C</span></div>
+                          <input type="tel" id="inp3-1" class="input__text" data-element="input" maxlength="1">
+                          <input type="tel" id="inp3-2" class="input__text" data-element="input" maxlength="1">
+                          <input type="tel" id="inp3-3" class="input__text" data-element="input" maxlength="1">
+                          <input type="tel" id="inp3-4" class="input__text" data-element="input" maxlength="1">
+                        </div>
+                      </div>
+                      <p tabindex="0" class="input__error">편명을 입력해 주세요.</p>
+                    </div>
+                  </div>
+
+                  <div class="input-row">
+                    <div class="input-item">
+                      <div class="input-box">
+                        <label for="inp4" class="input__label">가는날</label>
+                        <button
+                          type="button"
+                          class="picker picker--button"
+                          data-element="modal_anchor"
+                          data-modal-type="datepicker"
+                          data-target="#datepicker01">
+                        </button>
+                      </div>
+                      <p class="input__sub-text">최근 6개월만 조회할 수 있습니다.</p>
+                      <p class="input__error" tabindex="0">에러메세지</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container--small">
+              <div class="button-wrap button-wrap--center">
+                <button type="button" class="button button--optional button--disabled"><span class="button__text">조회하기</span></button>
+                <!-- button 활성화시 button--active class 추가 -->
+              </div>
+            </div>
+          </div>
+          <div class="gray-box pc-search pc-search--flex pc-search--row2">
+            <div class="input-wrap input--line">
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp" class="input__label">예약번호</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp" placeholder="예)12345678/ABCDE" class="input__text">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-item">
+                  <div class="input-box">
+                    <label for="inp2" class="input__label">탑승일자</label>
+                    <div data-element="form" class="input">
+                      <input type="text" data-element="input" id="inp2"  class="input__text">
+                      <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                    </div>
+                  </div>
+                  <p tabindex="0" class="input__error">에러메세지</p>
+                </div>
+              </div>
+            </div>
+            <div class="container--small">
+              <div class="button-wrap button-wrap--center">
+                <!-- D : 액티브 클래스 button--active -->
+                <button type="button" class="button button--optional button--disabled"><span class="button__text">조회하기</span></button>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+
+      <div class="component-title">orange-box</div>
+
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="orange-box">
+            <div class="orange-box__center">
+              <p class="orange-box__text">
+                회원 인증 되었습니다. (ID: <span class="color-org">jeju******</span>)
+              </p>
+            </div>
+          </div>
+
+          <div class="orange-box">
+            <p class="orange-box__text color-org">
+              추가한 친구는 정보 수정을 통해 언제든 <br>회원 인증할 수 있어요.
+            </p>
+          </div>
+        </pre>
+      </item>
+
+    <div class="component-title">step</div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="list-card list-card--step">
+            <div class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@icon48x48-01.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">01.등록</strong>
+                <p class="list-card__text">기내 유실물은 습득 후 2~3일 내에 유실물 센터에 등록 됩니다.</p>
+              </div>
+            </div>
+
+            <div class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@icon48x48-02.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">02.보관</strong>
+                <p class="list-card__text">습득일로부터 1개월 동안 보관합니다.</p>
+                <ul class="list-guide list-guide--asterisk">
+                  <li class="list-guide__item">단, 부패성 물품은 수시로 폐기합니다.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@icon48x48-03.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">03.문의</strong>
+                <p class="list-card__text">유실물을 찾으시면 ‘1:1 문의하기’를 통해 수령 방법을 안내 받습니다. </p>
+              </div>
+            </div>
+
+            <div class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@icon48x48-04.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">04.수령</strong>
+                <p class="list-card__text">방문 수령만 가능하며, 수령 시 신분증을 꼭 지참해주세요.</p>
+                <ul class="list-guide list-guide--asterisk">
+                  <li class="list-guide__item">본인 확인이 어려울 시 수령이 제한됩니다.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="list-card__item">
+              <div class="list-card__image">
+                <img src="../../assets/images/@temp/@icon48x48-05.png" alt="이미지">
+              </div>
+              <div class="list-card__info">
+                <strong class="list-card__title">05.폐기</strong>
+                <p class="list-card__text">습득일로부터 1개월 동안 보관합니다.</p>
+                <ul class="list-guide list-guide--asterisk">
+                  <li class="list-guide__item">1개월 후 주인이 나타나지 않으면 자동 폐기됩니다.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">banner</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="carousel--event-wrap">
+            <div class="carousel carousel--event carousel--full swiper-container" data-carousel="fullItem">
+              <div class="carousel__item swiper-wrapper" >
+                <div class="carousel__list swiper-slide">
+                  <div class="carousel__contents">
+                    <a href="#">
+                      <img src="../../assets/images/@temp/@banner_event_promo.png" alt="1">
+                      <div class="event-banner">
+                        <span class="event-banner__text">슬기로운 여행 생활</span>
+                        <p class="event-banner__title">제주항공 FLY Bag+<br>여행 플렉스 시작!</p>
+                        <p class="event-banner__date">20.09.03 ~ 20.10.18</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="carousel__list swiper-slide">
+                  <div class="carousel__contents">
+                    <a href="#">
+                      <img src="../../assets/images/@temp/@banner_event_promo.png" alt="1">
+                      <div class="event-banner">
+                        <span class="event-banner__text">슬기로운 여행 생활</span>
+                        <p class="event-banner__title">제주항공 FLY Bag+<br>여행 플렉스 시작!</p>
+                        <p class="event-banner__date">20.09.03 ~ 20.10.18</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel__pagination"></div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">box</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="box-line">
+            <p class="box-line__text">김제주 회원님의 기업 우대 쿠폰은<br><span class="text--color-org">총 OOO장</span> 입니다. </p>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">ressult-box</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="result-box">
+            <div class="result-box-item">
+              <div class="result-box__header">
+                <p class="result-box__header-title">02037</p>
+                <div class="check-wrap">
+                  <span class="checkbox">
+                    <input type="checkbox" id="inputCheck3" data-element="checkbox" class="checkbox__input">
+                    <label for="inputCheck3" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                    </label>
+                  </span>
+                </div>
+              </div>
+              <div class="result-box__content">
+                <dl>
+                  <dt class="result-box__name">도로명</dt>
+                  <dd class="result-box__text">제주특별자치도 제주시 516로 5961-20 (용강동, 제주산림항공관리소)</dd>
+                  <dt class="result-box__name">지번</dt>
+                  <dd class="result-box__text">제주특별자치도시 제주시 용강동 산 14-1</dd>
+                </dl>
+              </div>
+            </div>
+            <div class="result-box-item">
+              <div class="result-box__header">
+                <p class="result-box__header-title">02037</p>
+                <div class="check-wrap">
+                  <span class="checkbox">
+                    <input type="checkbox" id="inputCheck2" data-element="checkbox" class="checkbox__input">
+                    <label for="inputCheck2" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                    </label>
+                  </span>
+                </div>
+              </div>
+              <div class="result-box__content">
+                <dl>
+                  <dt class="result-box__name">도로명</dt>
+                  <dd class="result-box__text">제주특별자치도 제주시 516로 5961-20 (용강동, 제주산림항공관리소)</dd>
+                  <dt class="result-box__name">지번</dt>
+                  <dd class="result-box__text">제주특별자치도시 제주시 용강동 산 14-1</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+
+          <div class="result-box result-box--company">
+            <div class="result-box-item">
+              <div class="result-box__header">
+                <p class="result-box__header-title">제주항공</p>
+              </div>
+              <div class="result-box__content">
+                <div class="result-box__sub-title">
+                  <span>제주</span><span>운수업</span>
+                </div>
+                <dl>
+                  <dt class="result-box__name">대표자 성명</dt>
+                  <dd class="result-box__text">김이배</dd>
+                  <dt class="result-box__name">담당자 이메일</dt>
+                  <dd class="result-box__text">jeju@jejuair.net</dd>
+                </dl>
+                <div class="button-wrap">
+                  <button type="button" class="button button--middle"><span class="button__text">임직원 가입하기</span></button>
+                </div>
+              </div>
+            </div>
+            <div class="result-box-item">
+              <div class="result-box__header">
+                <p class="result-box__header-title">제주항공</p>
+              </div>
+              <div class="result-box__content">
+                <div class="result-box__sub-title">
+                  <span>제주</span><span>운수업</span>
+                </div>
+                <dl>
+                  <dt class="result-box__name">대표자 성명</dt>
+                  <dd class="result-box__text">김이배</dd>
+                  <dt class="result-box__name">담당자 이메일</dt>
+                  <dd class="result-box__text">jeju@jejuair.net</dd>
+                </dl>
+                <div class="button-wrap">
+                  <button type="button" class="button button--middle"><span class="button__text">임직원 가입하기</span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="toggle-item" data-element="toggle" data-options='{"mode": "slide"}'>
+            <div class="toggle-item__title">
+              <button type="button" class="toggle-item__anchor" data-element="toggle__anchor">예약번호로 조회하기</button>
+            </div>
+            <!-- 하단 인풋들어갈 경우 pdt-none -->
+            <div class="toggle-item__content pdt-none" data-element="toggle__panel">
+              <div class="input-wrap input--line">
+                <div class="input-row">
+                  <div class="input-item">
+                    <div class="input-box">
+                      <label for="inp" class="input__label">예약번호</label>
+                      <div data-element="form" class="input">
+                        <input type="text" data-element="input" id="inp"  class="input__text">
+                        <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+                      </div>
+                    </div>
+                    <p tabindex="0" class="input__error">에러메세지</p>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="input-item">
+                    <div class="input-box">
+                      <label for="inp4" class="input__label">탑승일자</label>
+                      <div class="picker">
+                        <input type="text" data-picker="layer" data-date-format="m/d/Y" data-header-first="month" class="picker__input">
+                      </div>
+                    </div>
+                    <p tabindex="0" class="input__error">에러메세지</p>
+                  </div>
+                </div>
+              </div>
+              <div class="button-wrap button-wrap--center">
+                <button type="button" class="button button--secondary button--active"><span class="button__text">예약조회</span></button>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="arrow-list arrow-list--payment">
+            <div class="arrow-list__item">
+              <div class="payment-amount">
+                <div class="payment-amount__title">총 결제예정금액</div>
+                <p class="payment-amount__sum"><a href="#none">2,200,000 <span class="text">JPY</span</a></p>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="pagination">
+            <div class="pagination__inner">
+              <button type="button" class="pagination__button pagination__button--first">
+                <span class="hidden">처음</span>
+              </button>
+              <button type="button" class="pagination__button pagination__button--next">
+                <span class="hidden">다음</span>
+              </button>
+              <strong class="pagination__page pagination__page--current">1</strong>
+              <a href="#" class="pagination__page">2</a>
+              <a href="#" class="pagination__page">3</a>
+              <a href="#" class="pagination__page">4</a>
+              <a href="#" class="pagination__page">5</a>
+              <a href="#" class="pagination__page">6</a>
+              <a href="#" class="pagination__page">7</a>
+              <a href="#" class="pagination__page">8</a>
+              <a href="#" class="pagination__page">9</a>
+              <a href="#" class="pagination__page">10</a>
+              <button type="button" class="pagination__button pagination__button--prev">
+                <span class="hidden">이전</span>
+              </button>
+              <button type="button" class="pagination__button pagination__button--last">
+                <span class="hidden">마지막</span>
+              </button>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="pagination__inner">
+              <button type="button" class="pagination__button pagination__button--first">
+                <span class="hidden">처음</span>
+              </button>
+              <button type="button" class="pagination__button pagination__button--next">
+                <span class="hidden">다음</span>
+              </button>
+              <strong class="pagination__page pagination__page--current">1</strong>
+              <a href="#" class="pagination__page">2</a>
+              <a href="#" class="pagination__page">3</a>
+              <a href="#" class="pagination__page">4</a>
+              <a href="#" class="pagination__page">5</a>
+              <button type="button" class="pagination__button pagination__button--prev">
+                <span class="hidden">이전</span>
+              </button>
+              <button type="button" class="pagination__button pagination__button--last">
+                <span class="hidden">마지막</span>
+              </button>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    const testData = [
+      { id: 0, text: 'enhancement' },
+      { id: 1, text: 'bug' },
+      { id: 2, text: 'duplicate' },
+      { id: 3, text: 'invalid' },
+      { id: 4, text: 'wontfix' }
+    ];
+
+    hljs.initHighlightingOnLoad();
+
+    $('#testEvent').on('select2:select', function (e) {
+      var data = e.params.data;
+      console.log(data);
+    });
+    $('#testAjax').select2({
+      data: testData
+    })
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

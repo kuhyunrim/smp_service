@@ -1,0 +1,32 @@
+.page-header__container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.page-header {
+  width: 100%;
+  background: #F5F8FA;
+}
+
+.page-header__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 157px;
+}
+
+.page-header__title {
+  color: #2C3238;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.page-header__text {
+  margin-top: 16px;
+  font-weight: 400;
+  color: #56606B;
+}

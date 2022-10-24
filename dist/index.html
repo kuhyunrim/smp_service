@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- 개발시 삭제: robots -->
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SMP</title>
+  <link rel="stylesheet" href="./dashboard/dashboard.css">
+  <link rel="stylesheet" href="./dashboard/sshpre.css">
+  <!--
+    Vue.js: Vue의 문법으로 Dashboard 구성
+    lodash.min.js: Array / Object 관련
+    sshpre.umd.min.js: Vue 용 Syntax Highlighter
+  -->
+  <script src="./dashboard/vue.js"></script>
+  <script src="./dashboard/lodash.min.js"></script>
+  <script src="./dashboard/sshpre.umd.min.js"></script>
+  <style>
+    /*
+    * Dashboard 의 기본 설정(css 변수)
+    */
+    body {
+    --color: #1d2d50;
+    --blue: #05aae2;
+    --action: all .3s ease;
+    --header: 50px;
+    --menu: 160px;
+  }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="wrapper" :class="{ 'active': activeNav}">
+      <div class="app-header">
+        <div class="inner">
+          <!-- <button type="button" class="toggle" :class="{ 'active': activeNav }">
+            <span class="line top"></span>
+            <span class="line mid"></span>
+            <span class="line bot"></span>
+          </button> -->
+          <span class="headline">Dashboard</span>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <template v-if="activeMenu === 'pageList'">
+          <div class="title-l">작업 목록</div>
+
+          <div class="title">페이지 목록</div>
+          <template v-if="showAll">
+            <div class="flatten-list">
+              <div class="pages header">
+                <div class="step page-id">Display Name</div>
+                <div class="step step-level hideMobile">Level</div>
+                <div class="step status">status</div>
+                <div class="step link">Link</div>
+                <div class="step hideMobile memo">Memo</div>
+              </div>
+              <div class="pages"
+                v-for="(page, p) in flattenPage"
+                :key="p"
+                v-if="isModify ? !!page.modify : true"
+              >
+                <div class="step page-id">{{ page.pageName }}</div>
+                <div class="step step-level hideMobile">
+                  {{ page.L1 }}
+                  <template v-if="page.L2">> {{ page.L2 }}</template>
+                  <template v-if="page.L3">> {{ page.L3 }}</template>
+                  <template v-if="page.L4">> {{ page.L4 }}</template>
+                  <template v-if="page.L5">> {{ page.L5 }}</template>
+                  <template v-if="page.L6">> {{ page.L6 }}</template>
+                  <template v-if="page.L7">> {{ page.L7 }}</template>
+                  <template v-if="page.L8">> {{ page.L8 }}</template>
+                </div>
+                <div class="step status">
+                  <span
+                    class="status"
+                    :class="[
+                      { 'wait': page.status === 0},
+                      { 'ing': page.status === 1},
+                      { 'comp': page.status === 2},
+                      { 'modify': page.status === 3},
+                      { 'emergency': page.status === 4 }
+                    ]"
+                  >
+                    {{
+                      page.status === 0 && '대기' ||
+                      page.status === 1 && '진행' ||
+                      page.status === 2 && '완료' ||
+                      page.status === 3 && '보류' ||
+                      page.status === 4 && '긴급'
+                    }}
+                  </span>
+                </div>
+                <div class="step link">
+                  <a :href='makeURL(page.pageId)' target="_blank">{{ page.pageId }}</a>
+                </div>
+                <div class="step hideMobile memo">{{ page.memo }}</div>
+                <div class="tooltip">{{ page.pageName }}</div>
+              </div>
+            </div>
+          </template>
+          <template v-else>
+            <div class="tabs">
+              <button
+              type="button"
+              class="tab"
+              v-for="(item, t) in getPage"
+              :key="t"
+              :class="{ 'active': t === activeIndex }"
+              @click="activeTab(t)"
+              >
+                {{ item.category }}
+                <span class="count">({{ item.countComp }}/{{ item.count }})</span>
+              </button>
+            </div>
+            <!-- pagelist -->
+            <template
+                v-for="(item, c) in getPage"
+                v-if="c === activeIndex"
+              >
+              <div class="items" :key="c">
+                <div class="pages header">
+                  <div class="step page-id">Display Name</div>
+                  <div class="step step-level hideMobile">Level</div>
+                  <div class="step status">status</div>
+                  <div class="step link">Link</div>
+                  <div class="step hideMobile memo">Memo</div>
+                </div>
+                <div class="pages"
+                  v-for="(page, p) in item.pages"
+                  :key="p"
+                  v-if="isModify ? !!page.modify: true"
+                >
+                  <div class="step page-id">{{ page.pageName }}</div>
+                  <div class="step step-level hideMobile">
+                    {{ page.L1 }}
+                    <template v-if="page.L2">> {{ page.L2 }}</template>
+                    <template v-if="page.L3">> {{ page.L3 }}</template>
+                    <template v-if="page.L4">> {{ page.L4 }}</template>
+                    <template v-if="page.L5">> {{ page.L5 }}</template>
+                    <template v-if="page.L6">> {{ page.L6 }}</template>
+                    <template v-if="page.L7">> {{ page.L7 }}</template>
+                    <template v-if="page.L8">> {{ page.L8 }}</template>
+                  </div>
+                  <div class="step status">
+                    <span
+                      class="status"
+                      :class="[
+                        { 'wait': page.status === 0},
+                        { 'ing': page.status === 1},
+                        { 'comp': page.status === 2},
+                        { 'modify': page.status === 3},
+                        { 'emergency': page.status === 4 }
+                      ]"
+                    >
+                      {{
+                        page.status === 0 && '대기' ||
+                        page.status === 1 && '진행' ||
+                        page.status === 2 && '완료' ||
+                        page.status === 3 && '보류' ||
+                        page.status === 4 && '긴급'
+                      }}
+                    </span>
+                  </div>
+                  <div class="step link">
+                    <a :href='makeURL(page.pageId)' target="_blank">{{ page.pageId }}</a>
+                  </div>
+                  <div class="step hideMobile memo">{{ page.memo }}</div>
+                  <div class="tooltip">{{ page.pageName }}</div>
+                </div>
+              </div>
+            </template>
+            <!-- // pagelist -->
+          </template>
+        </template>
+      </div>
+    </div>
+  </div>
+  <script type="application/json" id="pageList">
+    [
+  {
+    "category": "전체 목록",
+    "pages": [
+      // {
+      //   "pageName": "공통팝업",
+      //   "pageId": "PAGE-BASE",
+      //   "L1": "공통팝업",
+      //   "L2": "공통팝업",
+      //   "L3": "",
+      //   "L4": "",
+      //   "L5": "",
+      //   "L6": "",
+      //   "L7": "",
+      //   "L8": "",
+      //   "date": "-",
+      //   "displayType": ["P"],
+      //   "status": 0,
+      //   "statusP": 0,
+      //   "memo": ""
+      // },
+      {
+        "pageName": "전체서비스",
+        "pageId": "SMP_MAIN_01",
+        "L1": "SMP홈",
+        "L2": "전체서비스",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "요금청구서",
+        "pageId": "SMP_BILL_01",
+        "L1": "요금청구서",
+        "L2": "",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "청구서다운로드_p",
+        "pageId": "SMP_BILL_01_P01",
+        "L1": "요금청구서",
+        "L2": "청구서다운로드_p",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "계약조회",
+        "pageId": "SMP_INQ_01",
+        "L1": "계약조회",
+        "L2": "",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "계약조회상세",
+        "pageId": "SMP_INQ_02",
+        "L1": "계약조회",
+        "L2": "계약조회상세",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "구간전체보기_p",
+        "pageId": "SMP_INQ_02_P01",
+        "L1": "계약조회상세",
+        "L2": "구간전체보기_p",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "계약담당자관리",
+        "pageId": "SMP_MGMT_01",
+        "L1": "계약담당자관리",
+        "L2": "",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "담당자등록_p",
+        "pageId": "SMP_MGMT_01_P01",
+        "L1": "계약담당자관리",
+        "L2": "담당자등록_p",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "대표담당자변경_p",
+        "pageId": "SMP_MGMT_01_P02",
+        "L1": "계약담당자관리",
+        "L2": "대표담당자변경_p",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "계약상세_p",
+        "pageId": "SMP_MGMT_01_P03",
+        "L1": "계약담당자관리",
+        "L2": "계약상세_p",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      },
+      {
+        "pageName": "SM초대링크전송_p",
+        "pageId": "SMP_MGMT_01_P04",
+        "L1": "계약담당자관리",
+        "L2": "SM초대링크전송_p",
+        "L3": "",
+        "L4": "",
+        "L5": "",
+        "L6": "",
+        "L7": "",
+        "L8": "",
+        "date": "-",
+        "displayType": ["P"],
+        "status": 0,
+        "statusP": 0,
+        "memo": ""
+      }
+    ]
+  }
+]
+  </script>
+  <script>
+    const pageList = document.querySelector("#pageList")
+    const pageData = eval(pageList.textContent)
+
+    // 폴더 tree 를 만들기 위한 sub template
+    const treeChild = Vue.extend({
+      props: ['childItem'],
+      template: `
+        <ul class="child-ul">
+          <li class="has-child">
+            <div class="info">
+              <i class="icon" :class="childItem.type"></i>
+              <span class="name">{{ childItem.name }}</span>
+              <span class="desc">{{ childItem.desc }}</span>
+            </div>
+            <folder-structure-sub :child-item="sub" v-for="(sub, i) in childItem.child" :key="i" />
+          </li>
+        </ul>`
+    })
+    // 폴더 tree 를 만들기 위한 root template
+    const treeRoot = Vue.extend({
+      props: ['structure'],
+      template: `<template>
+        <ul class="structure">
+          <li class="root" v-for="(base, b) in structure" :key="b">
+            <div class="info">
+              <i class="icon" :class="base.type"></i>
+              <span class="name">{{ base.name }}</span>
+              <span class="desc">{{ base.desc }}</span>
+            </div>
+            <folder-structure-sub v-for="(subItem, s) in base.child" :childItem="subItem" :key="s" />
+          </li>
+        </ul>
+      </template>`,
+      components: {
+        'folder-structure-sub': treeChild
+      }
+    })
+
+    Vue.component('folder-structure-sub', treeChild)
+    Vue.component('folder-structure', treeRoot)
+
+    new Vue({
+      el: '#app',
+      data: () => {
+        return {
+          activeIndex: 0, // 페이지 목록의 탭 활성화
+          activeMenu: 'guide', // 메뉴 설정
+          activeNav: false, // 메뉴 활성화
+          isModify: false, // 수정된 목록 노출여부
+          showAll: false, // 페이지 목록 ? 탭형태: 전체 목록
+          currentComponent: 'datepicker',
+          fontSize: 10,
+          componentList: [
+            { name: 'COMMON', id: 'common' },
+          ],
+          // 메뉴 목록
+          menuList: [
+            { name: 'Component', menuId: 'component' },
+            { name: 'Page List', menuId: 'pageList' },
+          ],
+          // pageList: getPage(),
+          logList: [],
+          logCurrent: false,
+          orderBy: 'none',
+          origin: [],
+        }
+      },
+      components: {
+        sshpre
+      },
+      computed: {
+        // 모바일 구분
+        isMobile() {
+          if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            return true
+          } else {
+            return false
+          }
+        },
+        // 페이지 목록에서 진척률을 가져옴
+        graph() {
+          const graphItem = []
+          const arr =  this.getPage
+          arr.forEach(el => {
+            const cnt = []
+            const item = {
+              title: el.category,
+              count: el.pages.length,
+              complete: 0
+            }
+            _.forEach(el.pages, (v, k) => {
+              if (v.status === 2) {
+                cnt.push(v)
+              }
+            })
+            item.complete = cnt.length
+            graphItem.push(item)
+          })
+          return graphItem
+        },
+        flattenPage() {
+          const list = this.getPage
+          let result = []
+          _.forEach(list, (v) => {
+            result.push(v.pages)
+          })
+          result = _.flattenDeep(result)
+          if (this.orderBy === 'ascending') {
+            result = this.orderList(result, 'dueDate', 'asc')
+          } else if (this.orderBy === 'descending') {
+              result = this.orderList(result, 'dueDate', 'desc')
+          }
+          return result;
+        },
+        getPage() {
+          // revision log 가 있는 화면 ID 를 찾아서 수정일 자동 기입
+          const page = pageData
+          const log = this.revisionLog
+          const result = this.geList(log, pageData)
+
+          if (this.orderBy === 'ascending') {
+            _.forEach(result, (item) => {
+              item.pages = this.orderList(item.pages, 'dueDate', 'asc')
+            })
+          } else if (this.orderBy === 'descending') {
+            _.forEach(result, (item) => {
+              item.pages = this.orderList(item.pages, 'dueDate', 'desc')
+            })
+          } else {
+            return result
+          }
+          return this.origin
+        }
+      },
+      created() {
+        // 페이지 로드되었을때 localStorage 에서 활성화된 메뉴들을 가져옴(없으면 초기화)
+        const current = localStorage.getItem('current')
+        const menu = localStorage.getItem('active')
+        const compo = localStorage.getItem('component')
+        if (!!current) {
+          // current 는 string 형태이므로 number 로 변환
+          this.activeIndex = current * 1
+        } else {
+          this.activeIndex = 0
+        }
+        if (!!menu) {
+          this.activeMenu = menu
+        } else {
+          this.activeMenu = 'guide'
+        }
+        if (!!compo) {
+          this.currentComponent = compo
+        } else {
+          this.currentComponent = 'common'
+        }
+      },
+      methods: {
+        orderList(list, target, order) {
+          const item = _.orderBy(list, target, order);
+          return item
+        },
+        // 페이지 목록 정렬
+        geList(log, page) {
+          const result = _.cloneDeep(page)
+          _.forEach(log, (logItem) => {
+            _.forEach(result, (list) => {
+              list.countComp = 0
+              list.count = list.pages.length
+              _.forEach(list.pages, (item) => {
+                if (logItem.pageId === item.pageId) {
+                  item.modify = logItem.list[0].date
+                } else {
+                  logItem.modify = ''
+                }
+                if (item.status === 2) {
+                  list.countComp += 1
+                }
+              })
+            })
+          })
+          this.origin = result
+          return result
+        },
+        // 활성화 탭 걸졍(localStorage 에 저장)
+        activeTab(idx) {
+          this.activeIndex = idx
+          localStorage.setItem('current', idx)
+        },
+        // 활성화 메뉴 걸졍(localStorage 에 저장)
+        activeItem(menu) {
+          this.activeMenu = menu
+          localStorage.setItem('active', menu)
+        },
+        changeComponent(item) {
+          this.currentComponent = item
+          localStorage.setItem('component', item)
+        },
+        sortBy(i) {
+          if (this.orderBy === 'ascending') {
+            this.orderBy = 'descending'
+          } else if (this.orderBy === 'descending') {
+            this.orderBy = 'none'
+          } else {
+            this.orderBy = 'ascending'
+          }
+        },
+        // 수정이력 보기
+        viewLog(pid) {
+          const pageId = pid
+          const list = this.revisionLog
+          let msg = []
+
+          _.forEach(list, (k, v) => {
+            if (k.pageId === pageId) {
+              msg = k.list
+            }
+          })
+
+          this.logCurrent = pid
+        },
+        makeURL(page) {
+          const arr = page.split('-')
+          const folder = `${arr[0]}-${arr[1]}`;
+          const fullURL = `./html/${page}.html`
+
+          return fullURL
+
+        }
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">여정</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>상황이 맞게 직접 입력</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="boarding boarding--no-data">
+            <div class="no-data">
+              <div class="no-data__item">
+                <div class="no-data__item-text">
+                  다가오는 예약이 없어요.<br>이번에는 어디로 떠나볼까요?
+                </div>
+                <div class="link-wrap">
+                  <a href="#" class="link-wrap__underline"><span>예매하러 가기</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boarding boarding--bg">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span class="text--bold">가는 편</span>
+              </div>
+              <div class="boarding__header--item2">
+                <span>편명</span><span>7C854</span>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>FLYBAG</span></div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.12.04 (목)</span><span>20:30 </span></div>
+                </div>
+                <i aria-label="one-way" class="icon-mark one-way"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">제주</div>
+                  <div class="boarding__info-date"><span>2020.12.04 (목)</span><span>20:30 </span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span class="text--bold">변경후 여정</span>
+              </div>
+              <div class="boarding__header--item2">
+                <span>편명</span><span>7C854</span>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>FLYBAG</span></div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">제주</div>
+                  <div class="boarding__info-date"><span>2020.12.04 (목)</span><span>20:30 </span></div>
+                </div>
+                <i aria-label="one-way" class="icon-mark one-way"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.12.04 (목)</span><span>20:30 </span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot no-line">
+                <div class="gray-box">
+                  <span class="gray-box__text">결제금액 <span>500,000</span>원</span>
+                </div>
+              </div>
+              <div class="boarding__info--bot no-line">
+                <div class="gray-box">
+                  <span class="gray-box__text color-black">결제금액 <span>500,000</span>원</span>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--border"><span class="button__text">운임비교</span></button>
+              <button type="button" class="button button--border"><span class="button__text">탑승객별 운임비교</span></button>
+            </div>
+          </div>
+          <div class="boarding boarding--checkbox">
+            <input type="checkbox" id="inputBoarding01" class="boarding__checkbox">
+            <label for="inputBoarding01">
+              <span class="boarding__header">
+                <span class="boarding__header--item1">
+                  <span class="text__small">8GPR4</span>
+                </span>
+                <span class="boarding__header--item2">
+                  <span class="boarding__info-date">2020.10.11</span>
+                  <i class="boarding__input-icon" aria-hidden="true"></i>
+                </span>
+              </span>
+              <span class="boarding__info-wrap">
+                <span class="boarding__info--top">
+                  <span class="boarding__info--top-item1">
+                    <span class="boarding__info-date">17:35</span>
+                  </span>
+                  <span class="boarding__info--top-item2">
+                    <span class="boarding__info-date">17:35</span>
+                  </span>
+                </span>
+                <span class="boarding__info">
+                  <span class="boarding__info-before">
+                    <span class="boarding__info-title">서울</span>
+                    <span class="boarding__info-text">인천</span>
+
+                  </span>
+                  <span aria-label="one-way" class="icon-mark one-way"></span>
+                  <span class="boarding__info-after">
+                    <span class="boarding__info-title">오사카</span>
+                    <span class="boarding__info-text">간사이</span>
+                  </span>
+                </span>
+                <span class="boarding__info--bot no-line">
+                  <span class="boarding__info--bot-item1 person">
+                    <span class="person__item"><i aria-label="성인" class="icon adult"></i><span>2</span><span class="hidden">명</span></span>
+                    <span class="person__item"><i aria-label="유아" class="icon child"></i><span>1</span><span class="hidden">명</span></span>
+                    <span class="person__item"><i aria-label="소아" class="icon baby"></i><span>1</span><span class="hidden">명</span></span>
+                  </span>
+                </span>
+              </span>
+            </label>
+          </div>
+
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span class="text__small">8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <div class="boarding__info-date">2020.10.11</div>
+                  <button type="button" class="button-favorites on">
+                    <span class="hidden">즐겨찾기</span>
+                  </button>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1">
+                  <div class="boarding__info-date">17:35</div>
+                </div>
+                <div class="boarding__info--top-item2">
+                  <div class="boarding__info-date">17:35</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울</div>
+                  <div class="boarding__info-text">인천</div>
+
+                </div>
+                <div aria-label="one-way" class="icon-mark one-way"></div>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                </div>
+              </div>
+              <div class="boarding__info--bot no-line">
+                <div class="boarding__info--bot-item1 person">
+                  <div class="person__item"><i aria-label="성인" class="icon adult"></i><span>2</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="유아" class="icon child"></i><span>1</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="소아" class="icon baby"></i><span>1</span><span class="hidden">명</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <div class="boarding__info-date">2020.10.11</div>
+                  <button type="button" class="button-favorites on">
+                    <span class="hidden">즐겨찾기</span>
+                  </button>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="boarding__info-date">2020.01.01</div>
+                  <div class="label label-orange">결항</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울서울서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <i class="icon-mark round-trip" aria-label="round-trip"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="boarding__bottom boarding__bottom--pdb-n">
+              <div class="check-wrap">
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck1-01"  class="checkbox__input">
+                    <label for="inputCheck1-01" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>JEJUBUSANSEOULKGWANGJUYEOSUBAMBADAIJOMYEONGEDAMGIN</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck1-03"  class="checkbox__input" disabled>
+                    <label for="inputCheck1-03" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>KIM/JEJU</span>
+                    </label>
+                  </span>
+                  <span data-element="tooltip" role="tooltip" class="tooltip">
+                    <button type="button" aria-label= "툴팁 열기" data-element="tooltip__anchor" class="tooltip__button"></button>
+                    <span data-element="tooltip__panel" class="tooltip__panel">
+                      <span aria-hidden="true" class="tooltip-arrow"></span>
+                      <span class="tooltip-desc">(발급불가 고객)님은 탑승 당일
+                        카운터에 방문해주시면 친절하게
+                        도와드릴게요</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="boarding__link boarding__link--text">
+                <a href="#none" class="boarding__link-item">
+                  KIM/JEJU
+                </a>
+                <a href="#none" class="boarding__link-item">
+                  JEJUBUSANSEOULKGWANGJUYEOSUBAMBADAIJOMYEONGEDAMGIN
+                </a>
+              </div>
+              <div class="dim-message" style="display:none;">
+                <div class="dim-message__content">
+                  <div class="dim-message__text">자동발급을 신청하시면<br>제주항공에서<br>탑승 24시간 전에<br>탑승권을 발급하고 알려드려요.</div>
+                  <div class="button-wrap button-wrap--center">
+                    <button type="button" class="button button--small"><span class="button__text">자동발급신청하기</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--primary"><span class="button__text">탑승권 발급</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <button type="button" class="button-share">
+                  <span class="hidden">공유</span>
+                </button>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="label label-blue">D-3</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울서울서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <div class="icon-mark via" aria-label="via"></div>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <!-- dim 메세지 -->
+                <div class="dim-message">
+                  <div class="dim-message__content">
+                    <div class="dim-message__title c-red">결항안내</div>
+                    <div class="dim-message__text">지금 바로 가까운 시간의 동일한 노선으로<br>여정을 변경할 수 있어요</div>
+                  </div>
+                </div>
+              </div>
+              <div class="boarding__info--bot">
+                <div class="boarding__info--bot-item1 person">
+                  <div class="person__item"><i aria-label="성인" class="icon adult"></i><span>2</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="유아" class="icon child"></i><span>1</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="소아" class="icon baby"></i><span>1</span><span class="hidden">명</span></div>
+                </div>
+                <div class="boarding__info--bot-item2">
+                  <span class="text c-orange">발급가능</span>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--border"><span class="button__text">예약취소</span></button>
+              <button type="button" class="button button--border"><span class="button__text">예약변경</span></button>
+              <button type="button" class="button button--border w100"><span class="button__text">결항/지연 확인서</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <button type="button" class="button-share2" aria-label="내보내기"></button>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="boarding__info-date">2020.08.27 / <span class="c-red">17:35</span></div>
+                  <div class="label label-red">지연</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울서울서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <div class="icon-mark via" aria-label="via"></div>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot">
+                <div class="boarding__info--bot-item1 person">
+                  <div class="person__item"><i aria-label="성인" class="icon adult"></i><span>2</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="유아" class="icon child"></i><span>1</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="소아" class="icon baby"></i><span>1</span><span class="hidden">명</span></div>
+                </div>
+                <div class="boarding__info--bot-item2">
+                  <span class="text c-red">변경시간 확인</span>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--border"><span class="button__text">신청취소</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>편명</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <span class="text c-blue">비행중</span>
+              </div>
+            </div>
+            <div class="boarding__info-wrap boarding__info-wrap--narrow">
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title"><span>GMP</span><span>06:15</span></div>
+                </div>
+                <i class="icon-mark one-way" aria-label="one-way"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title"><span>CJU</span><span>06:15</span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot more-info">
+                <div class="more-info__item">
+                  <dl>
+                    <dt>출발예정</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                  <dl>
+                    <dt>이륙</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                </div>
+                <span aria-hidden="true" class="line"></span>
+                <div class="more-info__item">
+                  <dl>
+                    <dt>도착예정</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                  <dl>
+                    <dt>착륙</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--border"><span class="button__text">고객 확인서</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>편명</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <span class="text c-blue">비행중</span>
+              </div>
+            </div>
+            <div class="boarding__info-wrap boarding__info-wrap--narrow">
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title"><span>GMP</span><span>06:15</span></div>
+                </div>
+                <i aria-label="one-way" class="icon-mark one-way"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title"><span>CJU</span><span>06:15</span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot more-info">
+                <div class="more-info__item">
+                  <dl>
+                    <dt>출발예정</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                  <dl>
+                    <dt>이륙</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                </div>
+                <span aria-hidden="true" class="line"></span>
+                <div class="more-info__item">
+                  <dl>
+                    <dt>도착예정</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                  <dl>
+                    <dt>착륙</dt>
+                    <dd>06:30</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--border"><span class="button__text">고객 확인서</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <button type="button" class="button-share">
+                  <span class="hidden">공유</span>
+                </button>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="label label-blue">D-3</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울서울서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <i class="icon-mark one-way" aria-label="one-way"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot">
+                <div class="boarding__info--bot-item2">
+                  <span class="text c-blue">결제대기</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!-- *************** button version ******************** -->
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4 버튼 버전</span>
+              </div>
+              <div class="boarding__header--item2">
+                <div class="boarding__header--item2">
+                  <span class="text c-blue">비행중</span>
+                </div>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="label label-blue">D-3</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <button type="button">
+                    <span class="boarding__info-title">서울서울서울</span>
+                    <span class="boarding__info-text">인천</span>
+                  </button>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <button type="button" class="icon-mark via" aria-label="via"></button>
+                <div class="boarding__info-after">
+                  <button type="button">
+                    <span class="boarding__info-title">오사카</span>
+                    <span class="boarding__info-text">간사이</span>
+                  </button>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot">
+                <div class="boarding__info--bot-item1 person">
+                  <div class="person__item"><i aria-label="성인" class="icon adult"></i><span>2</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="유아" class="icon child"></i><span>1</span><span class="hidden">명</span></div>
+                  <div class="person__item"><i aria-label="소아" class="icon baby"></i><span>1</span><span class="hidden">명</span></div>
+                </div>
+                <div class="boarding__info--bot-item2">
+                  <span class="text c-orange">발급가능</span><span data-element="tooltip" role="tooltip" class="tooltip" data-width="100" data-position="center">
+                    <button type="button" aria-label= "툴팁 열기" data-element="tooltip__anchor" class="tooltip__button"></button>
+                    <span data-element="tooltip__panel" class="tooltip__panel">
+                      <span aria-hidden="true" class="tooltip-arrow"></span>
+                      <span class="tooltip-desc">짧은 툴팁...(페이지에선 됨)</span>
+                    </span>
+                </div>
+                <div class="container--xsmall">
+                  <div class="gray-box">
+                    <span class="gray-box__text">2020년 12월 20일 23:59 까지</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="label label-blue">D-3</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <i class="icon-mark round-trip" aria-label="round-trip"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+              </div>
+              <div class="boarding__info--bot">
+                <div class="boarding__info--bot-item2">
+                  <span class="text c-orange">발급대기</span><span data-element="tooltip" role="tooltip" class="tooltip">
+                    <button type="button" aria-label= "툴팁 열기" data-element="tooltip__anchor" class="tooltip__button"></button>
+                    <span data-element="tooltip__panel" class="tooltip__panel">
+                      <span aria-hidden="true" class="tooltip-arrow"></span>
+                      <span class="tooltip-desc">(발급불가 고객)님은 탑승 당일
+                        카운터에 방문해주시면 친절하게
+                        도와드릴게요</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="boarding__bottom boarding__bottom--pdb-n">
+              <div class="boarding__link boarding__link--text">
+                <a href="#none" class="boarding__link-item">
+                  KIM/JEJU
+                </a>
+                <a href="#none" class="boarding__link-item">
+                  JEJUBUSANSEOULKGWANGJUYEOSUBAMBADAIJOMYEONGEDAMGIN
+                </a>
+              </div>
+              <div class="dim-message" style="display:none;">
+                <div class="dim-message__content">
+                  <div class="dim-message__text">자동발급을 신청하시면<br>제주항공에서<br>탑승 24시간 전에<br>탑승권을 발급하고 알려드려요.</div>
+                  <div class="button-wrap button-wrap--center">
+                    <button type="button" class="button button--small"><span class="button__text">자동발급신청하기</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--primary"><span class="button__text">탑승권 발급</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <span class="text c-red">결항</span>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span>7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="label label-blue">D-3</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울서울서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+                <i class="icon-mark round-trip" aria-label="round-trip"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date"><span>2020.08.27 17:35</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="boarding__bottom">
+              <div class="check-wrap">
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck1-01"  class="checkbox__input">
+                    <label for="inputCheck1-01" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>JEJUBUSANSEOULKGWANGJUYEOSUBAMBADAIJOMYEONGEDAMGIN</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck1-02"  class="checkbox__input">
+                    <label for="inputCheck1-02" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>KIM/JEJU</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck1-03"  class="checkbox__input" disabled>
+                    <label for="inputCheck1-03" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>KIM/JEJU</span>
+                    </label>
+                  </span>
+                  <span data-element="tooltip" role="tooltip" class="tooltip">
+                    <button type="button" aria-label= "툴팁 열기" data-element="tooltip__anchor" class="tooltip__button"></button>
+                    <span data-element="tooltip__panel" class="tooltip__panel">
+                      <span aria-hidden="true" class="tooltip-arrow"></span>
+                      <span class="tooltip-desc">(발급불가 고객)님은 탑승 당일
+                        카운터에 방문해주시면 친절하게
+                        도와드릴게요</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="dim-message" style="display:none;">
+                <div class="dim-message__content">
+                  <div class="dim-message__text">자동발급을 신청하시면<br>제주항공에서<br>탑승 24시간 전에<br>탑승권을 발급하고 알려드려요.</div>
+                  <div class="button-wrap button-wrap--center">
+                    <button type="button" class="button button--small"><span class="button__text">자동발급신청하기</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--primary"><span class="button__text">탑승권 발급</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <span>예약번호</span> : <span>8GPR4</span>
+              </div>
+              <div class="boarding__header--item2">
+                <button type="button" class="button-share">
+                  <span class="hidden">공유</span>
+                </button>
+              </div>
+            </div>
+            <div class="boarding__info-wrap">
+              <div class="boarding__info--top">
+                <div class="boarding__info--top-item1"><span class="del">7C133</span><span class="c-jeju">7C133</span></div>
+                <div class="boarding__info--top-item2">
+                  <div class="label label-orange">항공편변경</div>
+                </div>
+              </div>
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <div class="boarding__info-title">서울서울서울</div>
+                  <div class="boarding__info-text">인천</div>
+                  <div class="boarding__info-date">
+                    <span class="del">2020.08.27 17:35</span>
+                    <span class="c-jeju">2020.08.27 17:35</span>
+                  </div>
+                </div>
+                <i class="icon-mark round-trip" aria-label="round-trip"></i>
+                <div class="boarding__info-after">
+                  <div class="boarding__info-title">오사카</div>
+                  <div class="boarding__info-text">간사이</div>
+                  <div class="boarding__info-date">
+                    <span class="del">2020.08.27 17:35</span>
+                    <span class="c-jeju">2020.08.27 17:35</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="boarding__bottom">
+              <div class="check-wrap">
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck2-01"  class="checkbox__input">
+                    <label for="inputCheck2-01" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>JEJUBUSANSEOULKGWANGJUYEOSUBAMBADAIJOMYEONGEDAMGIN</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck2-02"  class="checkbox__input">
+                    <label for="inputCheck2-02" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>KIM/JEJU</span>
+                    </label>
+                  </span>
+                </div>
+                <div class="check-item">
+                  <span class="checkbox checkbox--small">
+                    <input type="checkbox" id="inputCheck2-03"  class="checkbox__input" disabled>
+                    <label for="inputCheck2-03" class="checkbox__label">
+                      <i aria-hidden="true" class="checkbox__ico"></i>
+                      <span>KIM/JEJU</span>
+                    </label>
+                  </span>
+                  <span data-element="tooltip" role="tooltip" class="tooltip">
+                    <button type="button" aria-label= "툴팁 열기" data-element="tooltip__anchor" class="tooltip__button"></button>
+                    <span data-element="tooltip__panel" class="tooltip__panel">
+                      <span aria-hidden="true" class="tooltip-arrow"></span>
+                      <span class="tooltip-desc">(발급불가 고객)님은 탑승 당일
+                        카운터에 방문해주시면 친절하게
+                        도와드릴게요</span>
+                    </span>
+                  </span>
+                </div>
+              </div>
+              <div class="nodata">
+                <div class="nodata__content">
+                  <div class="nodata__text">자동발급을 신청하시면<br>제주항공에서<br>탑승 24시간 전에<br>탑승권을 발급하고 알려드려요.</div>
+                  <div class="button-wrap button-wrap--center">
+                    <button type="button" class="button button--small"><span class="button__text">나의 예약현황</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--primary"><span class="button__text">탑승권 발급</span></button>
+            </div>
+          </div>
+          <br>
+          <div class="boarding">
+            <div class="boarding__header">
+              <div class="boarding__header--item1">
+                <div class="radio-wrap">
+                  <span class="radio">
+                    <input type="radio" class="radio__input" id="inputRadio1" name="inputRadio" checked>
+                    <label for="inputRadio1" class="radio__label">
+                      <i class="radio__ico" aria-hidden="true"></i>
+                      <span>편도</span>
+                    </label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" class="radio__input" id="inputRadio2" name="inputRadio">
+                    <label for="inputRadio2" class="radio__label">
+                      <i class="radio__ico" aria-hidden="true"></i>
+                      <span>왕복</span>
+                    </label>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="boarding__info-wrap boarding__info-wrap--large">
+              <div class="boarding__info">
+                <div class="boarding__info-before">
+                  <button type="button">
+                    <span class="boarding__info-title">서울</span>
+                    <span class="boarding__info-text">인천</span>
+                  </button>
+                </div>
+                <button type="button" class="icon-mark round-trip" aria-label="round-trip"></button>
+                <div class="boarding__info-after before-select"><!-- 도시(공항) 선택 후 before-select class 삭제 -->
+                  <button type="button">
+                    <span class="boarding__info-title">도착지</span>
+                    <span class="boarding__info-text">선택</span>
+                  </button>
+                </div>
+              </div>
+              <div class="boarding__date">
+                <div class="input-wrap input--line">
+                  <div class="input-row">
+                    <div class="input-item">
+                      <div class="input-box">
+                        <label for="inp4" class="input__label">가는날</label>
+                        <button
+                          type="button"
+                          class="picker picker--button"
+                          data-element="modal_anchor"
+                          data-modal-type="datepicker"
+                          data-target="#datepicker01">
+                        </button>
+                      </div>
+                      <p class="input__error" tabindex="0">에러메세지</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button-wrap boarding__button-wrap">
+              <button type="button" class="button button--primary"><span class="button__text">조회하기</span></button>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    const testData = [
+      { id: 0, text: 'enhancement' },
+      { id: 1, text: 'bug' },
+      { id: 2, text: 'duplicate' },
+      { id: 3, text: 'invalid' },
+      { id: 4, text: 'wontfix' }
+    ];
+
+    hljs.initHighlightingOnLoad();
+
+    $('#testEvent').on('select2:select', function (e) {
+      var data = e.params.data;
+      console.log(data);
+    });
+    $('#testAjax').select2({
+      data: testData
+    })
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

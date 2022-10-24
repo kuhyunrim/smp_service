@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Primary button(56px)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Primary button</li>
+          <li>버튼 active 됐을 경우 button--active class 추가</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <button type="button" class="button button--primary"><span class="button__text">다음</span></button>
+          </div>
+          <div class="button-wrap">
+            <button type="button" class="button button--primary button--active"><span class="button__text">다음</span></button><!-- 버튼 active 됐을 경우 button--active class 추가 -->
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Primary button(Floating action button)</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap button-wrap--stick">
+            <button type="button" class="button button--primary button--black "><span class="button__text">취소</span></button>
+            <button type="button" class="button button--primary button--active"><span class="button__text">다음</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>fixed button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="fixed-wrap">
+            <div class="button-wrap button-wrap--stick">
+              <button type="button" class="button button--primary button--black"><span class="button__text">취소</span></button>
+              <button type="button" class="button button--primary button--active"><span class="button__text">다음</span></button>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Secondary button</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Secondary button(42px) - flex</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap button-flex">
+            <button type="button" class="button button--secondary"><span class="button__text">아니요</span></button>
+            <button type="button" class="button button--secondary button--gray"><span class="button__text">아니요</span></button>
+            <button type="button" class="button button--secondary button--active"><span class="button__text">예</span></button>
+          </div>
+        </pre>
+      </item>
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Secondary button(42px) inline-block</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap button-wrap--center">
+            <button type="button" class="button button--secondary button--border"><span class="button__text">normal</span></button>
+            <button type="button" class="button button--secondary button--gray"><span class="button__text">disabled</span></button>
+            <button type="button" class="button button--secondary button--active"><span class="button__text">active</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Optional button</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Optional button(38px)</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <button type="button" class="button button--optional"><span class="button__text">노말</span></button>
+            <button type="button" class="button button--optional button--disabled"><span class="button__text">disabled</span></button>
+            <button type="button" class="button button--optional button--active"><span class="button__text">acitve</span></button>
+            <button type="button" class="button button--optional button--border-org"><span class="button__text">border-org</span></button>
+          </div>
+          <div class="button-wrap button-wrap--center">
+            <button type="button" class="button button--optional"><span class="button__text">노말</span></button>
+            <button type="button" class="button button--optional button--disabled"><span class="button__text">disabled</span></button>
+            <button type="button" class="button button--optional button--active"><span class="button__text">acitve</span></button>
+            <button type="button" class="button button--optional button--border-org"><span class="button__text">border-org</span></button>
+          </div>
+          <div class="button-wrap button-wrap--right">
+            <button type="button" class="button button--optional"><span class="button__text">노말</span></button>
+            <button type="button" class="button button--optional button--disabled"><span class="button__text">disabled</span></button>
+            <button type="button" class="button button--optional button--active"><span class="button__text">acitve</span></button>
+            <button type="button" class="button button--optional button--border-org"><span class="button__text">border-org</span></button>
+          </div>
+          <div class="button-wrap button-flex">
+            <button type="button" class="button button--optional"><span class="button__text">acitve</span></button>
+            <button type="button" class="button button--optional button--border-org"><span class="button__text">border-org</span></button>
+            <button type="button" class="button button--optional button--plus"><span class="button__text">등록</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Middle button(30px)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Middle button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <button type="button" class="button button--middle"><span class="button__text">다음에 변경하기</span></button>
+            <button type="button" class="button button--middle button--white"><span class="button__text">메뉴 자세히 보기</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Small button(28px)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>small button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <button type="button" class="button button--small"><span class="button__text">1:1 문의하기</span></button>
+            <button type="button" class="button button--small button--small-org"><span class="button__text">1:1 문의하기</span></button>
+            <button type="button" class="button button--small"><span class="button__text button__icon">환불 위임장</span></button>
+            <button type="button" class="button button--small"><span class="button__text button__icon icon-02">공항지도</span></button>
+            <button type="button" class="button button--small"><span class="button__text button__icon icon-plus">추가</span></button>
+            <button type="button" class="button button--small"><span class="button__text button__icon icon-minus">삭제</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">부가서비스 button</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>부가서비스 button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <button type="button" class="button button--cart"><span class="button__text">담기</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>table button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <!--
+              인증번호 6자리 입력 후 활성화 상태
+              <button type="button" class="button button--table button--active"><span class="button__text">인증</span></button>
+             -->
+            <button type="button" class="button button--table button--border"><span class="button__text">인증</span></button>
+            <button type="button" class="button button--table button--active"><span class="button__text">인증</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">option button</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>option button(태그는 button / a 모두 사용 가능)</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap">
+            <button type="button" class="button button--option"><span class="button__text button__icon">네이버 회원가입</span></button>
+          </div>
+          <div class="button-wrap">
+            <button type="button" class="button button--option"><span class="button__text button__icon button__icon--kakao">카카오 회원가입</span></button>
+          </div>
+          <div class="button-wrap">
+            <button type="button" class="button button--option"><span class="button__text button__icon button__icon--email">이메일 인증 회원가입</span></button>
+          </div>
+          <div class="button-wrap">
+            <button type="button" class="button button--option"><span class="button__text button__icon button__icon--line">라인 회원가입</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">icon button</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>아이콘 버튼</li>
+        </ul>
+        <pre class="component-tag">
+          <button type="button" class="button-share">
+            <span class="hidden">공유</span>
+          </button>
+          <button type="button" class="button-share2">
+            <span class="hidden">공유</span>
+          </button>
+          <button type="button" class="button-bookmark">
+            <span class="hidden">북마크</span>
+          </button>
+          <button type="button" class="button-favorites on">
+            <span class="hidden">즐겨찾기</span>
+          </button><!-- 즐겨찾기된 경우 on class 추가-->
+          <button type="button" class="button-delete">
+            <span class="hidden">삭제</span>
+          </button>
+          <button type="button" class="button-refresh">
+            <span class="hidden">새로고침</span>
+          </button>
+
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-title">Icon button</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>SNS button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="button-wrap button-wrap--center">
+            <button type="button" class="button-sns button-sns--kakao" aria-label="카카오톡으로 로그인">
+            </button>
+            <button type="button" class="button-sns button-sns--facebook" aria-label="페이스북으로 로그인">
+            </button>
+            <button type="button" class="button-sns button-sns--naver" aria-label="네이버로 로그인">
+            </button>
+            <button type="button" class="button-sns button-sns--google" aria-label="구글로 로그인">
+            </button>
+            <button type="button" class="button-sns button-sns--twiter" aria-label="트위터로 로그인">
+            </button>
+            <button type="button" aria-label="애플로 로그인" class="button-sns button-sns--apple">
+            </button>
+          </div>
+          <div class="button-wrap button-wrap--center button-wrap--login">
+            <button type="button" aria-label="페이스북으로 로그인" class="button-sns button-sns--facebook">
+            </button>
+            <button type="button" aria-label="구글 로그인" class="button-sns button-sns--google">
+            </button>
+            <button type="button" aria-label="트위터로 로그인" class="button-sns button-sns--twiter">
+            </button>
+            <button type="button" aria-label="애플로 로그인" class="button-sns button-sns--apple">
+            </button>
+          </div>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>floating button</li>
+        </ul>
+        <pre class="component-tag">
+          <button type="button" class="button-floating" aria-label="메뉴 열기">
+          </button>
+          <button type="button" class="button-filter" aria-label="메뉴 열기">
+          </button>
+          <button type="button" class="button-top" aria-label="상단 이동">
+          </button>
+        </pre>
+      </item>
+    </div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>text link button</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="link-wrap">
+            <a href="#" class="link-wrap__item">아이디/비밀번호 찾기</a>
+            <a href="#" class="link-wrap__item">회원 가입하기</a>
+          </div>
+          <div class="link-wrap link-wrap--arrow">
+            <a href="#" class="link-wrap__text"><span>다른방법으로회원가입(화살표)</span></a>
+          </div>
+          <div class="link-wrap">
+            <a href="#" class="link-wrap__underline"><span>다른방법으로회원가입(중앙정렬)</span></a>
+          </div>
+          <div class="link-wrap link-wrap--right">
+            <a href="#" class="link-wrap__underline"><span>다른방법으로회원가입(오른쪽 정렬)</span></a>
+          </div>
+          <div class="link-wrap link-wrap--left">
+            <a href="#" class="link-wrap__underline"><span>다른방법으로회원가입(왼쪽 정렬)</span></a>
+          </div>
+          <div class="link-wrap link-wrap--left">
+            <a href="#" class="link-wrap__underline link-wrap__underline--gray"><span>공항시설 사용료</span></a>
+          </div>
+          <!-- <div class="link-wrap link-wrap--arrow link-wrap--left link-wrap--large">
+            <a href="#" class="link-wrap__text"><span>추가정보 수정하기</span></a>
+          </div> -->
+          <div class="more-wrap">
+            <button type="button" class="more__button"><span class="more__button-text">더보기</span></button>
+            <button type="button" class="more__button"><span class="more__button-text">더보기 (<span class="more__button--color">10</span>/33)</span></button>
+          </div>
+        </pre>
+      </item>
+    </div>
+  </div>
+
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">배너</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="main-banner">
+            <div class="main-banner__image">
+              <img src="../../assets/images/@temp/@event-banner360x280.png" alt="" style="width: 250px; height: 230px;">
+            </div>
+            <div class="main-banner__text">
+              <p class="banner-text">슬기로운 여행생활</p>
+              <div class="banner-title">제주항공 FLY Bag<br>여행 플렉스 시작!</div>
+            </div>
+          </div>
+
+          <div class="main-banner" style="background:#fde69d">
+            <div class="main-banner__image">
+              <img src="../../assets/images/@temp/@event-banner360x230.png" alt="" style="width: 360px; height: 230px;">
+            </div>
+            <div class="main-banner__text">
+              <p class="banner-text">제주항공 회원만의 </p>
+              <div class="banner-title">특별한 혜택으로<br>쿠폰 받고! 할인 받자!</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="sub-banner">
+            <div class="sub-banner__image">
+              <img src="../../assets/images/@temp/@event-banner360x280.png" alt="" style="width: 180px; height: 148px;">
+            </div>
+            <div class="sub-banner__text">
+              <p class="banner-text">슬기로운 여행생활</p>
+              <div class="banner-title">제주항공 FLY Bag<br>여행 플렉스 시작!</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <div class="component-sub">
+      <item guide-type="html">
+        <pre class="component-tag">
+          <div class="small-banner">
+            <div class="small-banner__image">
+              <img src="../../assets/images/@temp/@event-banner360x280.png" alt="" style="width: 116px; height: 90px;">
+            </div>
+            <div class="small-banner__text">
+              <p class="banner-text">슬기로운 여행생활</p>
+              <div class="banner-title">제주항공 FLY Bag<br>여행 플렉스 시작!</div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+    </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

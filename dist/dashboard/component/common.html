@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Common</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Dashboard 내의 일부 리소스를 제외한 모든 html, css, js, image 등 모든 리소스는 수정시 화면 새로고침 됩니다.</li>
+          <li>공통 코드의 반복되는 작업을 최소화 하기 위해 자주사용되는 태그는 component 하단에 emmet 추가 하였습니다.</li>
+          <li>pre.component-tag 내에 코드를 작성하면 자동으로 하단의 코드영역에 마크업이 나오도록 작업(Vue component)되어있습니다.</li>
+          <li>Vue 기반의 컴포넌트 목록이므로 code 하단에 추가할 내용이 있는 경우 template[slot="footer"] 생성 후 추가해주세요.(component > select 참고)</li>
+          <li>template[slot="footer"] 내의 마크업은 자동으로 코드로 변환되지 않습니다.</li>
+          <li>template 태그는 실제로 화면에 렌더링되지 않지만 담겨져 있는 하위 요소들은 화면에 표시됩니다.</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="test">테스트 코드 입니다.</div></pre>
+
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>테스트 emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.test{테스트 코드 입니다.}</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+    <div class="component-title">간격 가이드</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>컨텐츠와 컨텐츠 사이의 간격은 30px(container--default), 연관된 컨텐츠 일 경우 20px(container--small)로 클래스로 구분</li>
+          <li>일부 40px 의 간격을 갖고 있는 컴포넌트는 container--large 사용</li>
+          <li>컴포넌트와 컴포넌트 사이의 2-30px 의 간격은 container--default, small 를 사용하며 컴포넌트 내의 간격은 컴포넌트 내에서 지정</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="title">
+            <div class="title__wrap">
+              <div class="title__page">섹션의 제목입니다. 24px Extrabold</div>
+              <div class="title__additional title__additional--colored">제목의 설명글 입니다 16px Bold #666</div>
+              <div class="title__additional title__additional--colored--org">제목의 설명글 입니다 16px Bold #ff5000</div>
+            </div>
+          </div>
+
+          <div class="container--default">
+            <div class="img-box">
+              <button type="button" class="img-box__item img-box__item--active">
+                <span class="img-box__img">
+                  <img src="../../assets/images/icon/icon-ticket-online.png" alt="">
+                </span>
+                <span class="img-box__text">
+                  제주항공<br>온라인 구매
+                </span>
+              </button>
+
+              <button type="button" class="img-box__item">
+                <span class="img-box__img">
+                  <img src="../../assets/images/icon/icon-ticket-airport.png" alt="">
+                </span>
+                <span class="img-box__text">
+                  공항 지점<br>고객센터 구매
+                </span>
+              </button>
+
+              <button type="button" class="img-box__item">
+                <span class="img-box__img">
+                  <img src="../../assets/images/icon/icon-ticket-airport.png" alt="">
+                </span>
+                <span class="img-box__text">
+                  여행사<br>구매
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="container--default">
+            <div class="select">
+              <select class="select__selection">
+                <option value="1">SELECT 1</option>
+                <option value="2">SELECT 2</option>
+                <option value="3">SELECT 3</option>
+                <option value="4">SELECT 4</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="container--small">
+            <div class="input-row">
+              <div data-element="form" class="input">
+                <input type="text" data-element="input" id="inputDefault" placeholder="기본 텍스트 입력입니다." class="input__text">
+                <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+              </div>
+            </div>
+            <div class="input-row">
+              <div data-element="form" class="input">
+                <input type="text" data-element="input" id="inputDefault" placeholder="기본 텍스트 입력입니다." class="input__text">
+                <button type="button" data-element="remove" class="input__remove-button"><span class="hidden">삭제</span></button>
+              </div>
+            </div>
+          </div>
+        </pre>
+      </item>
+    </div>
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

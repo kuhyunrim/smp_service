@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Custom Select</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>커스텀 셀렉트</li>
+          <li>data-title : button 첫 문구 선택</li>
+          <li>title : 접근성 문구 & bottomsheet 타이틀 문구</li>
+          <li>option : .on 추가시 default selected</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="select-wrap" data-element="select">
+            <!--
+              data-title : button 첫 문구 선택
+              title : 접근성 문구 & bottomsheet 타이틀 문구
+              option : .on 추가시 default selected
+            -->
+            <select class="select-wrap__select" data-element="select__select" data-placeholder="선택해 주세요" title="해외 여행 신고 선택">
+              <option></option>
+              <option value="1" class="on">신용카드2</option>
+              <option value="2">실시간2</option>
+              <option value="3">공항지점고객센터서비스이용2</option>
+              <option value="4">예약발권서비스이용료2</option>
+            </select>
+          </div>
+          <div class="select-wrap select-wrap--line" data-element="select">
+            <select class="select-wrap__select" data-element="select__select" data-placeholder="선택해 주세요(라인)" title="거래선택방법 선택">
+              <option></option>
+              <option value="1">신용카드</option>
+              <option value="2">실시간</option>
+              <option value="3">공항지점고객센터서비스이용</option>
+              <option value="4">예약발권서비스이용료</option>
+            </select>
+          </div>
+          <div class="select-wrap select-wrap--inline" data-element="select">
+            <select data-element="select__select" data-placeholder="전체" title="보기 방식 선택" class="select-wrap__select">
+              <option></option>
+              <option value="1">전체</option>
+              <option value="2">사용가능</option>
+            </select>
+          </div>
+
+          <div data-element="select" class="select-wrap select-wrap--button">
+            <select data-element="select__select" data-placeholder="언어 설정 수정" title="언어 설정 선택" class="select-wrap__select">
+              <option></option>
+              <option value="1">대한민국</option>
+              <option value="2">日本</option>
+              <option value="3">中国</option>
+              <option value="4">香港</option>
+              <option value="5">澳門</option>
+              <option value="6">台灣</option>
+              <option value="7">เว็บไซต์ไทย</option>
+              <option value="8">Philippine</option>
+              <option value="9">U.S</option>
+              <option value="10">Malaysia</option>
+              <option value="11">Laos</option>
+              <option value="12">Việt</option>
+              <option value="13">Россия</option>
+              <option value="14">Singapore</option>
+            </select>
+          </div>
+        </pre>
+        <ul class="component-note">
+          <li>기본 셀렉트</li>
+        </ul>
+      </item>
+    </div>
+
+    <div class="component-title">Select(기본)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>디자인 전 이므로 변경 될 수 있음</li>
+          <li>사용 플러그인: <a href="https://select2.org/" target="_blank">https://select2.org/</a></li>
+        </ul>
+        <pre class="component-tag">
+          <div class="select">
+            <select class="select__selection">
+              <option value="1">SELECT 1</option>
+              <option value="2">SELECT 2</option>
+              <option value="3">SELECT 3</option>
+              <option value="4">SELECT 4</option>
+            </select>
+          </div>
+        </pre>
+        <ul class="component-note">
+          <li>기본 셀렉트</li>
+        </ul>
+        <template slot="footer">
+          <ul class="component-etc">
+            <li>
+              <strong>Event 목록</strong>
+              <ul>
+                <li>select2:open : select 박스가 열렸을때</li>
+                <li>select2:close : select 박스가 닫혔을때</li>
+                <li>select2:select : 항목이 선택되었을때</li>
+                <li>select2:unselect : 항목이 선택해제 되었을때</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="component-code">
+            <pre><code class="js">$(Selector).on('select2:select', function (e) {
+  var data = e.params.data;
+  console.log(data);
+});</code></pre>
+          </div>
+          <ul class="component-etc">
+            <li>
+              <strong>Ajax 호출시</strong>
+              <ul>
+                <li>Ajax 호출 후 Data 를 추가시</li>
+                <li>Data 를 Ajax만 사용하는 경우 option 삭제 가능</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="component-code">
+            <pre><code class="js">var testData = [
+  { id: 0, text: 'enhancement' },
+  { id: 1, text: 'bug' },
+  { id: 2, text: 'duplicate' },
+  { id: 3, text: 'invalid' },
+  { id: 4, text: 'wontfix'}
+];
+
+$(Selector).select2({
+  data: testData
+})</code></pre>
+          </div>
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.select>select.select__selection>option[value="value$"]*3</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+    <div class="component-title">Select(line)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>line 스타일</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="select select--line">
+            <select class="select__selection">
+              <option value="1">라인형식</option>
+              <option value="2">SELECT 2</option>
+              <option value="3">SELECT 3</option>
+              <option value="4">SELECT 4</option>
+            </select>
+          </div>
+        </pre>
+        <ul class="component-note">
+          <li>select select--line 클래스 추가</li>
+        </ul>
+      </item>
+    </div>
+    <div class="component-title">Select(placeholder)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>Placeholder 추가</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="select">
+            <select class="select__selection" data-placeholder="test placeholder">
+              <option></option>
+              <option value="1">SELECT 1</option>
+              <option value="2">SELECT 2</option>
+              <option value="3">SELECT 3</option>
+              <option value="4">SELECT 4</option>
+            </select>
+          </div></pre>
+        <ul class="component-note">
+          <li>select 에 data-placeholder="test placeholder" 및 비어있는 option 추가</li>
+        </ul>
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.select>select.select__selection[data-placeholder="placeholder"]>option+option[value="value$"]*3</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+    <div class="component-title">Select(비활성화)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>비활성화 기능</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="select">
+            <select class="select__selection" disabled>
+              <option value="1">SELECT 1</option>
+              <option value="2">SELECT 2</option>
+              <option value="3">SELECT 3</option>
+              <option value="4">SELECT 4</option>
+            </select>
+          </div></pre>
+        <ul class="component-note">
+          <li>select 에 disabled Attribute 추가</li>
+        </ul>
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.select>select.select__selection[disabled][data-placeholder="placeholder"]>option+option[value="value$"]*3</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    const encodeHTML = (str) => {
+      return str.replace(/[\u00A0-\u9999<>&](?!#)/gim, (i) => {
+        return '&#' + i.charCodeAt(0) + ';';
+      });
+    }
+    hljs.initHighlightingOnLoad();
+  </script>
+
+  <script>
+    const innerComp = Vue.extend({
+      props: ['slotData', 'guideType'],
+      template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+      computed: {
+        tagItem() {
+          return this.slotData
+        }
+      }
+    })
+
+    const wrapperComp = Vue.extend({
+      props: ['guideType'],
+      template: `<div class="wrap-slot">
+          <div class="component-item">
+            <slot name="default"></slot>
+          </div>
+          <div class="component-code">
+            <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+            <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+          </div>
+          <slot name="footer"></slot>
+        </div>`,
+      data: () => {
+        return {
+          slotTag: ''
+        }
+      },
+      components: {
+        'item-inner': innerComp
+      },
+      computed: {
+        tagList() {
+          return this.slotTag
+        }
+      },
+      mounted() {
+        const slotItem = $(this.$el).find('.component-tag').html()
+        this.slotTag = slotItem
+      },
+      methods: {
+        toggleExpend() {
+          const elem = this.$el.querySelector('.component-code')
+          elem.classList.toggle('expend')
+        },
+      }
+    })
+
+    Vue.component('item', wrapperComp)
+    Vue.component('item-inner', innerComp)
+
+    new Vue({
+      el: '#compo',
+      data: () => {
+        return {
+          def: '',
+        }
+      },
+    })
+  </script>
+</body>
+</html>

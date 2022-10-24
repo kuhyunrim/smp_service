@@ -35,11 +35,11 @@
     <div class="wrapper" :class="{ 'active': activeNav}">
       <div class="app-header">
         <div class="inner">
-          <button type="button" class="toggle" :class="{ 'active': activeNav }">
+          <!-- <button type="button" class="toggle" :class="{ 'active': activeNav }">
             <span class="line top"></span>
             <span class="line mid"></span>
             <span class="line bot"></span>
-          </button>
+          </button> -->
           <span class="headline">Dashboard</span>
         </div>
       </div>
@@ -49,12 +49,6 @@
           <div class="title-l">작업 목록</div>
 
           <div class="title">페이지 목록</div>
-          <div class="modify-list">
-            <span class="check-wrap">
-              <input type="checkbox" id="showAll" v-model="showAll">
-              <label for="showAll" class="label">전체목록보기</label>
-            </span>
-          </div>
           <template v-if="showAll">
             <div class="flatten-list">
               <div class="pages header">

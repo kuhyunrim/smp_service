@@ -1,0 +1,67 @@
+.header{
+  $root: &;
+  width: 100%;
+  background: $header;
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+  }
+  &__logo{
+    position: absolute;
+    top: 50%;
+    left: 58px;
+    transform: translateY(-50%);
+    color: #fff;
+  }
+  &__info{
+    position: absolute;
+    top: 50%;
+    right: 51px;
+    transform: translateY(-50%);
+    color: #fff;
+    .name{
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &__gnb{}
+}
+
+.gnb{
+  $root: &;
+  display: flex;
+  align-items: center;
+  &__item{
+    position: relative;
+    padding: 0 18px;
+    &--single{
+      &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 16px;
+        background: #8996A3;
+      }
+    }
+  }
+  &__link{
+    color: #8996A3;
+    font-weight: 500;
+    &.is_active{
+      color: #fff;
+    }
+  }
+}
+
+.content{
+  width: 100%;
+  & > .container{
+    @extend %container;
+  }
+}

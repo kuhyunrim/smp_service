@@ -1,0 +1,22 @@
+.page-header{
+  $root: &;
+  width: 100%;
+  background: #F5F8FA;
+  &__container{
+    @extend %container;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 157px;
+  }
+  &__title{
+    color: #2C3238;
+    font-size: 44px;
+    font-weight: 700;
+  }
+  &__text{
+    margin-top: 16px;
+    font-weight: 400;
+    color: #56606B;
+  }
+}

@@ -136,25 +136,21 @@ html{
   font-size: 16px;
 }
 body, button, input, textarea{
-  font-family: 'NanumSquare', 'roboto', sans-serif, Arial;
+  font-family: 'notosans', sans-serif;
   font-weight: 400;
 }
 input[type=password] {
-  font-family: sans-serif;
+  font-family: 'notosans', sans-serif;
 }
 body {
   line-height: 1.2;
 }
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition: background-color 5000s ease-in-out 0s;
-}
-
-html, body{
-  overflow-x: hidden;
-  padding-bottom: safe(bottom);
 }
 
 input[type=text]::-ms-clear {

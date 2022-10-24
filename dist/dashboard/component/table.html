@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>제주항공</title>
+  <link rel="stylesheet" href="../../assets/css/global.css">
+  <link rel="stylesheet" href="../../assets/css/component.css">
+  <link rel="stylesheet" href="../../assets/css/page.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+<link rel="stylesheet" href="../guide.css">
+  <link rel="stylesheet" href="../css/atelier-estuary-light.css">
+  <script src="../vue.js"></script>
+</head>
+<body>
+  <div id="compo">
+    <!-- <div class="component-title">Select</div> -->
+    <div class="component-title">Table (세로형)</div>
+    <div class="component-sub">
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기능 / 디자인 확정 후 진행 예정</li>
+        </ul>
+        <div data-element="toggle">
+          <button class="pualugin__button" data-element="toggle__anchor">toggle_anchor</button>
+          <div data-element="toggle__panel">toggle_panel</div>
+        </div>
+        <!-- <div data-element="toggle">
+          <a href="#" class="test-button" data-element="toggle__anchor">test button</a>
+          <div class="panel" data-element="toggle__pannel">panel panel panel</div>
+        </div> -->
+        <pre class="component-tag">
+          <div class="table-caption">테이블 타이틀
+            <span class="table-caption__sub">테이블 sub 타이틀</span>
+          </div>
+          <div class="table-vertical">
+            <table>
+              <caption>테이블의 설명</caption>
+              <colgroup>
+                <col span="3">
+              </colgroup>
+              <thead class="table-vertical__thead">
+                <tr>
+                  <th scope="col" class="table-vertical__th">성인</th>
+                  <th scope="col" class="table-vertical__th">소아</th>
+                  <th scope="col" class="table-vertical__th">유아</th>
+                </tr>
+              </thead>
+              <tbody class="table-vertical__tbody">
+                <tr>
+                  <td class="table-vertical__td  table-vertical__td--top">
+                    <div class="table-price">
+                      <span class="default default--del">25,000원</span>
+                      <span class="percent">
+                        <i class="icon-down--small"></i>
+                        32%
+                      </span>
+                      <strong class="price">16,900원</strong>
+                    </div>
+                  </td>
+                  <td class="table-vertical__td  table-vertical__td--top">
+                    <div class="table-price">
+                      <span class="default default--del">25,000원</span>
+                      <span class="percent">
+                        <i class="icon-down--small"></i>
+                        32%
+                      </span>
+                      <strong class="price">15,000원</strong>
+                    </div>
+                  </td>
+                  <td class="table-vertical__td  table-vertical__td--top">
+                    <strong class="text__default text--bold">법인카드(일반/체크)</strong>
+                    <div class="label-list__row">
+                      <div class="label-list__label">30만원 미만</div>
+                      <div class="label-list__content">안전 결제</div>
+                    </div>
+                    <div class="label-list__row">
+                      <div class="label-list__label">30만원 이상</div>
+                      <div class="label-list__content">안전 결제 + 공인인증서</div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-info">
+            <p class="table-info__text">하단 정보 문구 예시: 칭다오-인천, 인천-괌 연결 여정일 경우, 인천공항에서 최소 150분의 연결시간이 필요합니다.</p>
+          </div>
+        </pre>
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.table-vertical>table>(caption{테이블 설명})(colgroup>col)(thead.table-vertical__thead>tr>th[scope="col"])(tbody.table-vertical__tbody>tr>td.table-vertical__td)</code></pre>
+          </div>
+        </template>
+      </item>
+
+
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>유형 01</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="table-horizontal">
+            <table>
+              <caption>테이블의 설명</caption>
+              <colgroup>
+                <col style="width:30%" />
+                <col>
+              </colgroup>
+              <tbody class="table-horizontal__tbody">
+                <tr>
+                  <th scope="row" class="table-horizontal__th">관리번호</th>
+                  <td class="table-horizontal__td">PUS00275</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="table-horizontal__th">상세 설명</th>
+                  <td class="table-horizontal__td">카카오 프렌즈 캐릭터 스티커가 휴대폰 케이스에 붙어 있습니다.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>유형 02</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="table-vertical">
+            <table>
+              <caption>테이블의 설명</caption>
+              <colgroup>
+                <col span="1">
+              </colgroup>
+              <thead class="table-vertical__thead">
+                <tr>
+                  <th scope="col" class="table-vertical__th">체크카드</th>
+                </tr>
+              </thead>
+              <tbody class="table-vertical__tbody">
+                <tr>
+                  <td class="table-vertical__td border__none">은행에서 발행된 체크카드 사용 가능(한국기준)</td>
+                </tr>
+                <tr>
+                  <th scope="col" class="table-vertical__th bg__gray">해외카드 결제</th>
+                </tr>
+                  <tr>
+                    <td class="table-vertical__td">은행에서 발행된 체크카드 사용 가능(한국기준)</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>유형 03</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="table-vertical">
+            <table>
+              <caption>테이블의 설명</caption>
+              <colgroup>
+                <col style="width:50%">
+                <col style="width:50%">
+              </colgroup>
+              <thead class="table-vertical__thead">
+                <tr>
+                  <th scope="colgroup" colspan="2" class="table-vertical__th">고객의 탑승 시간</th>
+                </tr>
+              </thead>
+              <tbody class="table-vertical__tbody">
+                <tr>
+                  <th scope="col" class="table-vertical__th">오후 2시 이전</th>
+                  <th scope="col" class="table-vertical__th">오후 2시 이후</th>
+                </tr>
+                <tr>
+                  <td class="table-vertical__td">+2일 뒤 포인트 적립</td>
+                  <td class="table-vertical__td">+2일 뒤 포인트 적립</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>유형 04</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="table-horizontal">
+            <table>
+              <caption>테이블의 설명</caption>
+              <colgroup>
+                <col style="width:30%" />
+                <col>
+              </colgroup>
+              <thead class="table-horizontal__thead">
+                <tr>
+                  <th scope="col" class="table-horizontal__th">구분</th>
+                  <th scope="col" class="table-horizontal__td">결과</th>
+                </tr>
+              </thead>
+              <tbody class="table-horizontal__tbody">
+                <tr>
+                  <th scope="row" class="table-horizontal__th">상태</th>
+                  <td class="table-horizontal__td">정상</td>
+                </tr>
+                <tr>
+                  <th scope="row" class="table-horizontal__th">상태</th>
+                  <td class="table-horizontal__td">정상</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </pre>
+      </item>
+
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>유형 05</li>
+        </ul>
+        <pre class="component-tag">
+          <div class="table-vertical">
+            <table>
+              <caption>테이블의 설명</caption>
+              <colgroup>
+                <col style="width:17%">
+                <col style="width:23%">
+                <col style="width:22%">
+                <col>
+                <col style="width:22%">
+              </colgroup>
+              <thead class="table-vertical__thead">
+                <tr>
+                  <th scope="col" class="table-vertical__th">노선</th>
+                  <th scope="col" class="table-vertical__th">공항운임</th>
+                  <th scope="col" class="table-vertical__th">공항시설 사용료</th>
+                  <th scope="col" class="table-vertical__th">유류 할증료</th>
+                  <th scope="col" class="table-vertical__th">항공운임 등 총액</th>
+                </tr>
+              </thead>
+              <tbody class="table-vertical__tbody">
+                <tr>
+                  <th class="table-vertical__td">서울 -제주</th>
+                  <td class="table-vertical__td align__right">70.000</td>
+                  <td class="table-vertical__td align__right">70.000</td>
+                  <td class="table-vertical__td align__right">0</td>
+                  <td class="table-vertical__td align__right text__bold">70.000</td>
+                </tr>
+                <tr>
+                  <th class="table-vertical__td">서울 -제주</th>
+                  <td class="table-vertical__td align__right">70.000</td>
+                  <td class="table-vertical__td align__right">70.000</td>
+                  <td class="table-vertical__td align__right">0</td>
+                  <td class="table-vertical__td align__right text__bold">70.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </pre>
+      </item>
+    </div>
+
+    <!--
+    <div class="component-title">Table (세로형)</div>
+    <div class="component-sub">
+      <item guide-type="html">
+        <ul class="component-description">
+          <li>기능 / 디자인 확정 후 진행 예정</li>
+        </ul>
+        <pre class="component-tag">
+
+
+        </pre>
+        <template slot="footer">
+          <ul class="component-etc">
+            <li><strong>emmet</strong></li>
+          </ul>
+          <div class="component-code">
+            <pre class="inline"><code class="text">div.table-horizontal>table>(caption{테이블 설명})(colgroup>col)(tbody.table-horizontal__tbody>tr>(th[scope="row"]+td))</code></pre>
+          </div>
+        </template>
+      </item>
+    </div>
+    -->
+  </div>
+
+  <script src="../../assets/js/lib/lib.min.js"></script>
+  <script src="../../dashboard/highlight.pack.js"></script>
+  <script src="../../assets/js/plugin.js"></script>
+  <script src="../../assets/js/common.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+<script>
+  const innerComp = Vue.extend({
+    props: ['slotData', 'guideType'],
+    template: `<pre><code :class="guideType">{{ tagItem }}</code></pre>`,
+    computed: {
+      tagItem() {
+        return this.slotData
+      }
+    }
+  })
+
+  const wrapperComp = Vue.extend({
+    props: ['guideType'],
+    template: `<div class="wrap-slot">
+        <div class="component-item">
+          <slot name="default"></slot>
+        </div>
+        <div class="component-code">
+          <button type="button" class="toggle-expend" @click="toggleExpend">toggle expend</button>
+          <item-inner :slot-data="tagList" :guide-type="guideType"></item-inner>
+        </div>
+        <slot name="footer"></slot>
+      </div>`,
+    data: () => {
+      return {
+        slotTag: ''
+      }
+    },
+    components: {
+      'item-inner': innerComp
+    },
+    computed: {
+      tagList() {
+        return this.slotTag
+      }
+    },
+    mounted() {
+      const slotItem = $(this.$el).find('.component-tag').html()
+      this.slotTag = slotItem
+    },
+    methods: {
+      toggleExpend() {
+        const elem = this.$el.querySelector('.component-code')
+        elem.classList.toggle('expend')
+      },
+    }
+  })
+
+  Vue.component('item', wrapperComp)
+  Vue.component('item-inner', innerComp)
+
+  new Vue({
+    el: '#compo',
+    data: () => {
+      return {
+        def: '',
+      }
+    },
+  })
+</script>
+</body>
+</html>

@@ -1,42 +1,8 @@
-$h-header: 60px;
-$h-booking: 219px;
-$h-booking-multi: 265px;
-$h-booking-s: 100px;
-$h-booking-multi-s: 120px;
-$h-container: calc(100vh - #{$h-header});
-$c-jeju: #ff5000;
-$c-lightblue: #00a7e1;
-$t-booking: all 0.3s ease;
+$pink: #E0205C;
+$header: #2C3238;
 
-$fix: matrix(1, 0, 0.0005, 1, 0, 0);
-
-%gnbline {
-  position: absolute;
-  top: 50%;
-  border: 0;
-  border-radius: 4px;
-  //background: #000;
-  height: 2px;
-}
-
-%picker-dot {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  top: 50%;
-  left: 50%;
-  margin: -13px 0 0 -2px;
-  border-radius: 100%;
-}
-
-%hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+%container{
+	width: 100%;
+	max-width: 1180px;
+	margin: 0 auto;
 }
