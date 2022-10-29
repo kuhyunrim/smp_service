@@ -17,7 +17,9 @@
     </ul>
     <div class="header__info">
       <strong class="name">김이름</strong>
-      <i class="profile"></i>
+      <i class="profile">
+        <img src="/assets/images/icon_avatar.png" alt="" />
+      </i>
     </div>
   </div>
 </header>
