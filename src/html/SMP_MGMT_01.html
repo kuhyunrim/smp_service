@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <!--#include file="./inc/meta.inc" -->
   <title>SMP</title>
   <!--#include file="./inc/css.inc" -->
 </head>
+
 <body>
   <div id="skipNav" class="skip-nav">
     <a href="#gnb" class="skip-nav__item">메뉴 바로가기</a>
@@ -17,12 +19,136 @@
       <p class="page-header__text"> SINGLEX서비스의 계약 담당자 확인과 변경을 확인할 수 있어요.</p>
     </div>
   </div>
-
+  <div class="content">
+    <div class="container">
+      <div class="btn__sort">
+          <div class="part__right">
+            <button type="button" class="button"><span class="button__text">초대링크전송</span></button>
+            <button type="button" class="button"><span class="button__text">대표담당자변경</span></button>
+            <button type="button" class="button"><span class="button__text">담당자 삭제</span></button>
+            <button type="button" class="button"><span class="button__text">담당자 등록</span></button>
+          </div>
+      </div>
+      <div class="tbl__wrap">
+        <table class="bbs__list">
+          <caption></caption>
+          <colgroup>
+            <col style="width:194px">
+            <col>
+            <col style="width:121px">
+            <col style="width:108px">
+            <col style="width:110px">
+            <col style="width:110px">
+            <col style="width:200px">
+            <col style="width:140px">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">
+                <div class="select">
+                  <select class="select__box small">
+                    <option value="" selected>서비스 선택</option>
+                    <option value="">선택1</option>
+                  </select>
+                </div>
+              </th>
+              <th scope="col">
+                <div class="lever__subj">
+                  <label class="lever__check"><input type="checkbox" name="" value=""><span>계약명</span></label>
+                </div>
+              </th>
+              <th scope="col">회사명</th>
+              <th scope="col">담당자명</th>
+              <th scope="col">대표담당자</th>
+              <th scope="col">SMP가입</th>
+              <th scope="col">email</th>
+              <th scope="col">연락처</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SINGLEX기준정보관리(MDD)</td>
+              <td>
+                  <div class="lever__subj">
+                    <label class="lever__check"><input type="checkbox" name="" value=""></label>
+                    <p class="subj ell">[PJ20214794][공상평-구독료]테스트입니다.</p>
+                  </div>
+                </td>
+              <td>LX판토스</td>
+              <td><div class="name"><span class="ico__medal"></span>박엘지</div></td>
+              <td>Yes</td>
+              <td>No</td>
+              <td><a href="#" class="underline">lgpark@lgcns.com</a></td>
+              <td>010-0123-4567</td>
+            </tr>
+            <tr>
+              <td>SINGLEX기준정보관리(MDD)</td>
+              <td>
+                  <div class="lever__subj">
+                    <label class="lever__check"><input type="checkbox" name="" value=""></label>
+                    <p class="subj ell">[PJ20214794][공상평-구독료]테스트입니다.</p>
+                  </div>
+                </td>
+              <td>LX판토스</td>
+              <td><div class="name"><span class="ico__medal"></span>박엘지</div></td>
+              <td>Yes</td>
+              <td>No</td>
+              <td><a href="#" class="underline">lgpark@lgcns.com</a></td>
+              <td>010-0123-4567</td>
+            </tr>
+            <tr>
+              <td>SINGLEX기준정보관리(MDD)</td>
+              <td>
+                  <div class="lever__subj">
+                    <label class="lever__check"><input type="checkbox" name="" value=""></label>
+                    <p class="subj ell">[PJ20214794][공상평-구독료]테스트입니다.</p>
+                  </div>
+                </td>
+              <td>LX판토스</td>
+              <td><div class="name">박엘지</div></td>
+              <td>Yes</td>
+              <td>No</td>
+              <td><a href="#" class="underline">lgpark@lgcns.com</a></td>
+              <td>010-0123-4567</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!--
   <div class="content">
     <div class="container">
       test
+      <div class="tab tab--small tab--red">
+        <div class="tab__buttons">
+          <div class="tab__button is-active">탭 버튼1</div>
+          <div class="tab__button">탭 버튼2</div>
+        </div>
+        <div class="tab__contents">
+          <div class="tab__content is-active">탭 컨텐츠1</div>
+          <div class="tab__content">탭 컨텐츠2</div>
+        </div>
+      </div>
+
+      <div class="table-data">
+        <table class="table-data__table">
+        </table>
+      </div>
+      <button class="button">
+        버튼
+        <i class="button__icon">></i>
+      </button>
+      <button class="button button--red">
+        버튼 모디파이어 modifier
+        <i class="button__icon">></i>
+      </button>
     </div>
   </div>
+  -->
+
+
   <!--#include file="./inc/script.inc" -->
 </body>
+
 </html>
