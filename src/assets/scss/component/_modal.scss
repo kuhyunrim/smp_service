@@ -117,6 +117,15 @@
   &__content{
     padding: 40px 60px;
   }
+  &__button{
+    padding-top: 44px;
+    text-align: right;
+    button{
+      & ~ button{
+        margin-left:4px;
+      }
+    }
+  }
 }
 .close-modal{
   overflow: hidden;

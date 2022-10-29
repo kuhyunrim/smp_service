@@ -19,9 +19,148 @@
 
       <div class="modal" id="testModal">
         <div class="modal__header">
-          <h2 class="modal__title">모달 타이틀</h2>
+          <h2 class="modal__title">청구서 다운로드</h2>
         </div>
-        <div class="modal__content">asdasdasdasdas</div>
+        <div class="modal__content">
+          <div class="billing-statement">
+            <div class="flexbox flexbox--between">
+              <div class="flexbox__item bill">
+                <div class="bill__detail">SINGLEX기준정보관리(MDD)</div>
+                <span class="bill__description">요금제: 기준정보 요금제-기업정보 이용료 추가</span>
+              </div>
+
+              <div class="flexbox__item price">
+                <span class="price__detail">28,795,845</span>
+                <span class="price__unit">원</span>
+              </div>
+            </div>
+          </div>
+   
+          <div class="flexbox flexbox--between datail-list">
+            <div class="flexbox__item datail-list__table">
+              <div class="data-table">
+                <table>
+                  <caption>청구내역 - 사용정보, 총 이용요금, 기본요금, 사용요금, 사용량</caption>
+                  <colgroup>
+                      <col width="242px;">
+                      <col width="150px;">
+                      <col width="132px;">
+                      <col width="131px;">
+                      <col width="154px;">
+                  </colgroup>
+                  <thead>
+                      <tr>
+                          <th scope="col" class="data-table__th table__left cell-blue bold"><span>사용정보</span></th>
+                          <th scope="col" class="data-table__th cell-skyblue bold"><span>총 이용요금</span></th>
+                          <th scope="col" class="data-table__th cell-lightgrey"><span>기본요금</span></th>
+                          <th scope="col" class="data-table__th cell-lightgrey"><span>사용요금</span></th>
+                          <th scope="col" class="data-table__th cell-lightgrey"><span>사용량</span></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <th scope="row" class="data-table__th table__left cell-darkgrey medium"><span>사(社)별 MDM-구간별단가</span></th>
+                        <td class="data-table__td table__right cell-grey">
+                          <span class="bold">12,234,000</span>
+                          <span class="unit bold">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>31</span>
+                          /
+                          <span>31</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="data-table__th table__left cell-darkgrey medium"><span>사(社)별 MDM-구간별단가</span></th>
+                        <td class="data-table__td table__right cell-grey">
+                          <span class="bold">12,234,000</span>
+                          <span class="unit bold">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>31</span>
+                          /
+                          <span>31</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="data-table__th table__left cell-darkgrey medium"><span>공통MDM-구간별단가</span></th>
+                        <td class="data-table__td table__right cell-grey">
+                          <span class="bold">12,234,000</span>
+                          <span class="unit bold">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>31</span>
+                          /
+                          <span>31</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="data-table__th table__left cell-darkgrey medium"><span>부가서비스</span></th>
+                        <td class="data-table__td table__right cell-grey">
+                          <span class="bold">12,234,000</span>
+                          <span class="unit bold">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>31</span>
+                          /
+                          <span>31</span>
+                        </td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+            </div>
+
+            <div class="flexbox__item datail-list__memo">
+              <div class="list-bullet">
+                실제사용기간
+                <br>
+                <span>22.08.01~22.08.31</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal__button">
+            <button type="button" class="button">
+              <span class="button__text">취소</span>
+            </button>
+            <button type="button" class="button">
+              <span class="button__text">인쇄</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

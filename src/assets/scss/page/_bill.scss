@@ -1,12 +1,12 @@
 
-.select{
-    &__inline{
-        width:auto;
-        padding:0 50px 0 0;
-    }
+.select-month{
+    width: 167px;
 }
 .content-wrapper{
     padding-top: 20px;
+    & ~ .content-wrapper{
+        padding-top:32px;
+    }
 }
 .flexbox{
     $root: &;
@@ -31,11 +31,11 @@
 }
 .bill{
     &__info{
-        font-size: 24px;
+        font-size: 40px;
         font-weight: 500;
     }
     &__period{
-        margin-top:4px;
+        margin-top:8px;
         font-size: 14px;
         font-weight: 400;
     }
@@ -49,6 +49,7 @@
         padding:3px 10px;
         font-size: 13px;
         color: #56606B;
+        font-weight: 700;
         background-color: #E9EFF5;
         border-radius: 30px;
     }
@@ -63,17 +64,17 @@
 .price{
     text-align: right;
     &__point{
-        font-size: 24px;
+        font-size: 40px;
         font-weight: 700;
         color: #E0205C;
     }
     &__detail{
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 700;
     }
     &__unit{
         margin-left:4px;
-        font-size: 14px;
+        font-size: 20px;
         font-weight: 500;
     }
     &__nodata{
@@ -91,19 +92,19 @@
     }
     &-content{
         display: none;
-        padding: 15px;
-        background-color: #F9F9F9;
-        border: 1px solid #DAE3ED;
     }
 }
 .datail-list{
+    padding: 15px;
+    background-color: #F9F9F9;
+    border: 1px solid #DAE3ED;
     &__memo{
         width: 313px;
         padding:23px 22px 23px 10px;
         margin-left: 24px;
         border: 1px solid #BEC9D4;
         border-radius: 3px;
-        background-color: #fff;;
+        background-color: #fff;
         box-sizing: border-box;
     }
 }
@@ -143,6 +144,7 @@
 .cell-grey{background-color: #F2F6F9;}
 .cell-lightgrey{background-color: #F2F6F9;}
 .bold{font-weight: 700;}
+.medium{font-weight: 500;}
 .list-bullet{
     position: relative;
     padding-left: 15px;
