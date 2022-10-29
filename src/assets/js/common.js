@@ -33,12 +33,14 @@ $(document).ready(() => {
   responsive();
 
   $('.accordian-button button').click(function(){
-    // var accordianActive = $(this).parents('.accordian-wrapper').hasClass('active');
+    var accordianActive = $(this).parents('.accordian-wrapper').hasClass('active');
     if(accordianActive == true){
+      $(this).removeClass('is-active');
       $(this).parents('.accordian-wrapper').removeClass('active');
       $(this).parents('.accordian-header').next('.accordian-content').hide();
       console.log(1);
     }else{
+      $(this).addClass('is-active');
       $(this).parents('.accordian-wrapper').addClass('active');
       $(this).parents('.accordian-header').next('.accordian-content').show();
     }
