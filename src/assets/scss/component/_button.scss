@@ -46,4 +46,22 @@
   &--round{
     border-radius: 34px;
   }
+  &--large{
+    height: 42px;
+    #{$root}{
+      &__text{
+        font-size: 14px;
+        font-weight: 700;
+      }
+    }
+  }
+  &.is-gray{
+    border-color: #424952;
+    background: #424952;
+    #{$root}{
+      &__text{
+        color: #fff;
+      }
+    }
+  }
 }
