@@ -11,7 +11,118 @@
     <a href="#content" class="skip-nav__item">본문 바로가기</a>
   </div>
   <!--#include file="./inc/header.inc" -->
-  <h1>계약 조회</h1>
+  <div class="page-header">
+    <div class="page-header__container">
+      <h1 class="page-header__title">계약 조회</h1>
+      <p class="page-header__text">SINGLEX서비스의 계약 상태를 조회할 수 있어요.</p>
+    </div>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="filter__sort">
+        <div class="part__left">
+          <dl class="filter__finder">
+              <dt>서비스명</dt>
+              <dd class="w143">
+                  <div class="input">
+                    <input type="text" name="" value="" class="input__box small">
+                  </div>
+              </dd>
+              <dt>상태</dt>
+              <dd class="dd-select">
+                <div class="select">
+                  <select class="select__box small">
+                    <option value="">전체</option>
+                  </select>
+                </div>
+              </dd>
+              <dt>계약기간 종료</dt>
+              <dd class="dd-select">
+                <div class="select">
+                  <select class="select__box small">
+                    <option value="">아니오</option>
+                  </select>
+                </div>
+              </dd>
+              <dt>계약(코드/명)</dt>
+              <dd class="w164">
+                <div class="input">
+                  <input type="text" name="" value="" class="input__box small">
+                </div>
+              </dd>
+          </dl>
+        </div>
+        <div class="part__right">
+          <button type="button" class="button button--icon-only">
+            <i class="button__icon refresh"></i>
+          </button>
+          <button type="button" class="button is-primary">
+            <i class="button__icon find"></i>
+            <span class="button__text">검색</span>
+          </button>
+        </div>
+      </div>
+      <div class="tbl__wrap">
+        <table class="bbs__list">
+          <caption></caption>
+          <colgroup>
+            <col style="width:100px">
+            <col>
+            <col style="width:176px">
+            <col style="width:68px">
+            <col style="width:122px">
+            <col style="width:114px">
+            <col style="width:183px">
+            <col style="width:122px">
+          </colgroup>
+          <thead>
+            <tr class="tc">
+              <th scope="col">계약코드</th>
+              <th scope="col">계약명</th>
+              <th scope="col">계약기간</th>
+              <th scope="col">상태</th>
+              <th scope="col">종료일</th>
+              <th scope="col">변경사유</th>
+              <th scope="col">서비스명</th>
+              <th scope="col">변경일자</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tc">
+              <td>PJ20212794</td>
+              <td><p class="subj ell">[공상평-구독료]기준정보 기분정보  SaaS서비스(판토스)</p></td>
+              <td>2021-02-01~2024-01-31</td>
+              <td>유효계약</td>
+              <td></td>
+              <td>요금제 변경요청</td>
+              <td>SINGLEX기준관리(MDM)</td>
+              <td>2022-01-21</td>
+            </tr>
+            <tr class="tc">
+              <td>PJ20212794</td>
+              <td><p class="subj ell">[공상평-구독료]기준정보 기분정보  SaaS서비스(판토스)</p></td>
+              <td>2021-02-01~2024-01-31</td>
+              <td>유효계약</td>
+              <td></td>
+              <td>요금제 변경요청</td>
+              <td>SINGLEX기준관리(MDM)</td>
+              <td>2022-01-21</td>
+            </tr>
+            <tr class="tc">
+              <td>PJ20212794</td>
+              <td><p class="subj ell">[공상평-구독료]기준정보 기분정보  SaaS서비스(판토스)</p></td>
+              <td>2021-02-01~2024-01-31</td>
+              <td>유효계약</td>
+              <td></td>
+              <td>요금제 변경요청</td>
+              <td>SINGLEX기준관리(MDM)</td>
+              <td>2022-01-21</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
   <!--#include file="./inc/script.inc" -->
 </body>
 </html>
