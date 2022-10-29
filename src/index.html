@@ -45,7 +45,6 @@
       </div>
 
       <div class="wrap">
-        <template v-if="activeMenu === 'pageList'">
           <div class="title-l">작업 목록</div>
 
           <div class="title">페이지 목록</div>
@@ -174,7 +173,6 @@
               </div>
             </template>
             <!-- // pagelist -->
-          </template>
         </template>
       </div>
     </div>
@@ -229,7 +227,7 @@
       data: () => {
         return {
           activeIndex: 0, // 페이지 목록의 탭 활성화
-          activeMenu: 'guide', // 메뉴 설정
+          activeMenu: 'component', // 메뉴 설정
           activeNav: false, // 메뉴 활성화
           isModify: false, // 수정된 목록 노출여부
           showAll: false, // 페이지 목록 ? 탭형태: 전체 목록
