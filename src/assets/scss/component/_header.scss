@@ -19,4 +19,35 @@
     font-weight: 400;
     color: #56606B;
   }
+  &--small{
+    #{$root}{
+      &__container{
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        height: 79px;
+      }
+      &__title{
+        font-size: 32px;
+      }
+      &__back{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 38px;
+        min-width: 30px;
+        margin-right: 10px;
+        &::before{
+          content: '';
+          width: 14px;
+          height: 14px;
+          border: 3px solid #2C3238;
+          border-width: 0 0 3px 3px;
+          transform: rotate(45deg);
+
+        }
+      }
+    }
+  }
 }
