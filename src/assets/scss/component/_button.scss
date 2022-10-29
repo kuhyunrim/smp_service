@@ -2,6 +2,7 @@
 .button{
   $root: &;
   display: inline-flex;
+  position: relative;
   vertical-align: top;
   align-items: center;
   height: 34px;
@@ -14,11 +15,29 @@
     color: #4D4D4D;
   }
   &__icon{
+    position: relative;
     &.down{
       width: 15px;
       height: 13px;
       margin-right: 12px;
       background: url(/assets/images/icon_download.png) 0 0 no-repeat;
+    }
+    &.arrow{
+      width: 7.5px;
+      height: 100%;
+      margin-left: 12px;
+      &::before{
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 0;
+        transform: rotate(-45deg);
+        width: 7.5px;
+        height: 7.5px;
+        border: 2px solid #2C3238;
+        border-width: 0 0 2px 2px;
+        transition: all .3s ease;
+      }
     }
   }
   &--icon-text{
