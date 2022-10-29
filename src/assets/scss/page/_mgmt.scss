@@ -23,13 +23,13 @@
     &__box.small {
         height: 32px;
         font-size: 13px;
-    }
-
-    &::after {
-        top: 11px;
-        right: 11px;
+        &::after {
+            top: 11px;
+            right: 11px;
+        }
     }
 }
+
 
 .input {
     position: relative;
