@@ -39,12 +39,27 @@
         transition: all .3s ease;
       }
     }
+    &.find{
+      width: 18px;
+      height: 18px;
+      background: url(/assets/images/icon_find.png) 50% 50% no-repeat;
+      margin-right: 2px;
+    }
+    &.refresh{
+      width: 18px;
+      height: 18px;
+      background: url(/assets/images/icon_refresh.png) 50% 50% no-repeat;
+      margin-right: 2px;
+    }
   }
   &--icon-text{
     padding: 0 24px;
   }
   &--round{
     border-radius: 34px;
+  }
+  &--icon-only{
+    padding: 0 8px;
   }
   &--large{
     height: 42px;
@@ -58,6 +73,15 @@
   &.is-gray{
     border-color: #424952;
     background: #424952;
+    #{$root}{
+      &__text{
+        color: #fff;
+      }
+    }
+  }
+  &.is-primary{
+    border-color: #E0205C;
+    background: #E0205C;
     #{$root}{
       &__text{
         color: #fff;
