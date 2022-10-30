@@ -447,7 +447,11 @@
             overflow-y: auto;
             height: 199px;
         }
-
+        thead{
+            position: sticky;
+            top:0;
+            left:0;
+        }
         tbody tr:last-child {
             & th {
 
