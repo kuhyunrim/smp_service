@@ -429,16 +429,18 @@
     &.usage-table {
         border: 1px solid #E0E6ED;
 
-        &.scrollbar::-webkit-scrollbar {
-            width: 18px;
-        }
+        &.scrollbar {
+            &::-webkit-scrollbar {
+                width: 18px;
+            }
 
-        &.scrollbar::-webkit-scrollbar-thumb {
-            background-color: #c1c9d3;
-        }
+            &::-webkit-scrollbar {
+                width: 18px;
+            }
 
-        &.scrollbar::-webkit-scrollbar-track {
-            background-color: #E0E6ED;
+            &::-webkit-scrollbar-track {
+                background-color: #E0E6ED;
+            }
         }
 
         &.scroll {
@@ -446,12 +448,15 @@
             height: 199px;
         }
 
-        tbody tr:last-child th {
-            border-bottom: none;
-        }
+        tbody tr:last-child {
+            & th {
 
-        tbody tr:last-child td {
-            border-bottom: none;
+                border-bottom: none;
+            }
+
+            & td {
+                border-bottom: none;
+            }
         }
 
         #{$root}__th {
