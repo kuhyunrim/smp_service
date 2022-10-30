@@ -11,7 +11,72 @@
     <a href="#content" class="skip-nav__item">본문 바로가기</a>
   </div>
   <!--#include file="./inc/header.inc" -->
-  <h1>담당자등록_p</h1>
+  <div class="content">
+    <div class="container">
+      <a class="modal-trigger" rel="modal:open" href="#testModal">
+        모달레이어 열기
+      </a>
+
+      <div class="modal" id="testModal">
+        <div class="modal__header">
+          <h2 class="modal__title">담당자 등록</h2>
+        </div>
+        <div class="modal__content">
+          <div class="field-form">
+            <dl>
+              <dt>계약명</dt>
+              <dd>
+                <div class="input small">
+                  <input type="text" name="" value="단위기능간 연계적합성" class="input__box" readonly>
+                </div>
+              </dd>
+            </dl>
+          </div> 
+          <div class="field-form">
+            <dl>
+              <dt>회사명</dt>
+              <dd>
+                <div class="input small">
+                  <input type="text" name="" value="LX판토스" class="input__box" readonly>
+                </div>
+              </dd>
+            </dl>
+          </div>
+          <div class="field-form form-flex">
+            <dl class="form-flex__item">
+              <dt>이름</dt>
+              <dd>
+                <div class="input small">
+                  <input type="text" name="" placeholder="ex) Single플랫폼빌드팀 SMP" value="" class="input__box w245 search">
+                </div>
+              </dd>
+            </dl>
+            <dl class="form-flex__item flex-auto essential">
+              <dt><span>이메일</span></dt>
+              <dd>
+                <div class="input small form-flex">
+                  <input type="text" name="" value="" class="input__box flex-auto">
+                  <button type="button" class="button">
+                    <span class="button__text">조회</span>
+                  </button>
+                </div>
+              </dd>
+            </dl>
+          </div> 
+          <span class="notice">이메일을 입력 후 조회 버튼을 눌러주세요.</span>
+ 
+          <div class="modal__button">
+            <button type="button" class="button button--large">
+              <span class="button__text">취소</span>
+            </button>
+            <button type="button" class="button button--large is-gray">
+              <span class="button__text">확인</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--#include file="./inc/script.inc" -->
 </body>
 </html>
