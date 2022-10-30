@@ -19,7 +19,7 @@
     height: 31px;
     // color: #fff;
     padding-top: 31px;
-    background: url(/assets/images/logo_singlex.png) 0 0 no-repeat;
+    background: url(../images/logo_singlex.png) 0 0 no-repeat;
   }
   &__info{
     display: flex;
@@ -77,5 +77,6 @@
   width: 100%;
   & > .container{
     @extend %container;
+    padding-bottom: 45px;
   }
 }

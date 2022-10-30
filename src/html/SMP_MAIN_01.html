@@ -26,29 +26,61 @@
           <div class="main-info__column">
             <div class="main-title">
               <h2 class="main-title__title">9월 청구 금액</h2>
-              <div class="main-title__text">
+              <!-- <div class="main-title__text">
                 (<span class="date">2022-08-01</span>~<span class="text">2022-08-31</span>)
+              </div> -->
+            </div>
+
+            <!-- 서비스 준비중-->
+            <div class="ready">
+              <i class="ready__icon"></i>
+              <div class="ready__info">
+                <div class="ready__title"><strong>서비스 준비중</strong>입니다.</div>
+                <p class="ready__text">10월 5일 정보를 확인 할 수 있습니다.</p>
               </div>
             </div>
+            <!-- <div class="total-amount">
+              <span class="total-amount__label total-amount__label--wait">미정산</span>
+              <div class="total-amount__amount">
+                <strong class="total-amount__value">34,758,711</strong>원
+              </div>
+              <div class="total-amount__status">
+                전월대비 5,000원 <i class="total-amount__icon"></i>
+              </div>
+            </div> -->
           </div>
+
           <div class="main-info__column">
             <div class="main-title">
               <h2 class="main-title__title">8월 청구 금액</h2>
               <div class="main-title__text">
                 (<span class="date">2022-07-01</span>~<span class="text">2022-07-31</span>)
               </div>
+            </div>
 
+            <div class="total-amount">
+              <span class="total-amount__label total-amount__label--complete">정산완료</span>
+              <div class="total-amount__amount">
+                <strong class="total-amount__value">34,758,711</strong>원
+              </div>
+              <div class="total-amount__status">
+                전월대비 5,000원 <i class="total-amount__icon"></i>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="main-info__row">
           <div class="main-info__column">
             <div class="main-title">
               <h2 class="main-title__title">월별 청구금액 <span class="small">(<span class="date">2021.09</span> ~ <span class="date">2022.08</span>)</span></h2>
             </div>
 
-            <canvas class="main-graph" id="typeMonth"></canvas>
+            <div class="main-graph">
+              <canvas class="main-graph__graph" id="typeMonth"></canvas>
+            </div>
           </div>
+
           <div class="main-info__column">
             <div class="main-title">
               <h2 class="main-title__title">서비스별 청구금액</h2>
@@ -60,17 +92,84 @@
             </div>
           </div>
         </div>
+
         <div class="main-info__row">
-          <div class="main-info__column">test</div>
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">사용현황</h2>
+              <div class="main-title__text">
+                (<span class="date">2022-07-01</span>~<span class="text">2022-07-31</span>)
+              </div>
+              <div class="main-title__right">실시간 사용량 집계기준(2022.09.25)</div>
+            </div>
+          </div>
         </div>
+
         <div class="main-info__row">
-          <div class="main-info__column">test</div>
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">계약 담당자 </h2>
+              <button type="button" class="button button--icon-text main-title__button">
+                <span class="button__text">더보기</span>
+                <i class="button__icon more"></i>
+              </button>
+            </div>
+
+            <div class="manager-list">
+              <div class="manager-list__item">
+                <div class="manager-list__position">SINGLEX기준정보관리(MDD)</div>
+                <div class="manager-list__info">
+                  <div class="manager-list__name">박엘지<i class="medal"></i></div>
+                  <div class="manager-list__email">lgpark@lgcns.com</div>
+                  <div class="manager-list__phone">010-0123-4567</div>
+                </div>
+              </div>
+
+              <div class="manager-list__item">
+                <div class="manager-list__position">SINGLEX배움마당</div>
+                <div class="manager-list__info">
+                  <div class="manager-list__name">김서울<i class="medal"></i></div>
+                  <div class="manager-list__email">lgpark@lgcns.com</div>
+                  <div class="manager-list__phone">010-0123-4567</div>
+                </div>
+              </div>
+
+              <div class="manager-list__item">
+                <div class="manager-list__position">SINGLEX 설비관리 </div>
+                <div class="manager-list__info">
+                  <div class="manager-list__name">박엘지<i class="medal"></i></div>
+                  <div class="manager-list__email">lgpark@lgcns.com</div>
+                  <div class="manager-list__phone">010-0123-4567</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
           <div class="main-info__column main-info__column--service service">
             <div class="service__column">
-              SINGLEX Town
+              <i class="service__icon singlex"></i>
+              <h3 class="service__title">SINGLEX <span class="light">Town</span></h3>
+              <p class="service__text">SINGLEX 가 제공하는 다양한<br>서비스를 만나보세요.</p>
+
+              <div class="service__button">
+                <button type="button" class="button button--round button--icon-text">
+                  <span class="button__text">바로가기</span>
+                  <i class="button__icon arrow"></i>
+                </button>
+              </div>
             </div>
+
             <div class="service__column">
-              챗봇 플랫폼<br>체험하기
+              <i class="service__icon chatbot"></i>
+              <h3 class="service__title">챗봇 플랫폼<br><span class="light">체험하기</span></h3>
+
+              <div class="service__button">
+                <button type="button" class="button button--round button--icon-text">
+                  <span class="button__text">바로가기</span>
+                  <i class="button__icon arrow"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -96,6 +195,11 @@
       type: 'bar',
       data: monthData,
       options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+        },
         scales: {
           x: {
             grid: {
@@ -113,11 +217,8 @@
                   return value / 1e3 + 'K';
                 }
                 return value;
-              }
+              },
             },
-            legend: {
-              display: false
-            }
           },
         },
       }

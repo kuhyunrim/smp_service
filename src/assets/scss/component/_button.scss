@@ -20,7 +20,7 @@
       width: 15px;
       height: 13px;
       margin-right: 12px;
-      background: url(/assets/images/icon_download.png) 0 0 no-repeat;
+      background: url(../images/icon_download.png) 0 0 no-repeat;
     }
     &.arrow{
       width: 7.5px;
@@ -42,13 +42,13 @@
     &.find{
       width: 18px;
       height: 18px;
-      background: url(/assets/images/icon_find.png) 50% 50% no-repeat;
+      background: url(../images/icon_find.png) 50% 50% no-repeat;
       margin-right: 2px;
     }
     &.refresh{
       width: 18px;
       height: 18px;
-      background: url(/assets/images/icon_refresh.png) 50% 50% no-repeat;
+      background: url(../images/icon_refresh.png) 50% 50% no-repeat;
       margin-right: 2px;
     }
   }
