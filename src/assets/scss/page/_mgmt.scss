@@ -8,9 +8,8 @@
     text-decoration: underline !important;
 }
 
-.w100 {
-    width: 100%;
-}
+.color-black{color:#000000 !important;}
+.font-16{font-size:16px !important;}
 
 .ico__medal {
     display: inline-block;
@@ -424,5 +423,23 @@
         position: absolute;
         right: 12px;
         top: 13px;
+    }
+}
+
+.data-table{
+    &.usage-table{
+        border:1px solid #E0E6ED;
+        border-bottom:none;
+    }
+    &__th{
+        color:#3E454D;
+        border-bottom: 1px solid #E0E6ED;
+    }
+    &__td{
+        color:#3E454D;
+        border-bottom: 1px solid #E0E6ED;
+    }
+    & th.cell-blue{
+        background: #DAE3ED
     }
 }
