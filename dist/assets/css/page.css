@@ -685,7 +685,7 @@
   margin-left: -1px;
 }
 
-.tab__group .tab .button__tab.active {
+.tab__group .tab .button__tab.is-active {
   font-weight: 700;
   font-size: 18px;
   color: #2C3238;

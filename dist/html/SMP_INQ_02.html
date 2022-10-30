@@ -55,19 +55,19 @@
   <div class="content">
     <div class="container">
 
-      <div class="tab__group">
+      <div class="tab__group" data-element="tab">
         <div class="tab">
-          <button type="button" class="button__tab active">
+          <button type="button" class="button__tab active" data-element="tab__anchor">
             <span>기본 정보</span>
           </button>
-          <button type="button" class="button__tab">
+          <button type="button" class="button__tab" data-element="tab__anchor">
             <span>요금제 정보</span>
           </button>
-        </div> 
+        </div>
         <div class="tab__container">
           <!-- 기본 정보 -->
-          <div class="tab__content">
-            <h2 class="page-sub__title">기본 정보</h2>  
+          <div class="tab__content" data-element="tab__panel">
+            <h2 class="page-sub__title">기본 정보</h2>
             <div class="bundle">
               <div class="field-form unit">
                 <dl>
@@ -81,7 +81,7 @@
                     </div>
                   </dd>
                 </dl>
-              </div> 
+              </div>
               <div class="field-form half">
                 <dl>
                   <dt>판매서비스코드</dt>
@@ -137,9 +137,9 @@
                 </dl>
               </div> 
             </div>
-          </div>  
+          </div>
           <!-- 요금제 정보 -->
-          <div class="tab__content">
+          <div class="tab__content" data-element="tab__panel">
             <h2 class="page-sub__title">요금제 정보</h2>  
             <div class="bundle">
               <div class="field-form full">
@@ -253,7 +253,7 @@
                 </div>
               </div>
             </div>
-          </div>  
+          </div>
         </div>
         <!-- //tab__container -->
         <div class="btn">
