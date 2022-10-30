@@ -1,6 +1,7 @@
 
 .select-month{
     width: 167px;
+    margin-top: 20px;
 }
 .content-wrapper{
     padding-top: 20px;
@@ -123,6 +124,7 @@
         border-bottom: 1px solid #BEC9D4;
         box-sizing: border-box;
         font-size:14px;
+        color:#3E454D;
     }
     &__td{
         min-height: 50px;
@@ -130,6 +132,7 @@
         border-bottom: 1px solid #BEC9D4;
         box-sizing: border-box;
         font-size:14px;
+        color:#3E454D;
     }
 }
 .table{
@@ -236,4 +239,6 @@
         left:0; 
     } 
 }
-
+.text-black{
+    color:#000;
+}
