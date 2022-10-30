@@ -182,7 +182,7 @@ const concatJs = () => {
   return gulp
     .src([path.library.src])
     .pipe(concat('lib.min.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest(path.library.dist))
 }
 

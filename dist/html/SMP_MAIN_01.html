@@ -14,6 +14,7 @@
   <title>SMP</title>
   <link rel="stylesheet" href="../assets/css/global.css" />
 <link rel="stylesheet" href="../assets/css/component.css" />
+<link rel="stylesheet" href="../assets/css/page.css" />
 </head>
 <body>
   <div id="skipNav" class="skip-nav">
@@ -39,17 +40,227 @@
     </ul>
     <div class="header__info">
       <strong class="name">김이름</strong>
-      <i class="profile"></i>
+      <i class="profile">
+        <img src="/assets/images/icon_avatar.png" alt="" />
+      </i>
     </div>
   </div>
 </header>
   <div id="content" class="content">
-    <div class="container">
-      <h1>SMP홈-전체서비스</h1>
+    <div class="container container--main">
+      <div class="main-select">
+        <div class="select main-select__select">
+          <select class="select__box">
+            <option>전체 서비스</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="main-info">
+        <div class="main-info__row">
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">9월 청구 금액</h2>
+              <!-- <div class="main-title__text">
+                (<span class="date">2022-08-01</span>~<span class="text">2022-08-31</span>)
+              </div> -->
+            </div>
+
+            <!-- 서비스 준비중-->
+            <div class="ready">
+              <i class="ready__icon"></i>
+              <div class="ready__info">
+                <div class="ready__title"><strong>서비스 준비중</strong>입니다.</div>
+                <p class="ready__text">10월 5일 정보를 확인 할 수 있습니다.</p>
+              </div>
+            </div>
+            <!-- <div class="total-amount">
+              <span class="total-amount__label total-amount__label--wait">미정산</span>
+              <div class="total-amount__amount">
+                <strong class="total-amount__value">34,758,711</strong>원
+              </div>
+              <div class="total-amount__status">
+                전월대비 5,000원 <i class="total-amount__icon"></i>
+              </div>
+            </div> -->
+          </div>
+
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">8월 청구 금액</h2>
+              <div class="main-title__text">
+                (<span class="date">2022-07-01</span>~<span class="text">2022-07-31</span>)
+              </div>
+            </div>
+
+            <div class="total-amount">
+              <span class="total-amount__label total-amount__label--complete">정산완료</span>
+              <div class="total-amount__amount">
+                <strong class="total-amount__value">34,758,711</strong>원
+              </div>
+              <div class="total-amount__status">
+                전월대비 5,000원 <i class="total-amount__icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-info__row">
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">월별 청구금액 <span class="small">(<span class="date">2021.09</span> ~ <span class="date">2022.08</span>)</span></h2>
+            </div>
+
+            <div class="main-graph">
+              <canvas class="main-graph__graph" id="typeMonth"></canvas>
+            </div>
+          </div>
+
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">서비스별 청구금액</h2>
+              <div class="select main-title__select">
+                <select class="select__box">
+                  <option>9월</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-info__row">
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">사용현황</h2>
+              <div class="main-title__text">
+                (<span class="date">2022-07-01</span>~<span class="text">2022-07-31</span>)
+              </div>
+              <div class="main-title__right">실시간 사용량 집계기준(2022.09.25)</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-info__row">
+          <div class="main-info__column">
+            <div class="main-title">
+              <h2 class="main-title__title">계약 담당자 </h2>
+              <button type="button" class="button button--icon-text main-title__button">
+                <span class="button__text">더보기</span>
+                <i class="button__icon more"></i>
+              </button>
+            </div>
+
+            <div class="manager-list">
+              <div class="manager-list__item">
+                <div class="manager-list__position">SINGLEX기준정보관리(MDD)</div>
+                <div class="manager-list__info">
+                  <div class="manager-list__name">박엘지<i class="medal"></i></div>
+                  <div class="manager-list__email">lgpark@lgcns.com</div>
+                  <div class="manager-list__phone">010-0123-4567</div>
+                </div>
+              </div>
+
+              <div class="manager-list__item">
+                <div class="manager-list__position">SINGLEX배움마당</div>
+                <div class="manager-list__info">
+                  <div class="manager-list__name">김서울<i class="medal"></i></div>
+                  <div class="manager-list__email">lgpark@lgcns.com</div>
+                  <div class="manager-list__phone">010-0123-4567</div>
+                </div>
+              </div>
+
+              <div class="manager-list__item">
+                <div class="manager-list__position">SINGLEX 설비관리 </div>
+                <div class="manager-list__info">
+                  <div class="manager-list__name">박엘지<i class="medal"></i></div>
+                  <div class="manager-list__email">lgpark@lgcns.com</div>
+                  <div class="manager-list__phone">010-0123-4567</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="main-info__column main-info__column--service service">
+            <div class="service__column">
+              <i class="service__icon singlex"></i>
+              <h3 class="service__title">SINGLEX <span class="light">Town</span></h3>
+              <p class="service__text">SINGLEX 가 제공하는 다양한<br>서비스를 만나보세요.</p>
+
+              <div class="service__button">
+                <button type="button" class="button button--round button--icon-text">
+                  <span class="button__text">바로가기</span>
+                  <i class="button__icon arrow"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="service__column">
+              <i class="service__icon chatbot"></i>
+              <h3 class="service__title">챗봇 플랫폼<br><span class="light">체험하기</span></h3>
+
+              <div class="service__button">
+                <button type="button" class="button button--round button--icon-text">
+                  <span class="button__text">바로가기</span>
+                  <i class="button__icon arrow"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="../assets/js/lib/lib.min.js"></script>
 <script src="../assets/js/plugin.js"></script>
 <script src="../assets/js/common.js"></script>
+  <script>
+    const monthLabels = ['9월', '10월', '11월', '12월', '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월']
+    const monthData = {
+      labels: monthLabels,
+      datasets: [
+        {
+          label: '월별 청구 금액',
+          barThickness: 15,
+          backgroundColor: '#26B9D1',
+          borderColor: '#26B9D1',
+          data: [30000000, 30000000, 30000000, 30000000, 30000000, 30000000, 30000000, 30000000, 30000000, 30000000, 30000000, 40000000],
+        }
+      ]
+    }
+    const monthConfig = {
+      type: 'bar',
+      data: monthData,
+      options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            ticks: {
+              callback: function(value, index, values) {
+                if (value >= 1000000000 || value <= -1000000000 ) {
+                  return value / 1e9 + 'B';
+                } else if (value >= 1000000 || value <= -1000000) {
+                  return value / 1e6 + 'M';
+                } else  if (value >= 1000 || value <= -1000) {
+                  return value / 1e3 + 'K';
+                }
+                return value;
+              },
+            },
+          },
+        },
+      }
+    }
+    const monthChart = new Chart(document.querySelector('#typeMonth'), monthConfig);
+  </script>
 </body>
 </html>

@@ -14,6 +14,7 @@
   <title>SMP</title>
   <link rel="stylesheet" href="../assets/css/global.css" />
 <link rel="stylesheet" href="../assets/css/component.css" />
+<link rel="stylesheet" href="../assets/css/page.css" />
 </head>
 <body>
   <div id="skipNav" class="skip-nav">
@@ -39,7 +40,9 @@
     </ul>
     <div class="header__info">
       <strong class="name">김이름</strong>
-      <i class="profile"></i>
+      <i class="profile">
+        <img src="/assets/images/icon_avatar.png" alt="" />
+      </i>
     </div>
   </div>
 </header>
@@ -51,8 +54,384 @@
       </div>
     </div>
     <div class="container">
+      <div class="select-month">
+        <div class="select select__inline">
+          <select class="select__box">
+            <option>2022년 9월</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="content-wrapper">
+        <div class="billing-statement billing-total">
+          <div class="flexbox flexbox--between">
+            <div class="flexbox__item bill">
+              <div class="bill__info">
+                <div class="bill__month">
+                  <span class="month">9</span>
+                  <span class="">월 청구요금</span>
+                </div>
+  
+                <div class="bill__period">
+                  <div class="period">
+                    (<span class="period__date">2022-08-01</span>~<span class="period__date">2011-08-31</span>)
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="flexbox__item">
+              <div class="price">
+                <span class="price__point">34,758,711</span>
+                <span class="price__unit unit-total">원</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordian-wrapper">
+          <div class="accordian-header">
+            <div class="billing-statement acco">
+              <div class="flexbox flexbox--between">
+                <div class="flexbox__item bill">
+                  <div class="bill__detail">SINGLEX기준정보관리(MDD)</div>
+                  <span class="bill__description">요금제: 기준정보 요금제-기업정보 이용료 추가</span>
+                </div>
+  
+                <div class="flexbox__item price">
+                  <span class="price__detail">28,795,845</span>
+                  <span class="price__unit">원</span>
+                  <div class="button-download">
+                    <button type="button" class="button button--icon-text">
+                      <i class="button__icon down"></i>
+                      <span class="button__text">청구서 다운로드</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordian-button">
+                <button type="button" class="button button--round button--icon-text">
+                  <span class="button__text">과금상세</span>
+                  <i class="button__icon arrow"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordian-content">
+            <div class="flexbox flexbox--between datail-list">
+              <div class="flexbox__item datail-list__table">
+                <div class="data-table">
+                  <table>
+                    <caption>청구내역 - 사용정보, 총 이용요금, 기본요금, 사용요금, 사용량</caption>
+                    <colgroup>
+                        <col width="242px;">
+                        <col width="150px;">
+                        <col width="132px;">
+                        <col width="131px;">
+                        <col width="154px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="data-table__th table__left cell-blue bold"><span>사용정보</span></th>
+                            <th scope="col" class="data-table__th cell-skyblue bold"><span>총 이용요금</span></th>
+                            <th scope="col" class="data-table__th cell-lightgrey"><span>기본요금</span></th>
+                            <th scope="col" class="data-table__th cell-lightgrey"><span>사용요금</span></th>
+                            <th scope="col" class="data-table__th cell-lightgrey"><span>사용량</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">사(社)별 MDM-구간별단가</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">사(社)별 MDM-구간별단가</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">공통MDM-구간별단가</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">부가서비스</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+              </div>
+
+              <div class="flexbox__item datail-list__memo">
+                <div class="list-bullet">
+                  실제사용기간
+                  <br>
+                  <span>22.08.01~22.08.31</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="accordian-wrapper">
+          <div class="accordian-header">
+            <div class="billing-statement acco">
+              <div class="flexbox flexbox--between">
+                <div class="flexbox__item bill">
+                  <div class="bill__detail">SINGLEX배움마당</div>
+                  <span class="bill__description">요금제: 기준정보 요금제-기업정보 이용료 추가</span>
+                </div>
+  
+                <div class="flexbox__item price">
+                  <span class="price__detail">28,795,845</span>
+                  <span class="price__unit">원</span>
+                  <div class="button-download">
+                    <button type="button" class="button button--icon-text">
+                      <i class="button__icon down"></i>
+                      <span class="button__text">청구서 다운로드</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="accordian-button">
+                <button type="button" class="button button--round button--icon-text">
+                  <span class="button__text">과금상세</span>
+                  <i class="button__icon arrow"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="accordian-content">
+            <div class="flexbox flexbox--between datail-list">
+              <div class="flexbox__item datail-list__table">
+                <div class="data-table">
+                  <table>
+                    <caption>청구내역 - 사용정보, 총 이용요금, 기본요금, 사용요금, 사용량</caption>
+                    <colgroup>
+                        <col width="242px;">
+                        <col width="150px;">
+                        <col width="132px;">
+                        <col width="131px;">
+                        <col width="154px;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="data-table__th table__left cell-blue bold"><span>사용정보</span></th>
+                            <th scope="col" class="data-table__th cell-skyblue bold"><span>총 이용요금</span></th>
+                            <th scope="col" class="data-table__th cell-lightgrey"><span>기본요금</span></th>
+                            <th scope="col" class="data-table__th cell-lightgrey"><span>사용요금</span></th>
+                            <th scope="col" class="data-table__th cell-lightgrey"><span>사용량</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">사(社)별 MDM-구간별단가</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">사(社)별 MDM-구간별단가</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">공통MDM-구간별단가</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="data-table__th table__left cell-darkgrey"><span class="text-black">부가서비스</span></th>
+                          <td class="data-table__td table__right cell-grey">
+                            <span class="bold">12,234,000</span>
+                            <span class="unit bold">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>0</span>
+                            <span class="unit">원</span>
+                          </td>
+                          <td class="data-table__td table__right">
+                            <span>31</span>
+                            /
+                            <span>31</span>
+                          </td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+              </div>
+
+              <div class="flexbox__item datail-list__memo">
+                <div class="list-bullet">
+                  실제사용기간
+                  <br>
+                  <span>22.08.01~22.08.31</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 미납요금 -->
+      <div class="content-wrapper">
+        <div class="billing-statement billing-total">
+          <div class="flexbox flexbox--between flexbox--middle">
+            <div class="flexbox__item bill">
+              <div class="bill__nonpayment">미납요금</div>
+            </div>
+            
+            <div class="flexbox__item">
+              <div class="price">
+                <div class="price__wrapper">
+                  <span class="price__point">34,758,711</span>
+                  <span class="price__unit unit-total">원</span>
+                </div>
+                <span class="price__nodata">미납요금이 없습니다.</span><!-- 미납요금 없는 경우 -->
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="billing-statement">
+          <div class="flexbox flexbox--between">
+            <div class="flexbox__item bill">
+              <div class="bill__detail">7월 청구 요금</div>
+            </div>
+            <div class="flexbox__item price">
+              <span class="price__detail">5,962,866</span>
+              <span class="price__unit">원</span>
+            </div>
+          </div>
+        </div>
+        <div class="billing-statement">
+          <div class="flexbox flexbox--between">
+            <div class="flexbox__item bill"> 
+              <div class="bill__detail">8월 청구 요금</div>
+            </div>
+            <div class="flexbox__item price">
+              <span class="price__detail">5,962,866</span>
+              <span class="price__unit">원</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   <script src="../assets/js/lib/lib.min.js"></script>
 <script src="../assets/js/plugin.js"></script>
 <script src="../assets/js/common.js"></script>

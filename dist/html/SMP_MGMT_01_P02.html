@@ -14,6 +14,7 @@
   <title>SMP</title>
   <link rel="stylesheet" href="../assets/css/global.css" />
 <link rel="stylesheet" href="../assets/css/component.css" />
+<link rel="stylesheet" href="../assets/css/page.css" />
 </head>
 <body>
   <div id="skipNav" class="skip-nav">
@@ -39,11 +40,65 @@
     </ul>
     <div class="header__info">
       <strong class="name">김이름</strong>
-      <i class="profile"></i>
+      <i class="profile">
+        <img src="/assets/images/icon_avatar.png" alt="" />
+      </i>
     </div>
   </div>
 </header>
-  <h1>대표담당자변경_p</h1>
+  <div class="content">
+    <div class="container">
+      <a class="modal-trigger" rel="modal:open" href="#testModal">
+        모달레이어 열기
+      </a>
+  
+      <div class="modal" id="testModal">
+        <div class="modal__header">
+          <h2 class="modal__title">대표 담당자 변경</h2>
+        </div>
+        <div class="modal__content">
+          <div class="field-form">
+            <dl>
+              <dt>계약명</dt>
+              <dd>
+                <div class="input small">
+                  <input type="text" name="" value="[PJ20214794][공상평-구독료]기준정보 기준정보 SaaS 서비스(판토스)" class="input__box" readonly>
+                </div>
+              </dd>
+            </dl>
+          </div>
+          <div class="field-form half">
+            <dl class="half">
+              <dt>대표 담당자</dt>
+              <dd>
+                <div class="input small">
+                  <input type="text" name="" value="박엘지" class="input__box" readonly>
+                </div>
+              </dd>
+            </dl>
+            <dl class="half essential">
+              <dt><span>담당자 변경</span></dt>
+              <dd>
+                <div class="select small">
+                  <select class="select__box">
+                    <option value="">박엘지</option>
+                  </select>
+                </div>
+              </dd>
+            </dl>
+          </div> 
+          <div class="modal__button">
+            <button type="button" class="button button--large">
+              <span class="button__text">취소</span>
+            </button>
+            <button type="button" class="button button--large is-gray">
+              <span class="button__text">확인</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="../assets/js/lib/lib.min.js"></script>
 <script src="../assets/js/plugin.js"></script>
 <script src="../assets/js/common.js"></script>

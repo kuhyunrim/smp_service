@@ -28,24 +28,21 @@ var responsive = function () {
   };
 }();
 
-var customSelect = function () {
-  var setSelect = function setSelect(el) {
-    $(el).select2({
-      width: '100%'
-    }).on('select2:open', function () {
-      $('.select2-results__options').scrollbar();
-    });
-  };
-
-  return {
-    init: function init(el) {
-      setSelect(el);
-    }
-  };
-}();
-
 $(document).ready(function () {
   // uiGnb();
-  customSelect.init('.select .select__selection');
   responsive();
+  $('.accordian-button button').click(function () {
+    var accordianActive = $(this).parents('.accordian-wrapper').hasClass('active');
+
+    if (accordianActive == true) {
+      $(this).removeClass('is-active');
+      $(this).parents('.accordian-wrapper').removeClass('active');
+      $(this).parents('.accordian-header').next('.accordian-content').hide();
+      console.log(1);
+    } else {
+      $(this).addClass('is-active');
+      $(this).parents('.accordian-wrapper').addClass('active');
+      $(this).parents('.accordian-header').next('.accordian-content').show();
+    }
+  });
 });

@@ -103,6 +103,7 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
+  border: 1px solid #CCCCCC;
   border-radius: 0;
   outline: 0;
 }
@@ -168,6 +169,7 @@ input:-webkit-autofill {
 
 html {
   font-size: 16px;
+  min-width: 1280px;
 }
 
 body, button, input, textarea {
@@ -323,24 +325,41 @@ caption,
 }
 
 .header__logo {
+  overflow: hidden;
   position: absolute;
   top: 50%;
   left: 58px;
   transform: translateY(-50%);
-  color: #fff;
+  width: 235px;
+  height: 31px;
+  padding-top: 31px;
+  background: url(../images/logo_singlex.png) 0 0 no-repeat;
 }
 
 .header__info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
   position: absolute;
   top: 50%;
   right: 51px;
   transform: translateY(-50%);
+  width: auto;
   color: #fff;
 }
 
 .header__info .name {
   font-size: 14px;
   font-weight: 400;
+}
+
+.header__info .profile {
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-left: 7px;
 }
 
 .gnb {
@@ -377,4 +396,8 @@ caption,
 
 .content {
   width: 100%;
+}
+
+.content > .container {
+  padding-bottom: 45px;
 }

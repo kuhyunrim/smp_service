@@ -45,7 +45,6 @@
       </div>
 
       <div class="wrap">
-        <template v-if="activeMenu === 'pageList'">
           <div class="title-l">작업 목록</div>
 
           <div class="title">페이지 목록</div>
@@ -174,7 +173,6 @@
               </div>
             </template>
             <!-- // pagelist -->
-          </template>
         </template>
       </div>
     </div>
@@ -214,9 +212,9 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 1,
         "statusP": 0,
-        "memo": ""
+        "memo": "차트 확인"
       },
       {
         "pageName": "요금청구서",
@@ -231,7 +229,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -248,7 +246,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -265,7 +263,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -282,9 +280,9 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
-        "memo": ""
+        "memo": "탭기능 구현 전"
       },
       {
         "pageName": "구간전체보기_p",
@@ -299,9 +297,9 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
-        "memo": ""
+        "memo": "테이블 스티키 추가"
       },
       {
         "pageName": "계약담당자관리",
@@ -316,7 +314,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -333,7 +331,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -350,7 +348,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -367,7 +365,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       },
@@ -384,7 +382,7 @@
         "L8": "",
         "date": "-",
         "displayType": ["P"],
-        "status": 0,
+        "status": 2,
         "statusP": 0,
         "memo": ""
       }
@@ -439,7 +437,7 @@
       data: () => {
         return {
           activeIndex: 0, // 페이지 목록의 탭 활성화
-          activeMenu: 'guide', // 메뉴 설정
+          activeMenu: 'component', // 메뉴 설정
           activeNav: false, // 메뉴 활성화
           isModify: false, // 수정된 목록 노출여부
           showAll: false, // 페이지 목록 ? 탭형태: 전체 목록
