@@ -430,14 +430,14 @@
     &.usage-table{
         border:1px solid #E0E6ED;
         border-bottom:none;
-    }
-    &__th{
-        color:#3E454D;
-        border-bottom: 1px solid #E0E6ED;
-    }
-    &__td{
-        color:#3E454D;
-        border-bottom: 1px solid #E0E6ED;
+        &__th{
+            color:#3E454D;
+            border-bottom: 1px solid #E0E6ED;
+        }
+        &__td{
+            color:#3E454D;
+            border-bottom: 1px solid #E0E6ED;
+        }
     }
     & th.cell-blue{
         background: #DAE3ED
