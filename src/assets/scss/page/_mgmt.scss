@@ -35,20 +35,21 @@
 
 .input {
     position: relative;
-    color:#666666;
+    color: #666666;
+
     &.small {
         .input__box {
             width: 100%;
             height: 32px;
-            padding:0 13px;
+            padding: 0 13px;
             border-radius: 3px;
 
             &[readonly] {
                 color: #424952;
                 cursor: default;
                 background: #F3F3F3;
-              }
-              
+            }
+
             &.w245 {
                 width: 245px;
                 min-width: 245px;
@@ -118,7 +119,7 @@
         margin-left: auto;
 
         button {
-            & ~ button {
+            &~button {
                 margin: 0 0 0 10px;
             }
         }
@@ -133,15 +134,16 @@
     border: 1px solid #E6E6E6;
     border-radius: 3px;
 
-    .part{
-        &__right{
+    .part {
+        &__right {
             white-space: nowrap;
         }
-        &__left{
+
+        &__left {
             width: 100%;
         }
-    }    
-    
+    }
+
     .filter__finder {
         display: flex;
         width: 100%;
@@ -186,16 +188,21 @@
 }
 
 .table__list {
+    &.center{
+        th,td{
+            text-align: center;
+        }
+    }
     thead {
         background: #F5F8FA;
         border-top: 1px solid #DAE3ED;
         border-bottom: 1px solid #DAE3ED;
 
-        tr.center {
+        /* tr.center {
             th {
                 text-align: center !important;
             }
-        }
+        } */
 
         th {
             padding: 24px 5px 24px 15px;
@@ -204,25 +211,25 @@
             text-align: left;
             vertical-align: middle;
 
-            & ~ th {
+            &~th {
                 padding: 24px 5px;
             }
         }
     }
 
     tbody {
-        tr.center {
+        /* tr.center {
             td {
                 text-align: center !important;
             }
-        }
+        } */
 
         td {
             font-size: 14px;
             padding: 24px 5px 24px 15px;
             border-bottom: 1px solid #DAE3ED;
 
-            & ~ td {
+            &~td {
                 padding: 24px 5px;
             }
         }
@@ -255,7 +262,7 @@
 }
 
 .page-sub__title {
-    margin:30px 0 30px 0;
+    margin: 30px 0 30px 0;
     font-weight: 500;
     font-size: 20px;
     color: #000000;
@@ -264,120 +271,158 @@
 .bundle {
     padding: 30px 20px;
     border: 1px solid #BEC9D4;
-    .data-table{
-        width:100%;
-        margin:20px 0 0 0;
+
+    .data-table {
+        width: 100%;
+        margin: 20px 0 0 0;
     }
 }
 
 .field-form {
     display: flex;
     flex-direction: column;
-    &~.field-form{
-        margin:20px 0 0 0;
+
+    &~.field-form {
+        margin: 20px 0 0 0;
     }
-    &.unit{
+
+    &.unit {
         flex-direction: row;
         flex-grow: 0;
-        dl{ 
-            dd{
+
+        dl {
+            dd {
                 display: flex;
-                .input{
-                    & ~ .input{
-                        margin:0 0 0 10px;
+
+                .input {
+                    &~.input {
+                        margin: 0 0 0 10px;
                     }
                 }
             }
         }
+
         .input__box {
             width: auto;
+
             &.w167 {
                 width: 167px;
                 min-width: 167px;
             }
+
             &.w556 {
                 width: 556px;
                 min-width: 556px;
             }
-        }   
+        }
     }
-    &.half{
+
+    &.half {
         flex-direction: row;
         flex-grow: 1;
-        dl{
-            &~dl{
-                margin:0 0 0 28px;
+
+        dl {
+            &~dl {
+                margin: 0 0 0 28px;
             }
         }
     }
-    dl{
-        width:100%;
-        dt{
-            margin:0 0 10px 0;
+
+    dl {
+        width: 100%;
+
+        dt {
+            margin: 0 0 10px 0;
             font-size: 14px;
             font-weight: 500;
         }
-        
+
     }
 }
 
-.wrap-btn{
+.wrap-btn {
     display: flex;
-    margin:20px 0 0 0;
-    .btn{
-        &__right{
-            margin-left:auto;    
+    margin: 20px 0 0 0;
+
+    .btn {
+        &__right {
+            margin-left: auto;
+
             button {
-                & ~ button {
+                &~button {
                     margin: 0 0 0 8px;
                 }
             }
         }
     }
-    
+
 }
 
-.tab__group{
-    position:relative;
-    margin:20px 0 0 0;
-    .tab{
-        position:relative;
-        &::before{
-            content:"";
-            display:block;
-            position:absolute;
-            bottom:0px;
-            left:0px;
-            width:100%;
-            height:1px;
+.tab__group {
+    position: relative;
+    margin: 20px 0 0 0;
+
+    .tab {
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+            height: 1px;
             background: #BEC9D4;
         }
-        &::after{
-			content: "";
-			display: block;
-			clear: both;
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
         }
-        .button{
-            &__tab{
+
+        .button {
+            &__tab {
                 float: left;
-                width:393px;
-                padding:15px 12px;
+                position: relative;
+                width: 393px;
+                padding: 15px 12px;
                 font-size: 18px;
                 text-align: center;
-                color: #8996A3;     
+                color: #8996A3;
                 background: #F5F8FA;
                 border: 1px solid #BEC9D4;
-                & ~ .button__tab {
-                    margin-left:-1px;
+                z-index: 1;
+                
+                &~.button__tab {
+                    margin-left: -1px;
+                }
+                &.active{
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #2C3238;
+                    background:#fff;
+                    border:1px solid #424952;
+                    border-bottom:1px solid #fff;
+                    z-index: 2;
                 }
             }
+            
+        }
+
+        &__container {
+            position: relative;
+        }
+
+        &__content {
+            position: relative;
         }
     }
-    .btn{
-        position:absolute;
-        right:12px;
-        top:13px;
+
+    .btn {
+        position: absolute;
+        right: 12px;
+        top: 13px;
     }
 }
-
-

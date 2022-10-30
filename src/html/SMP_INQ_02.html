@@ -22,207 +22,212 @@
 
       <div class="tab__group">
         <div class="tab">
-          <button type="button" class="button__tab">
+          <button type="button" class="button__tab active">
             <span>기본 정보</span>
           </button>
           <button type="button" class="button__tab">
             <span>요금제 정보</span>
           </button>
         </div> 
-        <div class="tab__content">
-          tab__content
-        </div>  
+        <div class="tab__container">
+          <!-- 기본 정보 -->
+          <div class="tab__content">
+            <h2 class="page-sub__title">기본 정보</h2>  
+            <div class="bundle">
+              <div class="field-form unit">
+                <dl>
+                  <dt>프로젝트</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="PJ20214794" class="input__box w167" readonly>
+                    </div>
+                    <div class="input small">
+                      <input type="text" name="" value="[공상평-구독료]기준정보 기준정보 SaaS 서비스(판토스)" class="input__box w556" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div> 
+              <div class="field-form half">
+                <dl>
+                  <dt>판매서비스코드</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="[SS20200012] 기준정보" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>서비스명</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="기준정보 / SINGLEX 기준정보관리(MDM)" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="field-form half">
+                <dl class="half">
+                  <dt>고객사</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="LX판토스" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="half">
+                  <dt>고객(인도처)</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="[103526] 주식회사 엘엑스판토스(116-81-31734)" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div> 
+              <div class="field-form half">
+                <dl class="half">
+                  <dt>계약 기간</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="2021-02-01 ~ 2024-01-31" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+                <dl class="half">
+                  <dt>이행 PM</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="SINGLEX솔루션팀 장윤호 책임 / 01077550308" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div> 
+            </div>
+          </div>  
+          <!-- 요금제 정보 -->
+          <div class="tab__content">
+            <h2 class="page-sub__title">요금제 정보</h2>  
+            <div class="bundle">
+              <div class="field-form full">
+                <dl>
+                  <dt>요금제 명</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="기준정보 요금제-기업정보이용료 추가" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="field-form half">
+                <dl>
+                  <dt>유형</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="사용량 (구간별 단가) - 구간 적용 방식" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>이름</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="공통MDM-구간별단가" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="field-form full">
+                <dl>
+                  <dt>설명</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="기본금+1건당 61원이며 사용량에 따라 건당 가격이 낮아짐" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+              <div class="data-table">
+                <table>
+                  <caption>요금제 정보</caption>
+                  <colgroup>
+                      <col>
+                      <col width="300px;">
+                      <col width="285px;">
+                      <col width="243px;">
+                  </colgroup>
+                  <thead>
+                      <tr>
+                          <th scope="col" class="data-table__th table__left cell-blue"><span>사용정보</span></th>
+                          <th scope="col" class="data-table__th cell-lightgrey"><span>사용량</span></th>
+                          <th scope="col" class="data-table__th cell-lightgrey"><span>구간 기본료</span></th> 
+                          <th scope="col" class="data-table__th cell-lightgrey"><span>단가</span></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <th class="data-table__th table__left cell-darkgrey"><span>구간1</span></th>
+                        <td class="data-table__td table__right"> 0초과 50,000이하</td>
+                        <td class="data-table__td table__right">
+                          <span>1,500,000</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>61</span>
+                          <span class="unit">원</span>
+                          /
+                          <span>건</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="data-table__th table__left cell-darkgrey"><span>구간2</span></th>
+                        <td class="data-table__td table__right">50,000초과 150,000이하</td>
+                        <td class="data-table__td table__right">
+                          <span>4,550,000</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>0</span>
+                          <span class="unit">원</span>
+                          /
+                          <span>54.9</span>
+                          <span>건</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="data-table__th table__left cell-darkgrey"><span>구간3</span></th>
+                        <td class="data-table__td table__right">150,000초과 250,000이하</td>
+                        <td class="data-table__td table__right">
+                          <span>10,040,000</span>
+                          <span class="unit">원</span>
+                        </td>
+                        <td class="data-table__td table__right">
+                          <span>48.8</span>
+                          <span class="unit">원</span>
+                          /
+                          <span></span>
+                          <span>건</span>
+                        </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="wrap-btn">
+                <div class="btn__right">
+                  <button type="button" class="button">
+                    <span class="button__text">구간 전체보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <!-- //tab__container -->
         <div class="btn">
           <button type="button" class="button">
             <span class="button__text">목록</span>
           </button>
         </div>
       </div>
- 
-      <h2 class="page-sub__title">기본 정보</h2>  
-      <div class="bundle">
-        <div class="field-form unit">
-          <dl>
-            <dt>프로젝트</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="PJ20214794" class="input__box w167" readonly>
-              </div>
-              <div class="input small">
-                <input type="text" name="" value="[공상평-구독료]기준정보 기준정보 SaaS 서비스(판토스)" class="input__box w556" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div> 
-        <div class="field-form half">
-          <dl>
-            <dt>판매서비스코드</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="[SS20200012] 기준정보" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-          <dl>
-            <dt>서비스명</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="기준정보 / SINGLEX 기준정보관리(MDM)" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div>
-        <div class="field-form half">
-          <dl class="half">
-            <dt>고객사</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="LX판토스" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-          <dl class="half">
-            <dt>고객(인도처)</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="[103526] 주식회사 엘엑스판토스(116-81-31734)" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div> 
-        <div class="field-form half">
-          <dl class="half">
-            <dt>계약 기간</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="2021-02-01 ~ 2024-01-31" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-          <dl class="half">
-            <dt>이행 PM</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="SINGLEX솔루션팀 장윤호 책임 / 01077550308" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div> 
-      </div>
-
-      <h2 class="page-sub__title">요금제 정보</h2>  
-      <div class="bundle">
-        <div class="field-form full">
-          <dl>
-            <dt>요금제 명</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="기준정보 요금제-기업정보이용료 추가" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div>
-        <div class="field-form half">
-          <dl>
-            <dt>유형</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="사용량 (구간별 단가) - 구간 적용 방식" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-          <dl>
-            <dt>이름</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="공통MDM-구간별단가" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div>
-        <div class="field-form full">
-          <dl>
-            <dt>설명</dt>
-            <dd>
-              <div class="input small">
-                <input type="text" name="" value="기본금+1건당 61원이며 사용량에 따라 건당 가격이 낮아짐" class="input__box" readonly>
-              </div>
-            </dd>
-          </dl>
-        </div>
-        <div class="data-table">
-          <table>
-            <caption>요금제 정보</caption>
-            <colgroup>
-                <col>
-                <col width="300px;">
-                <col width="285px;">
-                <col width="243px;">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th scope="col" class="data-table__th table__left cell-blue"><span>사용정보</span></th>
-                    <th scope="col" class="data-table__th cell-lightgrey"><span>사용량</span></th>
-                    <th scope="col" class="data-table__th cell-lightgrey"><span>구간 기본료</span></th> 
-                    <th scope="col" class="data-table__th cell-lightgrey"><span>단가</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <th class="data-table__th table__left cell-darkgrey"><span>구간1</span></th>
-                  <td class="data-table__td table__right"> 0초과 50,000이하</td>
-                  <td class="data-table__td table__right">
-                    <span>1,500,000</span>
-                    <span class="unit">원</span>
-                  </td>
-                  <td class="data-table__td table__right">
-                    <span>61</span>
-                    <span class="unit">원</span>
-                    /
-                    <span>건</span>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="data-table__th table__left cell-darkgrey"><span>구간2</span></th>
-                  <td class="data-table__td table__right">50,000초과 150,000이하</td>
-                  <td class="data-table__td table__right">
-                    <span>4,550,000</span>
-                    <span class="unit">원</span>
-                  </td>
-                  <td class="data-table__td table__right">
-                    <span>0</span>
-                    <span class="unit">원</span>
-                    /
-                    <span>54.9</span>
-                    <span>건</span>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="data-table__th table__left cell-darkgrey"><span>구간3</span></th>
-                  <td class="data-table__td table__right">150,000초과 250,000이하</td>
-                  <td class="data-table__td table__right">
-                    <span>10,040,000</span>
-                    <span class="unit">원</span>
-                  </td>
-                  <td class="data-table__td table__right">
-                    <span>48.8</span>
-                    <span class="unit">원</span>
-                    /
-                    <span></span>
-                    <span>건</span>
-                  </td>
-                </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="wrap-btn">
-          <div class="btn__right">
-            <button type="button" class="button">
-              <span class="button__text">구간 전체보기</span>
-            </button>
-          </div>
-        </div>
-      </div>
+      <!-- //tab__group -->
       <div class="wrap-btn">
         <div class="btn__right">
           <button type="button" class="button button--large">
