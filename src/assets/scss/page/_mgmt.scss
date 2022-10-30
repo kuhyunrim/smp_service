@@ -48,6 +48,11 @@
                 cursor: default;
                 background: #F3F3F3;
               }
+              
+            &.w245 {
+                width: 245px;
+                min-width: 245px;
+            }
         }
     }
 }
