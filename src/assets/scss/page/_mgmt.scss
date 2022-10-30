@@ -434,8 +434,8 @@
                 width: 18px;
             }
 
-            &::-webkit-scrollbar {
-                width: 18px;
+            &::-webkit-scrollbar-thumb {
+                background-color: #bfc8d1;
             }
 
             &::-webkit-scrollbar-track {
