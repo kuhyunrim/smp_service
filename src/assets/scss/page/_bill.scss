@@ -1,3 +1,30 @@
+.button{
+    $root: &;
+    &.copy{
+        padding-left: 46px;
+        background:#424952 url(../../../assets/images/icon_copy.png) 16px 11px no-repeat;
+        background-size: 20px 20px;
+    }
+    &.is-active{
+        #{$root}__icon{
+            &.arrow{
+                &::before{
+                    top: 13px;
+                    right: 0;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+}
+.cell-blue{background-color: #D5DEE9;}
+.cell-skyblue{background-color: #DAE3ED;}
+.cell-darkgrey{background-color: #EDF1F5;}
+.cell-grey{background-color: #F2F6F9;}
+.cell-lightgrey{background-color: #F2F6F9;}
+.bold{font-weight: 700;}
+.medium{font-weight: 500;}
+.text-black{color:#000;}
 
 .select-month{
     width: 167px;
@@ -144,13 +171,6 @@
     }
    
 }
-.cell-blue{background-color: #D5DEE9;}
-.cell-skyblue{background-color: #DAE3ED;}
-.cell-darkgrey{background-color: #EDF1F5;}
-.cell-grey{background-color: #F2F6F9;}
-.cell-lightgrey{background-color: #F2F6F9;}
-.bold{font-weight: 700;}
-.medium{font-weight: 500;}
 .list-bullet{
     position: relative;
     padding-left: 15px;
@@ -238,7 +258,4 @@
         top:0;
         left:0; 
     } 
-}
-.text-black{
-    color:#000;
 }
