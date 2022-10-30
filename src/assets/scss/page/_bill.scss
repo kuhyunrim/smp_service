@@ -23,6 +23,9 @@
     &-statement {
         border:1px solid #DAE3ED;
         padding: 34px 65px 34px 50px;
+        &.acco{
+            padding: 34px 65px 19px 50px;
+        }
     }
     &-total{
         background-color: #F5F7FA;
@@ -214,12 +217,12 @@
             &.search{
                 position: relative;
                 padding-left:30px;
-                background: url(../../../assets/images/icon_find_grey.png) no-repeat 9px 9px;
+                background: url(../../../assets/images/icon_find_grey.png) no-repeat 9px 8px;
                 background-size: 14px auto;
             }
         }
     }
-}
+} 
 .notice{
     position: relative;
     display: inline-block;
