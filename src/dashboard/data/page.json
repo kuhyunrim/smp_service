@@ -102,7 +102,7 @@
         "displayType": ["P"],
         "status": 2,
         "statusP": 0,
-        "memo": "탭기능 구현 전"
+        "memo": ""
       },
       {
         "pageName": "구간전체보기_p",
