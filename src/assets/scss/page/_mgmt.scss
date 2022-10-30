@@ -8,8 +8,13 @@
     text-decoration: underline !important;
 }
 
-.color-black{color:#000000 !important;}
-.font-16{font-size:16px !important;}
+.color-black {
+    color: #000000 !important;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
 
 .ico__medal {
     display: inline-block;
@@ -187,21 +192,18 @@
 }
 
 .table__list {
-    &.center{
-        th,td{
+    &.center {
+
+        th,
+        td {
             text-align: center;
         }
     }
+
     thead {
         background: #F5F8FA;
         border-top: 1px solid #DAE3ED;
         border-bottom: 1px solid #DAE3ED;
-
-        /* tr.center {
-            th {
-                text-align: center !important;
-            }
-        } */
 
         th {
             padding: 24px 5px 24px 15px;
@@ -217,12 +219,6 @@
     }
 
     tbody {
-        /* tr.center {
-            td {
-                text-align: center !important;
-            }
-        } */
-
         td {
             font-size: 14px;
             padding: 24px 5px 24px 15px;
@@ -393,21 +389,22 @@
                 background: #F5F8FA;
                 border: 1px solid #BEC9D4;
                 z-index: 1;
-                
+
                 &~.button__tab {
                     margin-left: -1px;
                 }
-                &.active{
+
+                &.active {
                     font-weight: 700;
                     font-size: 18px;
                     color: #2C3238;
-                    background:#fff;
-                    border:1px solid #424952;
-                    border-bottom:1px solid #fff;
+                    background: #fff;
+                    border: 1px solid #424952;
+                    border-bottom: 1px solid #fff;
                     z-index: 2;
                 }
             }
-            
+
         }
 
         &__container {
@@ -426,21 +423,49 @@
     }
 }
 
-.data-table{
-    &.usage-table{
-        border:1px solid #E0E6ED;
-        border-bottom:none;
-        &__th{
-            color:#3E454D;
+.data-table {
+    $root: &;
+
+    &.usage-table {
+        border: 1px solid #E0E6ED;
+
+        &.scrollbar::-webkit-scrollbar {
+            width: 18px;
+        }
+
+        &.scrollbar::-webkit-scrollbar-thumb {
+            background-color: #c1c9d3;
+        }
+
+        &.scrollbar::-webkit-scrollbar-track {
+            background-color: #E0E6ED;
+        }
+
+        &.scroll {
+            overflow-y: auto;
+            height: 199px;
+        }
+
+        tbody tr:last-child th {
+            border-bottom: none;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        #{$root}__th {
+            color: #3E454D;
             border-bottom: 1px solid #E0E6ED;
         }
-        &__td{
-            color:#3E454D;
+
+        #{$root}__td {
+            color: #3E454D;
             border-bottom: 1px solid #E0E6ED;
         }
     }
-    & th.cell-blue{
+
+    & th.cell-blue {
         background: #DAE3ED
     }
 }
-
