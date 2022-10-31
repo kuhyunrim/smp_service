@@ -1,58 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-<meta name="robots" content="noindex" />
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0"
-/>
-<meta http-equiv="Pragma" content="no-cache" />
-<meta http-equiv="Expires" content="-1" />
-<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<meta name="format-detection" content="telephone=no" />
+  <!--#include file="./inc/meta.inc" -->
   <title>SMP</title>
-  <link rel="stylesheet" href="../assets/css/global.css" />
-<link rel="stylesheet" href="../assets/css/component.css" />
-<link rel="stylesheet" href="../assets/css/page.css" />
+  <!--#include file="./inc/css.inc" -->
 </head>
 <body>
   <div id="skipNav" class="skip-nav">
     <a href="#gnb" class="skip-nav__item">메뉴 바로가기</a>
     <a href="#content" class="skip-nav__item">본문 바로가기</a>
   </div>
-  <header class="header">
-  <div class="header__inner">
-    <a href="#" class="header__logo">SINGLEX Platform</a>
-    <ul class="header__gnb gnb">
-      <li class="gnb__item">
-        <a href="#" class="gnb__link is_active">요금 청구서</a>
-      </li>
-      <li class="gnb__item">
-        <a href="#" class="gnb__link">계약조회</a>
-      </li>
-      <li class="gnb__item">
-        <a href="#" class="gnb__link">계약담당자 관리</a>
-      </li>
-      <li class="gnb__item gnb__item--single">
-        <a href="#" class="gnb__link">SINGLEX Town</a>
-      </li>
-    </ul>
-    <div class="header__info">
-      <strong class="name">김이름</strong>
-      <i class="profile">
-        <img src="/assets/images/icon_avatar.png" alt="" />
-      </i>
-    </div>
-  </div>
-</header>
+  <!--#include file="./inc/header.inc" -->
   <div class="content">
     <div class="container">
-      <a class="modal-trigger" rel="modal:open" href="#consumptionModal">
+      <a class="modal-trigger" rel="modal:open" href="#modal01">
         구간 전체보기
       </a>
 
-      <div class="modal" id="consumptionModal">
+      <!-- 구간 전체보기 -->
+      <div class="modal" id="modal01">
         <div class="modal__header">
           <h2 class="modal__title">구간 전체보기</h2>
         </div>
@@ -147,10 +113,9 @@
           </div>
         </div>
       </div>
+      <!-- // 구간 전체보기 -->
     </div>
   </div>
-  <script src="../assets/js/lib/lib.min.js"></script>
-<script src="../assets/js/plugin.js"></script>
-<script src="../assets/js/common.js"></script>
+  <!--#include file="./inc/script.inc" -->
 </body>
 </html>

@@ -247,9 +247,9 @@
               </div>
               <div class="wrap-btn">
                 <div class="btn__right">
-                  <button type="button" class="button">
+                  <a rel="modal:open" href="#modal01" class="button">
                     <span class="button__text">구간 전체보기</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -275,6 +275,104 @@
       </div>
     </div>
   </div>
+
+  <!-- 구간 전체보기 -->
+  <div class="modal" id="modal01">
+    <div class="modal__header">
+      <h2 class="modal__title">구간 전체보기</h2>
+    </div>
+    <div class="modal__content">
+      <div class="data-table usage-table scroll scrollbar">
+        <table>
+          <caption>요금제 정보</caption>
+          <colgroup>
+            <col>
+            <col width="200px;">
+            <col width="200px;">
+            <col width="200px;">
+          </colgroup>
+          <thead>
+              <tr>
+                  <th scope="col" class="data-table__th table__left cell-blue bold"><span>사용정보</span></th>
+                  <th scope="col" class="data-table__th cell-lightgrey"><span>사용량</span></th>
+                  <th scope="col" class="data-table__th cell-lightgrey"><span>구간 기본료</span></th> 
+                  <th scope="col" class="data-table__th cell-lightgrey"><span>단가</span></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <th class="data-table__th table__left cell-lightgrey color_black font-16"><span>구간1</span></th>
+                <td class="data-table__td table__right"> 0초과 50,000이하</td>
+                <td class="data-table__td table__right">
+                  <span>1,500,000</span>
+                  <span class="unit">원</span>
+                </td>
+                <td class="data-table__td table__right">
+                  <span>61</span>
+                  <span class="unit">원</span>
+                  /
+                  <span>건</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="data-table__th table__left cell-lightgrey color_black font-16"><span>구간2</span></th>
+                <td class="data-table__td table__right">50,000초과 150,000이하</td>
+                <td class="data-table__td table__right">
+                  <span>4,550,000</span>
+                  <span class="unit">원</span>
+                </td>
+                <td class="data-table__td table__right">
+                  <span>0</span>
+                  <span class="unit">원</span>
+                  /
+                  <span>54.9</span>
+                  <span>건</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="data-table__th table__left cell-lightgrey color_black font-16"><span>구간3</span></th>
+                <td class="data-table__td table__right">150,000초과 250,000이하</td>
+                <td class="data-table__td table__right">
+                  <span>10,040,000</span>
+                  <span class="unit">원</span>
+                </td>
+                <td class="data-table__td table__right">
+                  <span>48.8</span>
+                  <span class="unit">원</span>
+                  /
+                  <span></span>
+                  <span>건</span>
+                </td>
+              </tr>
+              <tr>
+                <th class="data-table__th table__left cell-lightgrey color_black font-16"><span>구간3</span></th>
+                <td class="data-table__td table__right">150,000초과 250,000이하</td>
+                <td class="data-table__td table__right">
+                  <span>10,040,000</span>
+                  <span class="unit">원</span>
+                </td>
+                <td class="data-table__td table__right">
+                  <span>48.8</span>
+                  <span class="unit">원</span>
+                  /
+                  <span></span>
+                  <span>건</span>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal__button">
+        <a href="#close" rel="modal:close" class="button button--large">
+          <span class="button__text">취소</span>
+        </button>
+        <button type="button" class="button is-gray">
+          <span class="button__text">확인</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // 구간 전체보기 -->
   <script src="../assets/js/lib/lib.min.js"></script>
 <script src="../assets/js/plugin.js"></script>
 <script src="../assets/js/common.js"></script>

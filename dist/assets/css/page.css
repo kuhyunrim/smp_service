@@ -692,7 +692,7 @@
   background: #fff;
   border: 1px solid #424952;
   border-bottom: 1px solid #fff;
-  z-index: 2;
+  z-index: 1;
 }
 
 .tab__group .tab__container {
@@ -968,6 +968,7 @@
 }
 
 .total-amount__amount {
+  display: block;
   margin-top: 24px;
   font-size: 20px;
   font-weight: 500;

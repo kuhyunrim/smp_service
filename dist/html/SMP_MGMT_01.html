@@ -58,10 +58,10 @@
     <div class="container">
       <div class="btn__sort">
           <div class="part__right">
-            <button type="button" class="button"><span class="button__text">초대링크전송</span></button>
-            <button type="button" class="button"><span class="button__text">대표담당자변경</span></button>
-            <button type="button" class="button"><span class="button__text">담당자 삭제</span></button>
-            <button type="button" class="button"><span class="button__text">담당자 등록</span></button>
+            <a rel="modal:open" href="#modal04"  class="button"><span class="button__text">초대링크전송</span></a>
+            <a rel="modal:open" href="#modal02" class="button"><span class="button__text">대표담당자변경</span></a>
+            <a rel="modal:open" href="#modal05" class="button"><span class="button__text">담당자 삭제</span></a>
+            <a rel="modal:open" href="#modal01" class="button"><span class="button__text">담당자 등록</span></a>
           </div>
       </div>
       <div class="table-wrap">
@@ -106,14 +106,14 @@
               <td>
                   <div class="lever__subj">
                     <label class="lever__check"><input type="checkbox" name="" value=""></label>
-                    <p class="subj ellipsis">[PJ20214794][공상평-구독료]테스트입니다.</p>
+                    <a rel="modal:open" href="#modal03" class="subj ellipsis">[PJ20214794][공상평-구독료]테스트입니다.</a>
                   </div>
                 </td>
               <td>LX판토스</td>
               <td><div class="name"><span class="ico__medal"></span>박엘지</div></td>
               <td>Yes</td>
               <td>No</td>
-              <td><a href="#" class="underline">lgpark@lgcns.com</a></td>
+              <td><a href="mailto:lgpark@lgcns.com" class="underline">lgpark@lgcns.com</a></td>
               <td>010-0123-4567</td>
             </tr>
             <tr>
@@ -121,14 +121,14 @@
               <td>
                   <div class="lever__subj">
                     <label class="lever__check"><input type="checkbox" name="" value=""></label>
-                    <p class="subj ellipsis">[PJ20214794][공상평-구독료]테스트입니다.</p>
+                    <a rel="modal:open" href="#modal03" class="subj ellipsis">[PJ20214794][공상평-구독료]테스트입니다.</a>
                   </div>
                 </td>
               <td>LX판토스</td>
               <td><div class="name"><span class="ico__medal"></span>박엘지</div></td>
               <td>Yes</td>
               <td>No</td>
-              <td><a href="#" class="underline">lgpark@lgcns.com</a></td>
+              <td><a href="mailto:lgpark@lgcns.com" class="underline">lgpark@lgcns.com</a></td>
               <td>010-0123-4567</td>
             </tr>
             <tr>
@@ -136,14 +136,14 @@
               <td>
                   <div class="lever__subj">
                     <label class="lever__check"><input type="checkbox" name="" value=""></label>
-                    <p class="subj ellipsis">[PJ20214794][공상평-구독료]테스트입니다.</p>
+                    <a rel="modal:open" href="#modal03" class="subj ellipsis">[PJ20214794][공상평-구독료]테스트입니다.</a>
                   </div>
                 </td>
               <td>LX판토스</td>
               <td><div class="name">박엘지</div></td>
               <td>Yes</td>
               <td>No</td>
-              <td><a href="#" class="underline">lgpark@lgcns.com</a></td>
+              <td><a href="mailto:lgpark@lgcns.com" class="underline">lgpark@lgcns.com</a></td>
               <td>010-0123-4567</td>
             </tr>
           </tbody>
@@ -151,6 +151,219 @@
       </div>
     </div>
   </div>
+
+  <!-- 담당자 등록 -->
+  <div class="modal" id="modal01">
+    <div class="modal__header">
+      <h2 class="modal__title">담당자 등록</h2>
+    </div>
+    <div class="modal__content">
+      <div class="field-form">
+        <dl>
+          <dt>계약명</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="단위기능간 연계적합성" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="field-form">
+        <dl>
+          <dt>회사명</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="LX판토스" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="field-form form-flex">
+        <dl class="form-flex__item">
+          <dt>이름</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" placeholder="ex) Single플랫폼빌드팀 SMP" value="" class="input__box w245 search">
+            </div>
+          </dd>
+        </dl>
+        <dl class="form-flex__item flex-auto essential">
+          <dt><span>이메일</span></dt>
+          <dd>
+            <div class="input small form-flex">
+              <input type="text" name="" value="" class="input__box flex-auto">
+              <button type="button" class="button">
+                <span class="button__text">조회</span>
+              </button>
+            </div>
+          </dd>
+        </dl>
+      </div> 
+      <span class="notice">이메일을 입력 후 조회 버튼을 눌러주세요.</span>
+
+      <div class="modal__button">
+        <a href="#close" rel="modal:close" class="button button--large">
+          <span class="button__text">취소</span>
+        </a>
+        <button type="button" class="button button--large is-gray">
+          <span class="button__text">확인</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // 담당자 등록 -->
+
+  <!-- 대표 담당자 변경 -->
+  <div class="modal" id="modal02">
+    <div class="modal__header">
+      <h2 class="modal__title">대표 담당자 변경</h2>
+    </div>
+    <div class="modal__content">
+      <div class="field-form">
+        <dl>
+          <dt>계약명</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="[PJ20214794][공상평-구독료]기준정보 기준정보 SaaS 서비스(판토스)" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="field-form half">
+        <dl class="half">
+          <dt>대표 담당자</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="박엘지" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+        <dl class="half essential">
+          <dt><span>담당자 변경</span></dt>
+          <dd>
+            <div class="select small">
+              <select class="select__box">
+                <option value="">박엘지</option>
+              </select>
+            </div>
+          </dd>
+        </dl>
+      </div> 
+      <div class="modal__button">
+        <a href="#close" rel="modal:close" class="button button--large">
+          <span class="button__text">취소</span>
+        </a>
+        <button type="button" class="button button--large is-gray">
+          <span class="button__text">확인</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // 대표 담당자 변경 -->
+
+  <!-- 계약 상세 -->
+  <div class="modal" id="modal03">
+    <div class="modal__header">
+      <h2 class="modal__title">계약 상세</h2>
+    </div>
+    <div class="modal__content">
+      <div class="field-form">
+        <dl>
+          <dt>계약명</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="[PJ20214794][공상평-구독료]기준정보 기준정보 SaaS 서비스(판토스)" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="field-form half">
+        <dl class="half">
+          <dt>계약기간</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="박엘지" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+        <dl class="half">
+          <dt>서비스 담당자</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="박엘지 (010-1234-5678)" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+      </div> 
+      <div class="field-form">
+        <dl>
+          <dt>설명</dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" value="" class="input__box" readonly>
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="modal__button">
+        <a href="#close" rel="modal:close" class="button button--large">
+          <span class="button__text">취소</span>
+        </a>
+        <button type="button" class="button button--large is-gray">
+          <span class="button__text">확인</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // 계약 상세 -->
+
+  <!-- SM 초대 링크 전송 -->
+  <div class="modal" id="modal04">
+    <div class="modal__header">
+      <h2 class="modal__title">SM 초대 링크 전송</h2>
+    </div>
+    <div class="modal__content">
+      <div class="field-form">
+        <dl class="essential">
+          <dt><span>이메일</span></dt>
+          <dd>
+            <div class="input small">
+              <input type="text" name="" placeholder="ex) email@lgcns.com" class="input__box">
+            </div>
+          </dd>
+        </dl>
+      </div>
+      <div class="modal__button">
+        <a href="#close" rel="modal:close" class="button button--large">
+          <span class="button__text">취소</span>
+        </a>
+        <button type="button" class="button button--large is-gray">
+          <span class="button__text">전송</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // SM 초대 링크 전송 -->
+
+  <!-- 담당자 삭제 -->
+  <div class="modal alert" id="modal05">
+    <div class="alert__header">
+      <h2 class="alert__title">확인메시지</h2>
+    </div>
+    <div class="alert__content">
+      <div class="alert__text"><strong class="highlight">1</strong>개의 항목을 선택했습니다.<br>선택한 항목을 삭제하시겠습니까?</div>
+      <div class="alert__button">
+        <a href="#close" rel="modal:close" class="button-alert button-alert--cancel">
+          <span class="button__text">취소</span>
+        </a>
+        <button type="button" class="button-alert">
+          <span class="button__text">확인</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- // 담당자 삭제 -->
+
   <script src="../assets/js/lib/lib.min.js"></script>
 <script src="../assets/js/plugin.js"></script>
 <script src="../assets/js/common.js"></script>

@@ -48,13 +48,14 @@
 </header>
   <div class="content">
     <div class="container">
-      <a class="modal-trigger" rel="modal:open" href="#testModal">
+      <a class="modal-trigger" rel="modal:open" href="#modal03">
         모달레이어 열기
       </a>
   
-      <div class="modal" id="testModal">
+      <!-- 계약 상세 -->
+      <div class="modal" id="modal03">
         <div class="modal__header">
-          <h2 class="modal__title">대표 담당자 변경</h2>
+          <h2 class="modal__title">계약 상세</h2>
         </div>
         <div class="modal__content">
           <div class="field-form">
@@ -69,24 +70,32 @@
           </div>
           <div class="field-form half">
             <dl class="half">
-              <dt>대표 담당자</dt>
+              <dt>계약기간</dt>
               <dd>
                 <div class="input small">
                   <input type="text" name="" value="박엘지" class="input__box" readonly>
                 </div>
               </dd>
             </dl>
-            <dl class="half essential">
-              <dt><span>담당자 변경</span></dt>
+            <dl class="half">
+              <dt>서비스 담당자</dt>
               <dd>
-                <div class="select small">
-                  <select class="select__box">
-                    <option value="">박엘지</option>
-                  </select>
+                <div class="input small">
+                  <input type="text" name="" value="박엘지 (010-1234-5678)" class="input__box" readonly>
                 </div>
               </dd>
             </dl>
           </div> 
+          <div class="field-form">
+            <dl>
+              <dt>설명</dt>
+              <dd>
+                <div class="input small">
+                  <input type="text" name="" value="" class="input__box" readonly>
+                </div>
+              </dd>
+            </dl>
+          </div>
           <div class="modal__button">
             <button type="button" class="button button--large">
               <span class="button__text">취소</span>
@@ -97,6 +106,7 @@
           </div>
         </div>
       </div>
+      <!-- // 계약 상세 -->
     </div>
   </div>
   <script src="../assets/js/lib/lib.min.js"></script>
