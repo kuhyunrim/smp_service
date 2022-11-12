@@ -939,6 +939,34 @@
   padding-top: 25px;
 }
 
+.graph-label {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.graph-label__wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  gap: 20px;
+}
+
+.graph-label__item {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 10px;
+  gap: 5px;
+}
+
+.graph-label__item i {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
 .total-amount {
   margin-top: 12px;
   text-align: right;

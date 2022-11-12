@@ -149,6 +149,30 @@
 }
 .main-graph{
     padding-top: 25px;
+    // height: 218px;
+    // &.graph-label{
+    //     height: 300px;
+    // }
+}
+.graph-label{
+    position: relative;
+    padding-bottom: 20px;
+    &__wrap{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        gap: 5px;
+        i{
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+        }
+    }
 }
 
 .total-amount{

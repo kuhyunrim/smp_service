@@ -76,7 +76,7 @@
               <h2 class="main-title__title">월별 청구금액 <span class="small">(<span class="date">2021.09</span> ~ <span class="date">2022.08</span>)</span></h2>
             </div>
 
-            <div class="main-graph">
+            <div class="main-graph" style="height: 218px">
               <canvas class="main-graph__graph" id="typeMonth"></canvas>
             </div>
           </div>
@@ -90,6 +90,14 @@
                 </select>
               </div>
             </div>
+
+            <div class="main-graph graph-label" style="height: 218px">
+              <canvas class="main-graph__graph" id="typeService"></canvas>
+            </div>
+            <div class="graph-label__wrap">
+              <div class="graph-label__item"><i style="background: #26B9D1;"></i> SINGLEX기준정보관리(MDD)</div>
+              <div class="graph-label__item"><i style="background: #8B8FE8"></i> SINGLEX배움마당</div>
+            </div>
           </div>
         </div>
 
@@ -101,6 +109,17 @@
                 (<span class="date">2022-07-01</span>~<span class="text">2022-07-31</span>)
               </div>
               <div class="main-title__right">실시간 사용량 집계기준(2022.09.25)</div>
+            </div>
+
+            <div class="main-graph graph-label" style="height: 218px">
+              <canvas class="main-graph__graph" id="typeUsage"></canvas>
+            </div>
+            <div class="graph-label__wrap">
+              <div class="graph-label__item"><i style="background: #8B9ED8;"></i> 공통MDD - 구간별단가</div>
+              <div class="graph-label__item"><i style="background: #8B9ED8"></i> 사(社)별 MDM -구간별단가</div>
+              <div class="graph-label__item"><i style="background: #FFB941"></i> 기업정보 이욜료(A)</div>
+              <div class="graph-label__item"><i style="background: #F47C7C"></i> Standard A -사용자 수</div>
+              <div class="graph-label__item"><i style="background: #2C3238"></i> Standard - 초과 사용량</div>
             </div>
           </div>
         </div>
@@ -178,6 +197,7 @@
   </div>
   <!--#include file="./inc/script.inc" -->
   <script>
+    // 월별 청구금액
     const monthLabels = ['9월', '10월', '11월', '12월', '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월']
     const monthData = {
       labels: monthLabels,
@@ -200,6 +220,8 @@
                 display: false
             },
         },
+        responsive: true,
+        maintainAspectRatio: false,
         scales: {
           x: {
             grid: {
@@ -224,6 +246,138 @@
       }
     }
     const monthChart = new Chart(document.querySelector('#typeMonth'), monthConfig);
+
+    // 서비스별 청구금액
+    const serviceLabels = ['2022-08', '2022-09'];
+    const serviceData = {
+      labels: serviceLabels,
+      datasets: [
+        {
+          label: '2022-08',
+          barThickness: 50,
+          backgroundColor: '#26B9D1',
+          borderColor: '#26B9D1',
+          data: [40000000, 30000000],
+        },
+        {
+          label: '2022-09',
+          barThickness: 50,
+          backgroundColor: '#8B8FE8',
+          borderColor: '#8B8FE8',
+          data: [30000000, 40000000],
+        }
+      ]
+    }
+    const serviceConfig = {
+      type: 'bar',
+      data: serviceData,
+      options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            ticks: {
+              stepSize: 0,
+              callback: function(value, index, values) {
+                if (value >= 1000000000 || value <= -1000000000 ) {
+                  return value / 1e9 + 'B';
+                } else if (value >= 1000000 || value <= -1000000) {
+                  return value / 1e6 + 'M';
+                } else  if (value >= 1000 || value <= -1000) {
+                  return value / 1e3 + 'K';
+                }
+                return value;
+              },
+            },
+          },
+        },
+      }
+    }
+    const serviceChart = new Chart(document.querySelector('#typeService'), serviceConfig);
+
+    // 사용현황
+    const usageLabels = ['9월', '10월', '11월', '12월', '1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월'];
+    const usageData = {
+      labels: usageLabels,
+      datasets: [
+        {
+          label: '공통MDD - 구간별단가',
+          backgroundColor: '#8B9ED8',
+          borderColor: '#8B9ED8',
+          data: [61231, 65234, 63423, 65452, 61231, 61231, 61243, 64452, 62311, 62131, 64231, 63122],
+        },
+        {
+          label: '사(社)별 MDM -구간별단가',
+          backgroundColor: '#8B9ED8 ',
+          borderColor: '#8B9ED8 ',
+          data: [54444, 51111, 51222, 55555, 51111, 52222, 54444, 55555, 51111, 52222, 51111, 51111],
+        },
+        {
+          label: '기업정보 이욜료(A)',
+          backgroundColor: '#FFB941',
+          borderColor: '#FFB941',
+          data: [12222, 11111, 13333, 12222, 11111, 11111, 13333, 13343, 12333, 11122, 12222, 11111],
+        },
+        {
+          label: 'Standard A -사용자 수',
+          backgroundColor: '#F47C7C',
+          borderColor: '#F47C7C',
+          data: [22222, 21111, 22222, 21111, 21111, 21111, 21111, 21111, 21111, 21111, 21111, 22222],
+        },
+        {
+          label: 'Standard  -초과 사용량',
+          backgroundColor: '#2C3238',
+          borderColor: '#2C3238',
+          data: [1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000, 1000],
+        },
+      ]
+    }
+    const usageConfig = {
+      type: 'line',
+      data: usageData,
+      options: {
+        plugins: {
+            legend: {
+                display: false
+            },
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+          },
+          y: {
+            ticks: {
+              stepSize: 0,
+              callback: function(value, index, values) {
+                if (value >= 1000000000 || value <= -1000000000 ) {
+                  return value / 1e9 + 'B';
+                } else if (value >= 1000000 || value <= -1000000) {
+                  return value / 1e6 + 'M';
+                } else  if (value >= 1000 || value <= -1000) {
+                  return value / 1e3 + 'K';
+                }
+                return value;
+              },
+            },
+          },
+        },
+      }
+    }
+    const usageChart = new Chart(document.querySelector('#typeUsage'), usageConfig);
   </script>
 </body>
 </html>
