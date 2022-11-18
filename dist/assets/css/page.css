@@ -303,6 +303,12 @@
   left: 0;
 }
 
+hr.spacer {
+  height: 1px;
+  margin: 32px 0;
+  background: #BEC9D4;
+}
+
 .ellipsis {
   overflow: hidden;
   white-space: nowrap;

@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <!--#include file="./inc/meta.inc" -->
+  <meta charset="UTF-8" />
+<meta name="robots" content="noindex" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1, user-scalable=0"
+/>
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<meta name="format-detection" content="telephone=no" />
   <title>SMP</title>
-  <!--#include file="./inc/css.inc" -->
+  <link rel="stylesheet" href="../assets/css/global.css" />
+<link rel="stylesheet" href="../assets/css/component.css" />
+<link rel="stylesheet" href="../assets/css/page.css" />
 </head>
 <body>
   <div id="skipNav" class="skip-nav">
     <a href="#gnb" class="skip-nav__item">메뉴 바로가기</a>
     <a href="#content" class="skip-nav__item">본문 바로가기</a>
   </div>
-  <!--#include file="./inc/header.inc" -->
+  <header class="header">
+  <div class="header__inner">
+    <a href="#" class="header__logo">SINGLEX Platform</a>
+    <ul class="header__gnb gnb">
+      <li class="gnb__item">
+        <a href="#" class="gnb__link is_active">요금 청구서</a>
+      </li>
+      <li class="gnb__item">
+        <a href="#" class="gnb__link">계약조회</a>
+      </li>
+      <li class="gnb__item">
+        <a href="#" class="gnb__link">계약담당자 관리</a>
+      </li>
+      <li class="gnb__item gnb__item--single">
+        <a href="#" class="gnb__link">SINGLEX Town</a>
+      </li>
+    </ul>
+    <div class="header__info">
+      <strong class="name">김이름</strong>
+      <i class="profile">
+        <img src="/assets/images/icon_avatar.png" alt="" />
+      </i>
+    </div>
+  </div>
+</header>
   <div class="page-header page-header--small">
     <div class="page-header__container">
       <a href="#" class="page-header__back"></a>
-      <h1 class="page-header__title">SINGLEX 기준정보관리(MDM)</h1>
+      <h1 class="page-header__title">부서/사용자 등록</h1>
     </div>
   </div>
   <div class="content">
@@ -23,16 +58,21 @@
       <div class="tab__group" data-element="tab">
         <div class="tab">
           <button type="button" class="button__tab active" data-element="tab__anchor">
-            <span>기본 정보</span>
+            <span>등록가이드</span>
           </button>
           <button type="button" class="button__tab" data-element="tab__anchor">
-            <span>요금제 정보</span>
+            <span>부서등록</span>
+          </button>
+
+          <button type="button" class="button__tab" data-element="tab__anchor">
+            <span>사용자 등록</span>
           </button>
         </div>
         <div class="tab__container">
           <!-- 기본 정보 -->
           <div class="tab__content" data-element="tab__panel">
-            <div class="bundle mgt84">
+            <h2 class="page-sub__title">기본 정보</h2>
+            <div class="bundle">
               <div class="field-form unit">
                 <dl>
                   <dt>프로젝트</dt>
@@ -104,8 +144,18 @@
           </div>
           <!-- 요금제 정보 -->
           <div class="tab__content" data-element="tab__panel">
-            <h2 class="page-sub__title">요금제 명</h2>  
+            <h2 class="page-sub__title">요금제 정보</h2>  
             <div class="bundle">
+              <div class="field-form full">
+                <dl>
+                  <dt>요금제 명</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="기준정보 요금제-기업정보이용료 추가" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
               <div class="field-form half">
                 <dl>
                   <dt>유형</dt>
@@ -199,9 +249,29 @@
                   </tbody>
                 </table>
               </div>
-              
-              <hr class="spacer">
-
+              <div class="wrap-btn">
+                <div class="btn__right">
+                  <a rel="modal:open" href="#modal01" class="button">
+                    <span class="button__text">구간 전체보기</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 요금제 정보 -->
+          <div class="tab__content" data-element="tab__panel">
+            <h2 class="page-sub__title">요금제 정보</h2>  
+            <div class="bundle">
+              <div class="field-form full">
+                <dl>
+                  <dt>요금제 명</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="기준정보 요금제-기업정보이용료 추가" class="input__box" readonly>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
               <div class="field-form half">
                 <dl>
                   <dt>유형</dt>
@@ -295,7 +365,6 @@
                   </tbody>
                 </table>
               </div>
-
               <div class="wrap-btn">
                 <div class="btn__right">
                   <a rel="modal:open" href="#modal01" class="button">
@@ -424,6 +493,8 @@
     </div>
   </div>
   <!-- // 구간 전체보기 -->
-  <!--#include file="./inc/script.inc" -->
+  <script src="../assets/js/lib/lib.min.js"></script>
+<script src="../assets/js/plugin.js"></script>
+<script src="../assets/js/common.js"></script>
 </body>
 </html>
