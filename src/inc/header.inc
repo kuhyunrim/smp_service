@@ -11,6 +11,12 @@
       <li class="gnb__item">
         <a href="#" class="gnb__link">계약담당자 관리</a>
       </li>
+      <li class="gnb__item">
+        <a href="#" class="gnb__link">사용자/부서등록</a>
+      </li>
+      <li class="gnb__item">
+        <a href="#" class="gnb__link">사용자/부서조회</a>
+      </li>
       <li class="gnb__item gnb__item--single">
         <a href="#" class="gnb__link">SINGLEX Town</a>
       </li>

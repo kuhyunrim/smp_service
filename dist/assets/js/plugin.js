@@ -1,7 +1,9 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 /* eslint-disable no-lonely-if */
+
 /*
   'no-plusplus': 0,
 */
@@ -15,42 +17,51 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
   }
 })(void 0, function () {
   var COMMON = {};
+
   (function () {
     COMMON.uuid = function () {
       var uuid = 0;
       return function (prefix) {
         uuid += 1;
         var prefixName = '';
+
         if (prefix) {
           prefixName = prefix;
         } else {
           prefixName = '';
         }
+
         return prefixName + uuid;
       };
     }();
+
     COMMON.checkPrevId = function ($element, pluginName) {
       var piName = false;
+
       if ($element.attr('id').indexOf(pluginName) !== -1) {
         piName = false;
       } else {
         piName = true;
       }
+
       return piName;
     };
+
     COMMON.checkFocusibleElement = function ($element) {
       var tagName = $element[0].tagName.toLowerCase();
       var boolTagname = false;
+
       if (tagName === 'a' || tagName === 'button') {
         boolTagname = true;
       } else {
         boolTagname = false;
       }
+
       return boolTagname;
     };
-  })();
+  })(); // toggle
 
-  // toggle
+
   (function () {
     var pluginName = 'toggle';
     var defaults = {
@@ -66,6 +77,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       clickToClose: false,
       isOpened: false
     };
+
     function Plugin(element, options) {
       var plugin = this;
       plugin.element = element;
@@ -77,11 +89,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       plugin.idx = 0;
       plugin.init();
     }
+
     $.extend(Plugin.prototype, {
       init: function init() {
         var plugin = this;
         plugin.buildCache();
         plugin.bindEvents();
+
         if (plugin.options.isOpened) {
           plugin.open();
         } else {
@@ -101,22 +115,27 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$anchor = plugin.$element.find(plugin.options.anchorEl);
         plugin.$panel = plugin.$element.find(plugin.options.panelEl);
         plugin.options.isOpened = plugin.$anchor.data('open');
+
         if (!COMMON.checkFocusibleElement(plugin.$anchor)) {
           plugin.$anchor.attr({
             role: 'button',
             tabIndex: 0
           });
         }
+
         var elemId = '';
+
         if (plugin.$panel.attr('id')) {
           elemId = plugin.$panel.attr('id');
         } else {
           elemId = COMMON.uuid("".concat(plugin.name, "-"));
         }
+
         plugin.$anchor.attr('aria-controls', elemId);
         plugin.$panel.attr({
           id: elemId
         });
+
         if (plugin.options.onChangeAfterText !== null && plugin.options.onChangeBeforeText !== null) {
           plugin.textFlag = true;
         }
@@ -125,16 +144,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var plugin = this;
         plugin.$anchor.removeAttr('aria-expended aria-controls tabindex role');
         plugin.$panel.removeAttr('aria-expended style');
+
         if (!COMMON.checkPrevId(plugin.$panel, plugin.name)) {
           plugin.$panel.removeAttr('id');
         }
       },
       bindEvents: function bindEvents() {
         var _this = this;
+
         var plugin = this;
+
         var eventName = function eventName() {
           var events = plugin.options.event;
           var returnEvent;
+
           if (events === 'focusin') {
             returnEvent = "focusin.".concat(plugin.name, " mouseenter.").concat(plugin.name);
           } else if (events === 'click') {
@@ -142,12 +165,15 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           } else {
             return "".concat(events, ".").concat(plugin.name);
           }
+
           return returnEvent;
         };
+
         var event = eventName();
         plugin.$anchor.off(event).on(event, function (e) {
           e.stopPropagation();
           var key = e.witch || e.keyCode;
+
           if (e.type === 'click' || e.type === 'focusin' || key === 13 || key === 32) {
             plugin.idx = $(_this).data('index');
             plugin.toggle();
@@ -160,6 +186,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$element.off("hide.".concat(plugin.name)).on("hide.".concat(plugin.name), function () {
           plugin.hide();
         });
+
         if (plugin.options.clickToClose) {
           $(document).on('click', function (e) {
             if (e.target !== plugin.$panel && $(e.target).closest(plugin.options.panelEl).length === 0) {
@@ -183,6 +210,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       },
       toggle: function toggle() {
         var plugin = this;
+
         if (plugin.flag) {
           plugin.close();
         } else {
@@ -194,13 +222,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var option = plugin.options;
         plugin.flag = true;
         plugin.beforeChange(plugin.$anchor, plugin.$panel);
+
         if (plugin.textFlag) {
           plugin.$anchor.text(option.onChangeAfterText);
         }
+
         plugin.$anchor.addClass(option.activeClassName).attr('aria-expended', true);
+
         if (option.parentClass) {
           plugin.$anchor.closest(option.parentClass).addClass(option.activeClassName);
         }
+
         if (option.mode === 'fade') {
           plugin.$panel.stop().fadeIn(option.speed, option.easing);
         } else if (option.mode === 'slide') {
@@ -209,6 +241,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           plugin.$panel.stop().show();
           plugin.afterChange(plugin.$anchor, plugin.$panel);
         }
+
         plugin.afterChange(plugin.$anchor, plugin.$panel);
       },
       close: function close() {
@@ -216,13 +249,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var option = plugin.options;
         plugin.flag = false;
         plugin.beforeChange(plugin.$anchor, plugin.$panel);
+
         if (plugin.textFlag) {
           plugin.$anchor.text(option.onChangeBeforeText);
         }
+
         plugin.$anchor.removeClass(option.activeClassName).attr('aria-expended', false);
+
         if (option.parentClass) {
           plugin.$anchor.closest(option.parentClass).removeClass(option.activeClassName);
         }
+
         if (option.mode === 'fade') {
           plugin.$panel.stop().fadeOut(option.speed, option.easing);
         } else if (option.mode === 'slide') {
@@ -230,9 +267,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         } else {
           plugin.$panel.stop().hide();
         }
+
         plugin.afterChange(plugin.$anchor, plugin.$panel);
       }
     });
+
     $.fn[pluginName] = function init(options) {
       return this.each(function (i, elem) {
         if (!$.data(elem, "plugin_".concat(pluginName))) {
@@ -240,12 +279,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
       });
     };
+
     $(function () {
       $('[data-element="toggle"]').toggle();
     });
-  })();
+  })(); // tab
 
-  // tab
+
   (function () {
     var pluginName = 'tab';
     var defaults = {
@@ -272,6 +312,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       activeTab: 0,
       firstScr: true
     };
+
     function Plugin(element, options) {
       var plugin = this;
       plugin.element = element;
@@ -283,14 +324,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       plugin.idx = 0;
       plugin.init();
     }
+
     $.extend(Plugin.prototype, {
       init: function init() {
         var plugin = this;
         plugin.buildCache();
         plugin.bindEvents();
+
         if (plugin.options.isInitActive) {
           plugin.$anchor.eq(plugin.options.initIndex).trigger(plugin.options.event);
         }
+
         plugin.getWidth();
       },
       destroy: function destroy() {
@@ -310,11 +354,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$direction = plugin.$element.find(plugin.options.direction);
         plugin.options.isBooking = true;
         plugin.options.offsets = [];
+
         if (plugin.options.linkedTab) {
           plugin.$panel = $(plugin.options.linkedTab).children(plugin.options.panel);
         } else {
           plugin.$panel = plugin.$element.find(plugin.options.panel);
         }
+
         plugin.$anchor.each(function (idx, el) {
           var $this = $(el);
           var tabId = $this.attr('id') ? $this.attr('id') : COMMON.uuid("plugin-".concat(pluginName, "-"));
@@ -325,11 +371,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             role: 'tab',
             tabIndex: focusible ? '' : 0
           });
+
           if (plugin.options.isBooking) {
             plugin.options.offsets.push(Math.round($this.position().left - plugin.$anchor.position().left / 2));
           } else {
             plugin.options.offsets.push($this.offset().left - plugin.$anchor.offset().left);
           }
+
           anchorId.push(tabId);
         });
         plugin.$panel.each(function (idx, el) {
@@ -352,6 +400,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$list.removeAttr('role');
         plugin.$anchor.removeData("".concat(plugin.name, "_target")).removeAttr('style role').removeClass(plugin.options.activeClassName);
         plugin.$panel.removeAttr('style role aria-labelledby').removeClass(plugin.options.activeClassName);
+
         if (!COMMON.checkPrevId(plugin.$panel, plugin.name)) {
           plugin.$panel.removeAttr('id');
         }
@@ -361,9 +410,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var $element = $(plugin.element);
         var $scrollWrap = $element.find(plugin.options.scrollWrap);
         var $scroller = $element.find(plugin.options.scroller);
+
         var eventName = function eventName() {
           var events = plugin.options.event;
           var event = '';
+
           if (events === 'focusin') {
             event = "focusin.".concat(plugin.name, " mounseenter.").concat(plugin.name);
           } else if (events === 'click') {
@@ -371,9 +422,12 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           } else {
             return "".concat(events, ".").concat(plugin.name);
           }
+
           return event;
         };
+
         var event = eventName();
+
         if (plugin.options.swipe) {
           $scrollWrap.css({
             overflow: 'hidden'
@@ -382,26 +436,28 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             plugin.swipeEvent(e);
           });
         }
+
         plugin.$direction.on(event, function (e) {
           var gotoIdx = plugin.options.activeTab;
           var targetElem = e.target;
           var $this;
-          if (targetElem.tagName !== 'BUTTON' || targetElem.tagName !== 'A') {
-            $this = $(targetElem).closest('button, a');
 
-            // eslint-disable-next-line prefer-destructuring
+          if (targetElem.tagName !== 'BUTTON' || targetElem.tagName !== 'A') {
+            $this = $(targetElem).closest('button, a'); // eslint-disable-next-line prefer-destructuring
+
             targetElem = $this[0];
           } else {
             $this = $(targetElem);
           }
+
           if ($this.data('tab-direction') === 'next') {
             if (plugin.$anchor.length - 1 === gotoIdx) {
               $this.addClass('disabled');
             } else {
               gotoIdx += 1;
               $this.removeClass('disabled');
-            }
-            // gotoIdx = plugin.$anchor.length - 1 === gotoIdx ? gotoIdx : gotoIdx + 1;
+            } // gotoIdx = plugin.$anchor.length - 1 === gotoIdx ? gotoIdx : gotoIdx + 1;
+
           } else {
             if (gotoIdx <= 0) {
               gotoIdx = 0;
@@ -409,8 +465,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             } else {
               gotoIdx -= 1;
               $this.removeClass('disabled');
-            }
-            // gotoIdx = gotoIdx <= 0 ? 0 : gotoIdx - 1;
+            } // gotoIdx = gotoIdx <= 0 ? 0 : gotoIdx - 1;
+
           }
 
           var gotoElem = plugin.$anchor[gotoIdx];
@@ -420,19 +476,23 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$anchor.on(event, function (e) {
           var targetElem = e.target;
           var $this;
-          if (targetElem.tagName !== 'BUTTON' || targetElem.tagName !== 'A') {
-            $this = $(targetElem).closest('button, a');
 
-            // eslint-disable-next-line prefer-destructuring
+          if (targetElem.tagName !== 'BUTTON' || targetElem.tagName !== 'A') {
+            $this = $(targetElem).closest('button, a'); // eslint-disable-next-line prefer-destructuring
+
             targetElem = $this[0];
           } else {
             $this = $(targetElem);
           }
+
           var returnValue = false;
+
           if ($this.hasClass(plugin.options.activeClassName) || $this.hasClass(plugin.options.disabledClassName) || plugin.flag) {
             returnValue = false;
           }
+
           var key = e.which;
+
           if (e.type === 'click' || e.type === 'focusin' || key === 13 || key === 32) {
             plugin.idx = $(targetElem).data('index');
             plugin.close(targetElem);
@@ -440,6 +500,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             e.preventDefault();
             e.stopPropagation();
           }
+
           return returnValue;
         });
       },
@@ -456,15 +517,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       afterChange: function afterChange($anchor, $panel) {
         var plugin = this;
         var linkedPanel;
+
         if (plugin.options.tabType === 'scroll' || plugin.options.tabType === 'booking') {
           linkedPanel = $(plugin.$panel[plugin.idx]).find('[data-element="tab"]');
           plugin.scrollTab($anchor);
         }
+
         plugin.$element.trigger('afterChange', [plugin, $anchor, $panel, linkedPanel]);
         plugin.getWidth();
+
         if (plugin.$element.find('[data-element="tab"]').length) {
           plugin.buildCache();
         }
+
         if (plugin.$direction.length) {
           if (plugin.options.activeTab === 0) {
             $(plugin.element).find('[data-tab-direction="prev"]').addClass('disabled');
@@ -473,18 +538,19 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           } else {
             plugin.$direction.removeClass('disabled');
           }
-        }
-        // plugin.reInit();
+        } // plugin.reInit();
+
       },
       centerMode: function centerMode(scrollTo) {
         var plugin = this;
-        var $element = $(plugin.element);
-        // const $scrollWrap = $element.find(plugin.options.scrollWrap);
+        var $element = $(plugin.element); // const $scrollWrap = $element.find(plugin.options.scrollWrap);
+
         var $scrollInner = $element.find(plugin.options.scroller);
         var $activated = plugin.$anchor.eq(plugin.options.initIndex);
         var positionLeft = $activated.outerWidth();
         var bookingScroller = $element.find('.booking-tab__scroller__inner');
         var width = bookingScroller.width() / 2;
+
         if ($(window).width() > 1080) {
           $scrollInner.css({
             transform: "translateX(".concat(width - (scrollTo + positionLeft * 2), "px)")
@@ -498,10 +564,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       swipeEvent: function swipeEvent(touch) {
         var plugin = this;
         var gotoIdx = plugin.options.activeTab;
+
         if (touch.type === 'touchstart') {
           plugin.options.touchFirst = touch.changedTouches[0].screenX;
         }
+
         var direction = plugin.options.touchFirst - touch.changedTouches[0].screenX;
+
         if (Math.abs(direction) > 50) {
           if (direction > 0) {
             if (gotoIdx === plugin.$anchor.length - 1) {
@@ -513,8 +582,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             if (gotoIdx <= 0) {
               gotoIdx = 1;
             }
+
             gotoIdx -= 1;
           }
+
           var targetElem = plugin.$anchor[gotoIdx];
           plugin.close(targetElem);
           plugin.open(targetElem);
@@ -537,9 +608,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var plugin = this;
         var $element = $(plugin.element);
         var $scrollWrap = $element.find(plugin.options.scrollWrap);
-        var scrollTo = plugin.options.offsets[target.data('index')];
+        var scrollTo = plugin.options.offsets[target.data('index')]; // const anchorWidth = Math.round($(target).outerWidth());
 
-        // const anchorWidth = Math.round($(target).outerWidth());
         if (plugin.options.tabAlign === 'center') {
           plugin.centerMode(scrollTo);
         } else if ($scrollWrap.parents('.tab__scroll')) {
@@ -563,6 +633,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.flag = true;
         plugin.options.activeTab = $anchor.data('index');
         plugin.beforeChange($anchor, $panel);
+
         if (plugin.options.mode === 'fade') {
           $panel.stop().fadeIn(plugin.options.speed, plugin.options.easing, function () {
             plugin.flag = false;
@@ -578,6 +649,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           plugin.flag = false;
           plugin.afterChange($anchor, $panel);
         }
+
         if (plugin.options.autoScroll && plugin.initialized) {
           $('html, body').stop().animate({
             scrollTop: plugin.$element.offset().top
@@ -591,6 +663,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
             'aria-selected': false,
             'aria-expended': false
           }).data("".concat(plugin.name, "_target")).removeClass(plugin.options.activeClassName);
+
           if (plugin.options.mode === 'fade') {
             $panel.stop().fadeOut(plugin.options.speed, plugin.options.easing);
           } else if (plugin.options.mode === 'slide') {
@@ -603,6 +676,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       go: function go(idx, autoScroll) {
         var plugin = this;
         plugin.$anchor.eq(idx).trigger(plugin.options.event);
+
         if (autoScroll && plugin.initialized) {
           $('html, body').stop().animate({
             scrollTop: plugin.$element.offset().top
@@ -619,6 +693,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.init();
       }
     });
+
     $.fn[pluginName] = function init(options) {
       return this.each(function (i, elem) {
         if (!$.data(elem, "plugin_".concat(pluginName))) {
@@ -626,12 +701,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
       });
     };
+
     $(function () {
       $('[data-element="tab"]').tab();
     });
-  })();
+  })(); // image upload
 
-  // image upload
+
   (function () {
     var pluginName = 'uploader';
     var defaults = {
@@ -652,6 +728,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       leng: 0,
       imageMax: 8
     };
+
     function Plugin(element, options) {
       var plugin = this;
       plugin.element = element;
@@ -662,6 +739,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       plugin.initialized = false;
       plugin.init();
     }
+
     $.extend(Plugin.prototype, {
       init: function init() {
         var plugin = this;
@@ -719,17 +797,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           var item = plugin.$images.append(temp.imageWrap);
           var image = URL.createObjectURL(el);
           var wrapper = '';
+
           if (temp.leng < temp.imageMax) {
             item.find('div:last-child').addClass(temp.imageClass);
             wrapper = plugin.$images.find(".".concat(temp.imageClass, ":last-child"));
+
             if (item.hasClass('file--pdf__images')) {
               wrapper.append("<p>".concat(file[i].name, "</p>").concat(temp.clearButton));
             } else {
               wrapper.append("<img src=\"".concat(image, "\" alt=\"").concat(file[i].name, "\">").concat(temp.clearButton));
             }
+
             temp.leng += 1;
-          }
-          // console.log(temp.leng);
+          } // console.log(temp.leng);
+
 
           plugin.afterChange(plugin.$images);
         });
@@ -746,6 +827,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       countImage: function countImage() {
         var plugin = this;
         var temp = plugin.options;
+
         if (plugin.$countCurrent) {
           plugin.$countCurrent.text(temp.leng);
         }
@@ -755,6 +837,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$element.trigger('afterChange', [plugin, $target]);
       }
     });
+
     $.fn[pluginName] = function init(options) {
       return this.each(function (i, elem) {
         if (!$.data(elem, "plugin_".concat(pluginName))) {
@@ -762,12 +845,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
       });
     };
+
     $(function () {
       $('[data-element="file__wrap"]').uploader();
     });
-  })();
+  })(); // accordion
 
-  // accordion
+
   (function () {
     var pluginName = 'accordion';
     var defaults = {
@@ -783,6 +867,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       autoFold: true,
       autoScroll: false
     };
+
     function Plugin(element, options) {
       var plugin = this;
       plugin.element = element;
@@ -793,14 +878,17 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       plugin.initialized = false;
       plugin.init();
     }
+
     $.extend(Plugin.prototype, {
       init: function init() {
         var plugin = this;
         plugin.buildCache();
         plugin.bindEvents();
+
         if (plugin.options.isInitActive) {
           plugin.open(plugin.$anchor.eq(plugin.options.initIndex));
         }
+
         plugin.initialized = true;
       },
       destroy: function destroy() {
@@ -820,11 +908,13 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.$anchor.each(function (idx, elem) {
           var $this = $(elem);
           var anchorId;
+
           if ($this.attr('id')) {
             anchorId = $this.attr('id');
           } else {
             anchorId = COMMON.uuid("plugin-".concat(plugin.name, "-"));
           }
+
           $this.data("".concat(plugin.name, "_target"), plugin.$panel.eq(idx)).data('title', $.trim($this.text())).attr({
             id: anchorId,
             'aria-expanded': false,
@@ -843,6 +933,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var plugin = this;
         plugin.$anchor.removeData("".concat(plugin.name, "_target")).removeData('title').removeAttr('id aria-expanded aria-controls').removeClass(plugin.options.activeClassName);
         plugin.$panel.removeAttr('aria-labeledby role').removeClass(plugin.options.activeClassName);
+
         if (!COMMON.checkPrevId(plugin.$anchor, plugin.name)) {
           plugin.$anchor.removeAttr('id');
         }
@@ -853,9 +944,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           e.stopPropagation();
           e.preventDefault();
           var target = $(e.target);
+
           if (e.target.tagName !== 'BUTTON' || e.target.tagName !== 'A') {
             target = $($(e.target).closest(plugin.options.anchor));
           }
+
           if (target.attr('disabled') !== 'disabled') {
             plugin.toggle(target);
           }
@@ -883,6 +976,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       toggle: function toggle($targetAnchor) {
         var plugin = this;
         plugin.flag = true;
+
         if ($targetAnchor.hasClass(plugin.options.activeClassName)) {
           plugin.close($targetAnchor);
         } else {
@@ -893,9 +987,11 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         var plugin = this;
         plugin.beforeChange($targetAnchor);
         var $panel = $targetAnchor.attr('aria-expanded', true).addClass(plugin.options.activeClassName).data("".concat(plugin.name, "_target")).addClass(plugin.options.activeClassName);
+
         if (plugin.initialized && plugin.options.mode === 'slide') {
           $panel.stop().slideDown(plugin.options.speed, plugin.options.easing, function () {
             plugin.flag = false;
+
             if (plugin.options.autoScroll) {
               $('html, body').stop().animate({
                 scrollTop: $targetAnchor.offset().top
@@ -906,17 +1002,20 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
           $panel.stop().show();
           plugin.flag = false;
         }
+
         if (plugin.options.autoFold) {
           plugin.$anchor.not($targetAnchor).each(function (i, elem) {
             plugin.close($(elem));
           });
         }
+
         plugin.afterChange($targetAnchor);
       },
       close: function close($targetAnchor) {
         var plugin = this;
         plugin.beforeChange($targetAnchor);
         var $panel = $targetAnchor.attr('aria-expanded', false).removeClass(plugin.options.activeClassName).data("".concat(plugin.name, "_target")).removeClass(plugin.options.activeClassName);
+
         if (plugin.options.mode === 'slide') {
           $panel.stop().slideUp(plugin.options.speed, plugin.options.easing, function () {
             plugin.flag = false;
@@ -929,6 +1028,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
       go: function go(idx, autoScroll) {
         var plugin = this;
         plugin.$anchor.eq(idx).trigger('click');
+
         if (autoScroll) {
           plugin.autoScroll();
         }
@@ -946,6 +1046,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         plugin.unbindEvents().removeCache().init();
       }
     });
+
     $.fn[pluginName] = function init(options) {
       return this.each(function (i, elem) {
         if (!$.data(elem, "plugin_".concat(pluginName))) {
@@ -953,6 +1054,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
         }
       });
     };
+
     $(function () {
       $('[data-element=accordion]').accordion();
     });

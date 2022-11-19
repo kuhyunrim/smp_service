@@ -13,7 +13,8 @@
   <!--#include file="./inc/header.inc" -->
   <div class="page-header">
     <div class="page-header__container">
-      <h1 class="page-header__title">부서/사용자 등록</h1>
+      <a href="#" class="page-header__back"></a>
+      <h1 class="page-header__title">부서/사용자 마스터 조회</h1>
     </div>
   </div>
   <div class="content">
@@ -21,9 +22,6 @@
 
       <div class="tab__group" data-element="tab">
         <div class="tab">
-          <button type="button" class="button__tab active" data-element="tab__anchor">
-            <span>등록가이드</span>
-          </button>
           <button type="button" class="button__tab" data-element="tab__anchor">
             <span>부서등록</span>
           </button>
@@ -33,129 +31,22 @@
           </button>
         </div>
         <div class="tab__container">
-          <!-- 기본 정보 -->
-          <div class="tab__content" data-element="tab__panel">
-            <div class="bundle" style="margin-top: 30px;">
-              <h3 class="page-sub__title">부서/사용자 등록 순서</h3>
-              <ul>
-                <li>1. 테이블 우측 상단의 [양식다운로드] 버튼을 눌러 양식을 준비해주세요.</li>
-                <li>2. [Sample Data Sheet]에 항목별 의미와 예시 데잍커를 확인 후, 첫번째 시트에 데이터를 작성해주세요.</li>
-                <li>3. 테이블 우측 상단의 [업로드]버튼을 눌러, 엑셀 파일을 업로드 후 전송해주세요.</li>
-              </ul>
-
-              <p style="margin-top: 48px;">문의처: SINGLEX PLATFORM 담당자 (<a href="mailto:SinglePlatform.Tech@lgcns.com" style="color: #E0205C;">SinglePlatform.Tech@lgcns.com</a>)</p>
-              <hr class="spacer">
-              <style>
-                .dotted-list{
-
-                }
-                .dotted-list li{
-                  position: relative;
-                  padding-left: 10px;
-                  font-size: 14px;
-                }
-                .dotted-list li ~ li{
-                  margin-top: 8px;
-                }
-                .dotted-list li::before{
-                  content: '';
-                  position: absolute;
-                  top: 8px;
-                  left: 0;
-                  width: 3px;
-                  height: 3px;
-                  background: #333;
-                  border-radius: 100%;
-                }
-              </style>
-              <div class="field-form half">
-                <dl>
-                  <dt>양식 작성시 유의사항</dt>
-                  <dd>
-                    <ul class="dotted-list">
-                      <li>노란색바탕의 붉은 글씨의 셀은 필수항목입니다.</li>
-                      <li>다운로드 받은양식은 열 변경(삽입/삭제)없이 작성합니다.</li>
-                      <li>첫번째 Sheet의 값만 업로드가 됩니다.</li>
-                    </ul>
-                  </dd>
-                </dl>
-                <dl>
-                  <dt>반영시 유의사항</dt>
-                  <dd>
-                    <ul class="dotted-list">
-                      <li>데이터가 많을 경우 수분(5~10분) 소요될 수 있으니 잠시 대기해 주세요.</li>
-                      <li>부서/사용자 데이터 서버 전송후, 실제 사용하는 SINGLEX서비스에는 익일 데이터가 반영됩니다.</li>
-                    </ul>
-                  </dd>
-                </dl>
-              </div>
-            </div>
-          </div>
-
-          <!-- 부서 등록 -->
-          <div class="tab__content" data-element="tab__panel">
-            <div class="filter__sort filter__sort--left">
-              <div class="part__left">
-                <dl class="filter__finder">
-                    <dt>부서명</dt>
-                    <dd>
-                      <div class="input small">
-                        <input type="text" name="" value="" class="input__box">
-                      </div>
-                    </dd>
-                    <dt>부서아이디</dt>
-                    <dd>
-                      <div class="input small">
-                        <input type="text" name="" value="" class="input__box">
-                      </div>
-                    </dd>
-                </dl>
-              </div>
-              <div class="part__right">
-                <button type="button" class="button button--icon-only">
-                  <i class="button__icon refresh"></i>
-                </button>
-                <button type="button" class="button is-primary">
-                  <i class="button__icon find"></i>
-                  <span class="button__text">검색</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="btn__sort">
-              <div class="part__right">
-                <button type="button" class="button"><span class="button__text">양식다운로드</span></button>
-                <a rel="modal:open" href="#modal02" class="button"><span class="button__text">업로드</span></a>
-                <button type="button" class="button"><span class="button__text">전송</span></button>
-              </div>
-            </div>
-            <!-- 그리드 영역 -->
-
-          </div>
-
-          <!-- 사용자 등록 -->
           <div class="tab__content" data-element="tab__panel">
             <div class="filter__sort  filter__sort--left">
               <div class="part__left">
                 <dl class="filter__finder">
-                    <dt>사용자 이름</dt>
-                    <dd>
-                      <div class="input small">
-                        <input type="text" name="" value="" class="input__box">
-                      </div>
-                    </dd>
-                    <dt>사번</dt>
-                    <dd>
-                      <div class="input small">
-                        <input type="text" name="" value="" class="input__box">
-                      </div>
-                    </dd>
-                    <dt>Email</dt>
-                    <dd>
-                      <div class="input small">
-                        <input type="text" name="" value="" class="input__box">
-                      </div>
-                    </dd>
+                  <dt>부서아이디</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="" class="input__box">
+                    </div>
+                  </dd>
+                  <dt>부서명</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="" class="input__box">
+                    </div>
+                  </dd>
                 </dl>
               </div>
               <div class="part__right">
@@ -169,11 +60,42 @@
               </div>
             </div>
 
-            <div class="btn__sort">
+            <!-- 그리드 영역 -->
+          </div>
+
+          <div class="tab__content" data-element="tab__panel">
+            <div class="filter__sort  filter__sort--left">
+              <div class="part__left">
+                <dl class="filter__finder">
+                  <dt>사용자 이름</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="" class="input__box">
+                    </div>
+                  </dd>
+                  <dt>사번</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="" class="input__box">
+                    </div>
+                  </dd>
+                  <dt>Email</dt>
+                  <dd>
+                    <div class="input small">
+                      <input type="text" name="" value="" class="input__box">
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+
               <div class="part__right">
-                <button type="button" class="button"><span class="button__text">양식다운로드</span></button>
-                <a rel="modal:open" href="#modal02" class="button"><span class="button__text">업로드</span></a>
-                <button type="button" class="button"><span class="button__text">전송</span></button>
+                <button type="button" class="button button--icon-only">
+                  <i class="button__icon refresh"></i>
+                </button>
+                <button type="button" class="button is-primary">
+                  <i class="button__icon find"></i>
+                  <span class="button__text">검색</span>
+                </button>
               </div>
             </div>
 
